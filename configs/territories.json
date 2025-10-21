@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "last_updated": "2024-10-28",
+  "territories": {
+    "ON-001": {
+      "name": "Toronto - Beaches/Danforth",
+      "fsa_codes": ["M4E", "M4J", "M4K", "M4L"],
+      "status": "active",
+      "max_subscribers": 1
+    }
+  }
+}
