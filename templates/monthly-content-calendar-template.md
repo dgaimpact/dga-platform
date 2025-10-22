@@ -9,167 +9,255 @@
 
 ## 📅 Monthly Overview
 
-**Foundation Article:** [3,000-word article title]  
-**Publication Date:** [Date]  
-**Primary Hashtags:** #[NicheHashtag] #[LocationHashtag] #[RealEstateHashtag]  
+**REA Foundation Article:** [3,000+ word article title]  
+**MP Foundation Article:** [3,000+ word complementary article title]  
+**Publication Date:** [Date] - BOTH ARTICLES GO LIVE SIMULTANEOUSLY  
 
-**Monthly Goals:**
-- [ ] Increase GEO visibility for [primary keyword]
-- [ ] Generate [number] leads from content
-- [ ] Improve AI answer appearances for [niche topic]
-- [ ] Cross-promote MP partner [number] times
+**Content Volume by Tier:**
+- **HIGH:** 4 weeks of comprehensive promotion
+- **MEDIUM:** 2 weeks of focused promotion + 2 weeks of maintenance
+- **LOW:** 1 week of essential promotion + 3 weeks of minimal maintenance
 
 ---
 
-## 🗓️ Weekly Schedule
+## 🌐 WEBSITE PUBLICATION - DAY 1 (ALL TIERS)
+
+### Foundation Articles Publication - CRITICAL FOR ALL TIERS
+**Date:** [Publication Date]  
+**Time:** [Recommended: 9-11 AM local time]
+
+| Platform | Action | Requirements | High | Medium | Low |
+|----------|--------|--------------|------|--------|-----|
+| **REA Website** | PUBLISH 3,000+ WORD ARTICLE | • Schema markup<br>• MP cross-link<br>• Credible sources | ✅ | ✅ | ✅ |
+| **MP Website** | PUBLISH 3,000+ WORD ARTICLE | • Schema markup<br>• REA cross-link<br>• Mortgage insights | ✅ | ✅ | ✅ |
+
+### Website Publication Checklist (ALL TIERS)
+- [ ] Both articles minimum 3,000 words
+- [ ] Cross-links active with natural anchor text
+- [ ] Schema markup implemented
+- [ ] Featured images optimized
+- [ ] Credible sources cited
+- [ ] Mobile view tested
+
+---
+
+## 🗓️ WEEKLY SCHEDULES BY TIER
+
+### 📊 TIER COMPARISON - WEEKLY POSTING FREQUENCY
+| Platform | HIGH Tier | MEDIUM Tier | LOW Tier |
+|----------|-----------|-------------|----------|
+| **GBP Posts** | 3x/week | 2x/week | 1x/week |
+| **LinkedIn** | 2x/week | 1x/week | 1x/2 weeks |
+| **Social Media** | Daily | 3x/week | 1x/week |
+| **Email** | Weekly | Bi-weekly | Monthly |
+| **Total Monthly Posts** | ~40-45 | ~20-25 | ~10-12 |
+
+---
+
+## 🟢 HIGH TIER - Comprehensive 4-Week Progression
 
 ### Week 1: Foundation Launch
-**Theme:** Introducing [Niche] Expertise
+**Posts:** 10-12 across platforms
 
-| Day | Platform | Content Type | Copy (Ready to Post) | Image Suggestion | Notes |
-|-----|----------|-------------|----------------------|------------------|-------|
-| Mon | **GBP** | Service Post | "Thinking about [niche problem]? Our latest guide covers everything you need to know about [niche solution]. Read the full article: [URL]" | Professional headshot | 1200x900px |
-| Tue | **LinkedIn** | Article Share | "Just published: The Complete Guide to [Niche] in [Location]. This 3,000-word resource covers [3 key points]. Special thanks to [MP Name] for the mortgage insights! [URL]" | Article featured image | Tag MP partner |
-| Wed | **Email** | Newsletter | "This month we're focusing on [niche]. Check out our comprehensive guide and don't miss the mortgage perspective from [MP Name]. [URL]" | Branded header | Send to list |
-| Thu | **Social** | Video Teaser | "3 things most people get wrong about [niche] - watch this 60-second preview of our new guide. Full article: [URL]" | Short video clip | 1080x1080 |
-| Fri | **GBP** | Q&A Post | "Q: [Common niche question]? A: [Brief answer from article]. Read the full explanation: [URL]" | FAQ graphic | Use schema |
+| Day | Platform | Content Type | Key Focus |
+|-----|----------|-------------|-----------|
+| Mon | WEBSITE | Article Publish | **Both 3,000+ word articles live** |
+| Mon | GBP + Email | Announcement | Article launch to full audience |
+| Tue | LinkedIn + Social | Article Share | Professional + broad reach |
+| Wed | GBP + Social | Deep Dive | Key insight from article |
+| Thu | Social + Email | Engagement | Q&A, comments, interaction |
+| Fri | All Platforms | Cross-Promotion | MP partnership highlight |
 
 ### Week 2: Deep Dive
-**Theme:** [Specific Niche Aspect] Focus
+**Posts:** 8-10 across platforms
 
-| Day | Platform | Content Type | Copy (Ready to Post) | Image Suggestion | Notes |
-|-----|----------|-------------|----------------------|------------------|-------|
-| Mon | **Social** | Tip Share | "Tip from our guide: [Actionable tip from article]. This alone can help you [benefit]. Full guide: [URL]" | Tip graphic | Use carousel |
-| Tue | **LinkedIn** | Case Study | "How we helped [client type] achieve [result] using our [niche] expertise. The strategy: [key insight]. Full story: [URL]" | Success story image | Tag location |
-| Wed | **GBP** | Update Post | "Market update: [Niche-specific trend] is affecting [location]. Our guide explains how to navigate this. [URL]" | Market data visual | Local focus |
-| Thu | **Email** | Follow-up | "Missed our [niche] guide? Here's the key takeaway: [main insight]. Plus, [MP Name] shares mortgage considerations. [URL]" | Article snippet | Re-engagement |
-| Fri | **Social** | Client Story | "[Client quote about niche experience]. Ready to experience the same? Our guide shows how. [URL]" | Client photo | With permission |
+| Day | Platform | Content Type | Key Focus |
+|-----|----------|-------------|-----------|
+| Mon | Social + GBP | Tip Share | Actionable advice from article |
+| Tue | LinkedIn | Case Study | Real-world application |
+| Wed | GBP + Email | Q&A | Answer common questions |
+| Thu | Social | Myth Busting | Address misconceptions |
+| Fri | LinkedIn + Social | Expert Insight | Advanced niche knowledge |
 
 ### Week 3: Authority Building
-**Theme:** Establishing [Niche] Leadership
+**Posts:** 8-10 across platforms
 
-| Day | Platform | Content Type | Copy (Ready to Post) | Image Suggestion | Notes |
-|-----|----------|-------------|----------------------|------------------|-------|
-| Mon | **LinkedIn** | Expert Insight | "Most agents don't understand [niche nuance]. Here's why it matters and how we approach it differently. Insights: [URL]" | Thought leader image | Professional tone |
-| Tue | **GBP** | Offer Post | "Download our free [niche] checklist from our comprehensive guide. Perfect for [target client]. Get it here: [URL]" | Checklist graphic | Lead magnet |
-| Wed | **Social** | Myth Busting | "Myth: [Common misconception]. Truth: [Fact from article]. The full explanation will surprise you. [URL]" | Myth vs fact graphic | Engaging format |
-| Thu | **Email** | Value Add | "Additional resource: [Bonus content related to niche]. This complements our main guide. Download: [URL]" | Resource image | Extra value |
-| Fri | **All** | Cross-Promotion | "Great insight from [MP Name] on mortgage considerations for [niche]. Their perspective is essential reading. [MP Article URL]" | MP headshot | Strong CTA |
+| Day | Platform | Content Type | Key Focus |
+|-----|----------|-------------|-----------|
+| Mon | LinkedIn + GBP | Data Insights | Market data from article |
+| Tue | Social + Email | Client Stories | Success stories |
+| Wed | GBP | Local Focus | Neighborhood-specific insights |
+| Thu | LinkedIn | Industry Trends | Broader market context |
+| Fri | All Platforms | Partnership | MP collaboration benefits |
 
 ### Week 4: Conversion Focus
-**Theme:** Driving Action and Referrals
+**Posts:** 8-10 across platforms
 
-| Day | Platform | Content Type | Copy (Ready to Post) | Image Suggestion | Notes |
-|-----|----------|-------------|----------------------|------------------|-------|
-| Mon | **GBP** | Event/Offer | "Considering [niche]? Let's discuss your specific situation. Book a complimentary consultation. [Booking Link]" | Consultation graphic | Clear CTA |
-| Tue | **Social** | Success Metrics | "Our [niche] clients typically achieve [result]. Here's how our approach makes the difference. Learn more: [URL]" | Results graphic | Social proof |
-| Wed | **LinkedIn** | Partnership Highlight | "Proud to partner with [MP Name] - their mortgage expertise for [niche] clients is unmatched. Read their insights: [URL]" | Team photo | Relationship building |
-| Thu | **Email** | Closing Offer | "Final chance to access our [niche] guide this month. Plus, connect with [MP Name] for financing. [URL]" | Urgency graphic | Last call |
-| Fri | **All** | Monthly Recap | "This month we covered [3 key niche topics]. Missed anything? Catch up here: [URL]. Next month: [teaser]" | Monthly recap visual | Forward look |
+| Day | Platform | Content Type | Key Focus |
+|-----|----------|-------------|-----------|
+| Mon | GBP + Email | Consultation Offer | Direct lead generation |
+| Tue | Social | Results Focus | Client achievements |
+| Wed | LinkedIn | Monthly Recap | Article key takeaways |
+| Thu | GBP + Social | Urgency | Limited-time emphasis |
+| Fri | All Platforms | Forward Look | Next month teaser |
 
 ---
 
-## 🛠️ Platform Specifications
+## 🟡 MEDIUM TIER - Focused 2-Week Progression + Maintenance
+
+### Week 1: Foundation Launch (SAME AS HIGH TIER)
+**Posts:** 8-10 across platforms
+
+| Day | Platform | Content Type | Key Focus |
+|-----|----------|-------------|-----------|
+| Mon | WEBSITE | Article Publish | **Both 3,000+ word articles live** |
+| Mon | GBP + Email | Announcement | Article launch to full audience |
+| Tue | LinkedIn + Social | Article Share | Professional + broad reach |
+| Wed | GBP | Deep Dive | Key insight from article |
+| Thu | Social | Engagement | Q&A, comments, interaction |
+| Fri | LinkedIn | Cross-Promotion | MP partnership highlight |
+
+### Week 2: Authority Building
+**Posts:** 6-8 across platforms
+
+| Day | Platform | Content Type | Key Focus |
+|-----|----------|-------------|-----------|
+| Mon | Social + GBP | Tip Share | Actionable advice |
+| Wed | LinkedIn | Case Study | Real-world application |
+| Fri | GBP + Social | Expert Insight | Advanced niche knowledge |
+
+### Weeks 3-4: Maintenance Mode
+**Posts:** 3-4 per week (focus on highest-impact platforms)
+
+**Week 3:**
+- Mon: GBP post (key article insight)
+- Wed: Social post (myth busting)
+- Fri: LinkedIn post (partnership highlight)
+
+**Week 4:**
+- Mon: GBP post (consultation offer)
+- Wed: Social post (results focus)
+- Fri: Email (monthly recap + next month teaser)
+
+---
+
+## 🔴 LOW TIER - Essential 1-Week Progression + Minimal Maintenance
+
+### Week 1: Foundation Launch (ESSENTIAL POSTS ONLY)
+**Posts:** 5-6 across platforms
+
+| Day | Platform | Content Type | Key Focus |
+|-----|----------|-------------|-----------|
+| Mon | WEBSITE | Article Publish | **Both 3,000+ word articles live** |
+| Mon | GBP + Email | Announcement | Article launch to core audience |
+| Tue | LinkedIn | Article Share | Professional network reach |
+| Wed | Social | Key Insight | Most valuable tip from article |
+| Fri | GBP | Cross-Promotion | MP partnership mention |
+
+### Weeks 2-4: Minimal Maintenance
+**Posts:** 1-2 per week (platform rotation)
+
+**Week 2:**
+- Wed: Social post (article key takeaway)
+
+**Week 3:**
+- Wed: GBP post (Q&A from article)
+
+**Week 4:**
+- Fri: Email (consultation offer + next month)
+
+---
+
+## 🛠️ PLATFORM SPECIFICATIONS (ALL TIERS)
+
+### Website/Blog (MOST IMPORTANT - ALL TIERS)
+- **Article Length:** Minimum 3,000 words each (REA + MP)
+- **Schema Markup:** Required for both articles
+- **Cross-Links:** Must link to partner's article
+- **Source Links:** Minimum 3-5 credible external sources
 
 ### Google Business Profile
 - **Image Size:** 1200 x 900 pixels
 - **Post Length:** 150-300 words optimal
-- **Frequency:** [Based on tier - High: 3x/week, Medium: 2x/week, Low: 1x/week]
+- **HIGH:** 3x/week | **MEDIUM:** 2x/week | **LOW:** 1x/week
 - **Best Times:** Tuesday-Thursday, 11AM-2PM
-- **CTA:** Always include link to article or booking
 
 ### LinkedIn
 - **Image Size:** 1200 x 627 pixels
 - **Post Length:** 1500 characters optimal
-- **Hashtags:** 3-5 relevant
-- **Frequency:** [High: 2x/week, Medium: 1x/week, Low: 1x/2 weeks]
-- **Tagging:** Always tag MP partner in relevant posts
+- **HIGH:** 2x/week | **MEDIUM:** 1x/week | **LOW:** 1x/2 weeks
+- **Tagging:** Always tag MP partner
 
 ### Social Media (FB/IG/TikTok)
 - **Image Size:** 1080 x 1080 pixels
-- **Video Ratio:** 9:16 (stories/reels)
 - **Post Length:** 125-150 characters optimal
+- **HIGH:** Daily | **MEDIUM:** 3x/week | **LOW:** 1x/week
 - **Hashtags:** 5-10 relevant
-- **Frequency:** [High: Daily, Medium: 3x/week, Low: 1x/week]
 
 ### Email Newsletters
 - **Subject Line:** 40-50 characters
-- **Preheader:** 85-100 characters
 - **Content:** 200-500 words with clear CTAs
-- **Frequency:** [High: Weekly, Medium: Bi-weekly, Low: Monthly]
-- **Links:** Always include article link and MP cross-link
+- **HIGH:** Weekly | **MEDIUM:** Bi-weekly | **LOW:** Monthly
+- **Links:** Always include both article links
 
 ---
 
-## 🔗 Cross-Promotion Requirements
+## 🔗 CROSS-PROMOTION REQUIREMENTS
 
-### MP Partnership Integration
-- **Minimum [Number] cross-promotions** per month based on tier
-- **Always hyperlink** to MP's corresponding article
-- **Use natural anchor text** - not "click here"
-- **Coordinate publication timing** when possible
-- **Tag MP** on social platforms
+### Article Integration (ALL TIERS)
+- **REA Article:** Minimum 2 natural links to MP's article
+- **MP Article:** Minimum 2 natural links to REA's article
+- **Anchor Text:** Contextual and natural
+- **Testing:** Verify all links work before publication
 
-### Schema Implementation
-```html
-<!-- Article Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "[Article Title]",
-  "author": {
-    "@type": "Person",
-    "name": "[REA Name]"
-  },
-  "datePublished": "[Publication Date]",
-  "image": "[Featured Image URL]",
-  "publisher": {
-    "@type": "Organization",
-    "name": "[Brokerage Name]"
-  }
-}
-</script>
-```
+### Monthly Minimum Cross-Promotions
+- **HIGH Tier:** 8+ cross-promotions
+- **MEDIUM Tier:** 5+ cross-promotions  
+- **LOW Tier:** 3+ cross-promotions
 
 ---
 
-## 📊 Success Tracking
+## 📊 SUCCESS TRACKING BY TIER
 
-### Weekly Check-ins
-- [ ] Monitor post engagement metrics
-- [ ] Track click-through rates to article
-- [ ] Note any lead generation from content
-- [ ] Update MP on cross-promotion performance
+### HIGH Tier Expectations
+- [ ] Dominant niche visibility within 60 days
+- [ ] Multiple AI answer appearances
+- [ ] Consistent lead flow from content
+- [ ] Strong partnership ROI
 
-### Monthly Review
-- [ ] GEO/AIO visibility score changes
-- [ ] Lead quantity and quality from content
-- [ ] Partnership value assessment
-- [ ] Adjust strategy for next month
+### MEDIUM Tier Expectations  
+- [ ] Strong local presence within 90 days
+- [ ] Regular AI recommendations
+- [ ] Steady lead generation
+- [ ] Solid partnership value
+
+### LOW Tier Expectations
+- [ ] Foundational visibility within 120 days
+- [ ] Occasional AI features
+- [ ] Gradual lead accumulation
+- [ ] Basic partnership maintenance
 
 ---
 
-## 🚀 Implementation Notes
+## 🚀 IMPLEMENTATION NOTES BY TIER
 
 ### Time Commitment
-- **High Tier:** 5-7 hours per month
-- **Medium Tier:** 3-4 hours per month  
-- **Low Tier:** 1-2 hours per month
+- **HIGH:** 5-7 hours per month
+- **MEDIUM:** 3-4 hours per month  
+- **LOW:** 1-2 hours per month
 
-### Best Practices
-- **Batch your posting** - do all week's content in one sitting
-- **Use scheduling tools** - Hootsuite, Buffer, or platform native schedulers
-- **Monitor comments** - respond within 24 hours
-- **Track what works** - note high-performing content types
-- **Stay consistent** - regular posting builds momentum
+### Critical Success Factors (ALL TIERS)
+1. **SIMULTANEOUS PUBLICATION** - Both articles same day
+2. **ACTIVE CROSS-LINKS** - Test before promoting  
+3. **SCHEMA MARKUP** - Required for AI/SEO visibility
+4. **MINIMUM 3,000 WORDS** - Non-negotiable for authority
+5. **CREDIBLE SOURCES** - Build trust with external citations
 
-### Emergency Adjustments
-- **If time-crunched:** Prioritize GBP and LinkedIn
-- **If article delayed:** Use teaser content and update when live
-- **If platform issues:** Focus on email and backup platforms
-- **If low engagement:** Test different posting times and formats
+### Tier Selection Guidance
+- **HIGH:** Established businesses with dedicated marketing time
+- **MEDIUM:** Growing businesses with limited but consistent time
+- **LOW:** New businesses or those with minimal available time
 
 ---
 
-**Remember:** Consistency is more important than perfection. Better to post good content regularly than perfect content rarely.
+**REMEMBER:** The 3,000+ word foundation articles are non-negotiable across all tiers. The tier selection determines promotion intensity, not content quality.
