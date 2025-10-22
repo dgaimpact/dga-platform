@@ -3,7 +3,7 @@
 ```markdown
 # Provincial Expansion Framework
 
-**Last Updated:** 2024-06-11  
+**Last Updated:** 2025-10-22  
 **Status:** Active  
 **Related Files:** `configs/territories.json`, `configs/product-types.json`, `docs/business-model.md`
 
