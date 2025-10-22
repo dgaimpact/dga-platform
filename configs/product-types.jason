@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "last_updated": "2024-06-11",
+  "description": "Defines all subscription product types and their business rules for territory management",
+  
+  "product_types": {
+    "PB": {
+      "name": "MP Playbook Subscription",
+      "description": "Mortgage Professional holding exclusive territory rights with ability to onboard REA partners",
+      "business_rules": {
+        "max_per_territory_level": 1,
+        "requires_exclusive_niche": false,
+        "can_have_dependents": true,
+        "dependent_type": "PB-REA",
+        "allowed_niche_strategy": "generalist",
+        "can_coexist_with": ["SO-MP", "SO-REA"]
+      },
+      "onboarding_workflow": "mp_playbook_activation",
+      "content_entitlements": ["core_content_package", "rea_management_dashboard"]
+    },
+
+    "SO-MP": {
+      "name": "MP Solo Subscription", 
+      "description": "Mortgage Professional with single exclusive niche in territory",
+      "business_rules": {
+        "max_per_territory_level": 1,
+        "requires_exclusive_niche": true,
+        "can_have_dependents": false,
+        "allowed_niche_strategy": "specialist",
+        "can_coexist_with": ["PB", "SO-REA"]
+      },
+      "onboarding_workflow": "solo_mp_activation",
+      "content_entitlements": ["niche_specific_content_package"]
+    },
+
+    "SO-REA": {
+      "name": "REA Solo Subscription",
+      "description": "Real Estate Agent with single exclusive niche in territory", 
+      "business_rules": {
+        "max_per_territory_level": 1,
+        "requires_exclusive_niche": true,
+        "can_have_dependents": false,
+        "allowed_niche_strategy": "specialist",
+        "can_coexist_with": ["PB", "SO-MP"]
+      },
+      "onboarding_workflow": "solo_rea_activation",
+      "content_entitlements": ["niche_specific_content_package"]
+    },
+
+    "PB-REA": {
+      "name": "REA under MP Playbook",
+      "description": "Dependent REA subscription operating under MP Playbook territory rights",
+      "business_rules": {
+        "max_per_territory_level": "unlimited",
+        "requires_exclusive_niche": true,
+        "is_dependent": true,
+        "parent_type": "PB",
+        "activation_requirement": "parent_active && niche_available && audit_passed"
+      },
+      "onboarding_workflow": "rea_partner_activation",
+      "content_entitlements": ["niche_specific_content_package"]
+    }
+  },
+
+  "workflow_references": {
+    "mp_playbook_activation": "docs/onboarding-workflows.md#mp-playbook",
+    "solo_mp_activation": "docs/onboarding-workflows.md#solo-mp", 
+    "solo_rea_activation": "docs/onboarding-workflows.md#solo-rea",
+    "rea_partner_activation": "docs/onboarding-workflows.md#rea-partner"
+  }
+}
