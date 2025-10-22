@@ -1,0 +1,202 @@
+{
+  "version": "1.0",
+  "last_updated": "2024-06-11",
+  "description": "Defines all status types and their lifecycle for subscriber management and REA onboarding workflows",
+  
+  "status_types": {
+    "subscriber_management": {
+      "description": "Status lifecycle for main subscriber accounts (PB, SO-MP, SO-REA)",
+      "statuses": {
+        "LEAD": {
+          "description": "Initial prospect, not yet subscribed",
+          "next_valid_statuses": ["ACTIVE", "CLOSED_LOST"],
+          "business_rules": "No territory access, no content delivery"
+        },
+        "PENDING": {
+          "description": "Subscription initiated, pending payment or agreement",
+          "next_valid_statuses": ["ACTIVE", "CANCELLED"],
+          "business_rules": "Territory temporarily reserved, no content delivery"
+        },
+        "ACTIVE": {
+          "description": "Fully active subscriber with territory access",
+          "next_valid_statuses": ["SUSPENDED", "CANCELLED", "EXPIRED"],
+          "business_rules": "Full territory rights, content delivery active"
+        },
+        "SUSPENDED": {
+          "description": "Temporarily inactive (payment issue, voluntary pause)",
+          "next_valid_statuses": ["ACTIVE", "CANCELLED"],
+          "business_rules": "Territory held but frozen, no content delivery"
+        },
+        "CANCELLED": {
+          "description": "Subscription terminated by subscriber or DGA",
+          "next_valid_statuses": ["ARCHIVED"],
+          "business_rules": "Territory released immediately, content stopped"
+        },
+        "EXPIRED": {
+          "description": "Subscription reached natural end date",
+          "next_valid_statuses": ["RENEWAL_PENDING", "ARCHIVED"],
+          "business_rules": "Territory held for grace period, content paused"
+        },
+        "RENEWAL_PENDING": {
+          "description": "Expired subscription in renewal negotiation",
+          "next_valid_statuses": ["ACTIVE", "CANCELLED"],
+          "business_rules": "Territory held temporarily, no content delivery"
+        },
+        "ARCHIVED": {
+          "description": "Final state for historical records",
+          "next_valid_statuses": [],
+          "business_rules": "Read-only records for reporting"
+        }
+      }
+    },
+
+    "rea_onboarding": {
+      "description": "Status lifecycle for REA partners under MP Playbook",
+      "statuses": {
+        "NEGOTIATION": {
+          "description": "MP is discussing partnership with REA",
+          "next_valid_statuses": ["FORM_SUBMITTED", "NEGOTIATION_ENDED"],
+          "business_rules": "No niche reservation, informal stage"
+        },
+        "FORM_SUBMITTED": {
+          "description": "MP has submitted REA onboarding form",
+          "next_valid_statuses": ["AUDIT_IN_PROGRESS", "REJECTED"],
+          "business_rules": "Niche temporarily reserved (PENDING in Master Niche List)"
+        },
+        "AUDIT_IN_PROGRESS": {
+          "description": "DGA operations reviewing REA information",
+          "next_valid_statuses": ["AUDIT_PASSED", "AUDIT_FAILED", "MORE_INFO_NEEDED"],
+          "business_rules": "Niche remains reserved, 2 business day SLA"
+        },
+        "MORE_INFO_NEEDED": {
+          "description": "Additional information required from MP/REA",
+          "next_valid_statuses": ["AUDIT_IN_PROGRESS", "REJECTED"],
+          "business_rules": "Niche reservation extended 3 business days"
+        },
+        "AUDIT_PASSED": {
+          "description": "REA has passed all compliance checks",
+          "next_valid_statuses": ["ACTIVE", "CANCELLED"],
+          "business_rules": "Ready for activation, niche confirmed"
+        },
+        "AUDIT_FAILED": {
+          "description": "REA failed compliance checks",
+          "next_valid_statuses": ["ARCHIVED"],
+          "business_rules": "Niche released immediately, cannot reapply with same REA"
+        },
+        "ACTIVE": {
+          "description": "REA partner fully onboarded and active",
+          "next_valid_statuses": ["SUSPENDED", "TERMINATED", "PARENT_INACTIVE"],
+          "business_rules": "Content delivery active, niche exclusively assigned"
+        },
+        "SUSPENDED": {
+          "description": "Temporary pause in partnership",
+          "next_valid_statuses": ["ACTIVE", "TERMINATED"],
+          "business_rules": "Content paused, niche held temporarily"
+        },
+        "TERMINATED": {
+          "description": "Partnership ended by MP or REA",
+          "next_valid_statuses": ["ARCHIVED"],
+          "business_rules": "Niche released, content stopped immediately"
+        },
+        "PARENT_INACTIVE": {
+          "description": "MP Playbook subscription lapsed or cancelled",
+          "next_valid_statuses": ["ARCHIVED", "REACTIVATION_PENDING"],
+          "business_rules": "All PB-REAs become inactive when parent MP cancels"
+        },
+        "REACTIVATION_PENDING": {
+          "description": "MP renewed, REA partnership being restored",
+          "next_valid_statuses": ["ACTIVE", "TERMINATED"],
+          "business_rules": "Quick reactivation path for existing REAs"
+        },
+        "REJECTED": {
+          "description": "Application rejected pre-audit",
+          "next_valid_statuses": ["ARCHIVED"],
+          "business_rules": "Niche released, can reapply with different REA"
+        },
+        "ARCHIVED": {
+          "description": "Final state for historical records",
+          "next_valid_statuses": [],
+          "business_rules": "Read-only for reporting and analytics"
+        }
+      }
+    },
+
+    "content_workflow": {
+      "description": "Status lifecycle for content creation and delivery",
+      "statuses": {
+        "REQUESTED": {
+          "description": "Content creation triggered by subscriber activation",
+          "next_valid_statuses": ["ASSIGNED", "CANCELLED"],
+          "business_rules": "Added to content team queue"
+        },
+        "ASSIGNED": {
+          "description": "Content assigned to specific creator/team",
+          "next_valid_statuses": ["IN_PROGRESS", "CANCELLED"],
+          "business_rules": "Creator has ownership, SLA clock starts"
+        },
+        "IN_PROGRESS": {
+          "description": "Content being actively created",
+          "next_valid_statuses": ["UNDER_REVIEW", "CANCELLED"],
+          "business_rules": "Regular updates required"
+        },
+        "UNDER_REVIEW": {
+          "description": "Content completed, awaiting quality review",
+          "next_valid_statuses": ["APPROVED", "REVISION_NEEDED"],
+          "business_rules": "24-hour review SLA"
+        },
+        "REVISION_NEEDED": {
+          "description": "Changes requested after review",
+          "next_valid_statuses": ["IN_PROGRESS", "CANCELLED"],
+          "business_rules": "Returned to creator with specific feedback"
+        },
+        "APPROVED": {
+          "description": "Content passed quality review",
+          "next_valid_statuses": ["DELIVERED", "SCHEDULED"],
+          "business_rules": "Ready for delivery or scheduling"
+        },
+        "SCHEDULED": {
+          "description": "Content queued for automated delivery",
+          "next_valid_statuses": ["DELIVERED", "CANCELLED"],
+          "business_rules": "Scheduled in content calendar"
+        },
+        "DELIVERED": {
+          "description": "Content successfully delivered to subscriber/channels",
+          "next_valid_statuses": ["COMPLETED", "ANALYZING"],
+          "business_rules": "Delivery confirmed, performance tracking begins"
+        },
+        "ANALYZING": {
+          "description": "Monitoring content performance metrics",
+          "next_valid_statuses": ["COMPLETED", "OPTIMIZATION_NEEDED"],
+          "business_rules": "30-day performance analysis period"
+        },
+        "OPTIMIZATION_NEEDED": {
+          "description": "Content underperforming, updates required",
+          "next_valid_statuses": ["IN_PROGRESS", "COMPLETED"],
+          "business_rules": "Triggers content refresh workflow"
+        },
+        "COMPLETED": {
+          "description": "Content lifecycle finished",
+          "next_valid_statuses": ["ARCHIVED"],
+          "business_rules": "Final state, ready for archiving"
+        },
+        "CANCELLED": {
+          "description": "Content request cancelled",
+          "next_valid_statuses": ["ARCHIVED"],
+          "business_rules": "Subscriber cancelled or became inactive"
+        },
+        "ARCHIVED": {
+          "description": "Content moved to historical records",
+          "next_valid_statuses": [],
+          "business_rules": "Read-only for reporting and reference"
+        }
+      }
+    }
+  },
+
+  "workflow_relationships": {
+    "rea_activation_requires": ["AUDIT_PASSED", "ACTIVE(parent_mp)"],
+    "content_trigger_requires": ["ACTIVE(subscriber)", "AUDIT_PASSED(rea)"],
+    "territory_access_requires": ["ACTIVE", "PENDING"],
+    "niche_reservation_requires": ["FORM_SUBMITTED", "ACTIVE"]
+  }
+}
