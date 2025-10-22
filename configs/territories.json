@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2024-10-28",
+  "last_updated": "2025-10-22",
   "description": "78 Ontario Exclusive Territories with FSA Postal Code Mapping",
   "exclusivity_rules": {
     "playbook": "one_mp_per_territory",
