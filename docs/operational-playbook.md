@@ -1,6 +1,6 @@
 # Operational Playbook
 
-**Last Updated:** 2024-06-11  
+**Last Updated:** 2025-10-22  
 **Status:** Active  
 **Related Files:** All config files and workflow documentation
 
