@@ -1,6 +1,6 @@
 # Omni-Channel Growth Framework (OCGF)
 
-**Last Updated:** 2024-06-11  
+**Last Updated:** 2025-10-22  
 **Status:** Active  
 **Related Files:** `configs/product-types.json`, `docs/rea-onboarding-workflow.md`, GEO/AIO Audit Checklists
 
