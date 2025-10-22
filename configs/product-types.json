@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2024-06-11",
+  "last_updated": "2025-10-22",
   "description": "Defines all subscription product types and their business rules for territory management",
   
   "product_types": {
