@@ -190,6 +190,17 @@ defaults:
 - **Marketing Team:** SEO, analytics, conversion optimization
 - **Customer Success:** User feedback, improvement suggestions
 
+### Sales & Marketing
+- `docs/sales-marketing/website-implementation-plan.md` - Public website strategy
+- `docs/sales-marketing/dga-sales-onboarding-framework.md` - Customer acquisition process
+
+### Pilot Program  
+- `docs/pilot-program/4-rea-pilot-workflows.md` - n8n automation workflows
+- `docs/pilot-program/pilot-success-metrics.md` - Success criteria and measurement
+
+### Website
+- `website/` - Public-facing Jekyll website (GitHub Pages)
+
 ---
 
 **Next Steps:**
