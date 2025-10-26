@@ -1,1 +1,6 @@
+Create a DGA AI-Visibility Audit for {{agent}} in {{market}}. 
+Include an executive summary, key findings based on the five DGA pillars, and three high-impact recommendations. 
+If available, consider their online presence at {{website}} and contact email {{email}}. 
+Use the following framework for structure:
+{{FRAMEWORK}}
 
