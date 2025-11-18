@@ -1,6 +1,6 @@
 # DGA Sales & Onboarding Framework
 
-**Last Updated:** 2025-10-22  
+**Last Updated:** 2025-11-18  
 **Status:** Active  
 **Related Files:** `docs/mp-rea-engagement-playbook.md`, `docs/omni-channel-growth-framework.md`
 
@@ -23,6 +23,23 @@ This framework outlines DGA's direct sales process for acquiring Mortgage Profes
 - Time-consuming to create quality content
 - Difficulty standing out in competitive markets
 - No systematic approach to REA partnerships
+
+### MP Solo Subscriber Profile
+**Ideal Candidate:**
+- Licensed Mortgage Professional with 1+ year of experience
+- Currently working independently or with a small referral network
+- Wants more consistent visibility but prefers a guided, done-with-you structure
+- Has basic comfort with digital tools (email, Google Drive, simple forms)
+- Wants to professionalize their online presence without hiring an agency
+- Open to building stronger relationships with REAs but unsure where to start
+
+**Pain Points:**
+- Struggles to create consistent, branded market updates
+- Relies too heavily on ad-hoc referrals or past clients
+- Low online visibility (GBP under-optimized, weak Google presence)
+- Doesn’t have a structured relationship-building process with REAs
+- Feels behind on digital marketing and unsure what to prioritize
+- Wants a simple, repeatable system without heavy time demands
 
 ### REA Solo Subscriber Profile  
 **Ideal Candidate:**
@@ -67,7 +84,7 @@ This framework outlines DGA's direct sales process for acquiring Mortgage Profes
 - How much time do you spend on marketing and content creation?
 - What would consistent, qualified referrals mean for your business?
 
-**Discovery Call Script - REA Solo:**
+**Discovery Call Script - MP & REA Solo:**
 ```
 "I see you specialize in [their niche]. Tell me about your current online visibility - when people search for [niche] in [market], how easily do they find you?"
 ```
@@ -86,7 +103,7 @@ This framework outlines DGA's direct sales process for acquiring Mortgage Profes
 3. **REA Onboarding Process:** Walk through the partnership framework
 4. **Performance Tracking:** Demonstrate reporting and ROI measurement
 
-**Demo Structure - REA Solo:**
+**Demo Structure - MP & REA Solo:**
 1. **GEO/AIO Audit:** Show current visibility gaps and opportunities
 2. **Content Samples:** Demonstrate niche-specific content quality
 3. **Implementation Simplicity:** Show how easy it is to use provided content
@@ -104,7 +121,7 @@ This framework outlines DGA's direct sales process for acquiring Mortgage Profes
 - All the tools to build a predictable referral engine"
 ```
 
-**Value Proposition - REA Solo:**
+**Value Proposition - MP & REA Solo:**
 ```
 "For [price]/month, you get:
 - Exclusive niche protection in [territory]
@@ -139,7 +156,7 @@ This framework outlines DGA's direct sales process for acquiring Mortgage Profes
 5. 30-Day Success Review
 ```
 
-### REA Solo Onboarding Flow  
+### MP & REA Solo Onboarding Flow  
 ```
 1. Niche Validation & GEO/AIO Baseline Assessment
 2. Content Personalization Session
@@ -167,15 +184,15 @@ This framework outlines DGA's direct sales process for acquiring Mortgage Profes
 ## Tools & Systems
 
 ### Sales Stack
-- **CRM:** [System] for lead tracking and pipeline management
-- **Calendar:** Calendly for demo scheduling
+- **CRM:** [Notion] for lead tracking and pipeline management
+- **Calendar:** Notion Calendar for demo scheduling
 - **Demo Environment:** Pre-configured sandbox for demonstrations
-- **Proposal Tools:** [System] for professional proposals
+- **Proposal Tools:** [Notion] for professional proposals
 
 ### Onboarding Stack
 - **n8n Workflows:** Automated onboarding sequences
 - **Documentation:** DGA knowledge base and training materials
-- **Support System:** [System] for customer support and success
+- **Support System:** [Notion] for customer support and success
 
 ## Continuous Improvement
 
