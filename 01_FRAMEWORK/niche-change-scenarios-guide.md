@@ -1,6 +1,6 @@
 # Niche Change Scenarios Guide
 
-**Last Updated:** 2025-10-22  
+**Last Updated:** 2025-11-18  
 **Status:** Active  
 **Related Files:** `templates/rea-onboarding-capture-form.md`, `docs/rea-onboarding-checklist.md`
 
