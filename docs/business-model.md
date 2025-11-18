@@ -3,9 +3,9 @@
 ## Subscription Streams
 
 ### Playbook Subscriptions (Mortgage Professionals)
-- **Starter:** $249/month - 1 playbook, 2 partners
-- **Pro:** $499/month - 2 playbooks, 5 partners each  
-- **Elite:** $999/month - 4 playbooks, 10 partners each
+- **Starter:** $249/month - 1-3 playbook partners
+- **Pro:** $499/month - 4-6 playbook partners each  
+- **Elite:** $999/month - 7-10 playbook partners each
 
 ### Solo Subscriptions (Individual Professionals)  
 - **REA Solo:** $249/month - Territory + Niche exclusivity
