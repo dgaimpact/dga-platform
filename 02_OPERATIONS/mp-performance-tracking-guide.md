@@ -254,3 +254,6 @@ This guide provides Mortgage Professionals with a structured framework for track
 Every hour and dollar invested in an underperforming REA partner is an hour and dollar not invested in a high-performing partner or new prospect.
 
 **Quality over quantity always wins.**
+
+**Change History**
+2025-11-18 - moved to new kb file structure
