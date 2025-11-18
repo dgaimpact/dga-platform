@@ -3,7 +3,7 @@
 ```markdown
 # Provincial Expansion Framework
 
-**Last Updated:** 2025-10-22  
+**Last Updated:** 2025-11-18  
 **Status:** Active  
 **Related Files:** `configs/territories.json`, `configs/product-types.json`, `docs/business-model.md`
 
@@ -52,13 +52,18 @@ This framework outlines the standardized process for expanding DGA operations in
 ## Province Code Standards
 
 ### Official Province Codes
-| Province | Code | Example Territory |
-|----------|------|-------------------|
-| Ontario | `ON` | `ON-TOR-Metro-Core` |
-| British Columbia | `BC` | `BC-VAN-Metro-Core` |
-| Alberta | `AB` | `AB-CAL-Metro-Core` |
-| Quebec | `QC` | `QC-MTL-Metro-Core` |
-| Manitoba | `MB` | `MB-WPG-Metro-Core` |
+| Province                | Code | Example Territory   |
+| ----------------------- | ---- | ------------------- |
+| Ontario                 | `ON` | `ON-TOR-Metro-Core` |
+| British Columbia        | `BC` | `BC-VAN-Metro-Core` |
+| Alberta                 | `AB` | `AB-CAL-Metro-Core` |
+| Manitoba                | `MB` | `MB-WPG-Metro-Core` |
+| Saskatchewan            | `SK` | `SK-SAS-Metro-Core` |
+| Nova Scotia             | `NS` | `NS-HFX-Metro-Core` |
+| New Brunswick           | `NB` | `NB-MON-Metro-Core` |
+| Prince Edward Island    | `PE` | `PE-CHA-Metro-Core` |
+| Newfoundland & Labrador | `NL` | `NL-STJ-Metro-Core` |
+
 
 ### Territory Numbering Protocol
 - Territory numbers continue **national sequence**
@@ -111,16 +116,17 @@ Assuming last Ontario territory was `ON-025`:
 ## Provincial Market Adaptations
 
 ### Pricing Strategy
-- Market-based pricing analysis for each province
-- Consider local income levels, real estate prices, and competition
-- May require different price points for Core/Mid/Outer tiers
+- Maintain consistent subscription pricing across all Canadian provinces
+- Apply a national price structure for all MP and REA subscription packages
+- Use market-based analysis only to determine whether specific territories should be classified as Core / Mid / Outer
+- Consider local factors (income levels, real estate prices, competition) solely for territory tier designation, not for adjusting subscription prices
+- Core/Mid/Outer tiers may carry different pricing, but the underlying package structure remains uniform nationwide
 
 ### Regulatory Considerations
 | Province | Key Considerations |
 |----------|-------------------|
 | BC | - Real Estate Services Act<br>- BC Financial Services Authority<br>- Specific advertising disclosure requirements |
 | AB | - Real Estate Act of Alberta<br>- RECA regulations<br>- Mortgage broker licensing differences |
-| QC | - French language requirements<br>- Different legal system (Civil Code)<br>- Unique regulatory body (OACIQ) |
 
 ### Content Localization
 - Adapt content for provincial market nuances
