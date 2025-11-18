@@ -1,6 +1,6 @@
 # Advanced MP Strategies Guide
 
-**Last Updated:** 2025-10-22  
+**Last Updated:** 2025-11-18  
 **Status:** Active  
 **Related Files:** `docs/mp-performance-tracking-guide.md`, `templates/monthly-content-calendar-template.md`
 
@@ -17,7 +17,6 @@ This guide provides advanced strategies for Mortgage Professionals managing mult
 | **A-Tier** | High implementers, consistent referrals, responsive | Strategic partnership, premium attention | 2-3 hours/month |
 | **B-Tier** | Good implementers, occasional referrals, engaged | Growth focus, regular nurturing | 1-2 hours/month |
 | **C-Tier** | Inconsistent implementation, minimal referrals | Performance improvement or exit | 30-60 mins/month |
-| **New** | Recently onboarded (<90 days) | Foundation building, training focus | 2-3 hours/month |
 
 ### Portfolio Balance Targets
 - **Ideal Mix:** 20% A-Tier, 50% B-Tier, 20% C-Tier, 10% New
