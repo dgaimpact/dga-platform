@@ -1,6 +1,6 @@
 # Operational Playbook
 
-**Last Updated:** 2025-10-22  
+**Last Updated:** 2025-11-18  
 **Status:** Active  
 **Related Files:** All config files and workflow documentation
 
@@ -231,6 +231,8 @@ This playbook provides day-to-day operational procedures for managing the DGA te
 - Annual compliance and regulatory updates
 
 ## Change History
+2025-10-15 - Original Document
+2025-11-18 - Move to new KB file structure
 
 | Date | Version | Changes |
 |------|---------|---------|
