@@ -1,6 +1,6 @@
 # Niche Management Guide
 
-**Last Updated:** 2025-10-22  
+**Last Updated:** 2025-11-18  
 **Status:** Active  
 **Related Files:** `configs/niches.json`, `configs/product-types.json`, `docs/rea-onboarding-workflow.md`
 
