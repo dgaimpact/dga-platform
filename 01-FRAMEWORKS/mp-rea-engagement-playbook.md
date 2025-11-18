@@ -9,6 +9,7 @@
 - "This isn't a casual 'throw leads when you feel like it' arrangement"
 - "I'm making a significant investment in your success, and I expect the same commitment in return"
 - "We're building a true partnership, not a one-sided referral relationship"
+- “For REAs who worry about protecting their brand identity, DGA’s Brand Voice Blueprint ensures every touchpoint — content, messaging, market updates — aligns precisely with their established tone and style. This eliminates the fear of ‘generic content’ and strengthens authenticity across channels.”
 
 ## Updated Scripts with the New Dynamic
 
