@@ -9,7 +9,7 @@
 ## Core Workflows
 1. Subscriber Onboarding
 2. Territory Assignment  
-3. AI Visibility Audits
+3. GEO/AIO Visibility Audits
 4. Content Plan Generation
 5. 30-Day Recurring Cycles
 
