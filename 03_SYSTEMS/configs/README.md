@@ -36,4 +36,4 @@ Includes:
 - MP Solo  
 - REA Solo  
 - MP Playbook  
-- Tiered volum
+- Tiered volume
