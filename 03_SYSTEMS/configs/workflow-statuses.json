@@ -1,8 +1,7 @@
 {
-  "version": "1.0",
-  "last_updated": "2025-10-22",
+  "version": "1.1",
+  "last_updated": "2025-11-25",
   "description": "Defines all status types and their lifecycle for subscriber management and REA onboarding workflows",
-  
   "status_types": {
     "subscriber_management": {
       "description": "Status lifecycle for main subscriber accounts (PB, SO-MP, SO-REA)",
@@ -49,7 +48,6 @@
         }
       }
     },
-
     "rea_onboarding": {
       "description": "Status lifecycle for REA partners under MP Playbook",
       "statuses": {
@@ -120,7 +118,6 @@
         }
       }
     },
-
     "content_workflow": {
       "description": "Status lifecycle for content creation and delivery",
       "statuses": {
@@ -192,7 +189,6 @@
       }
     }
   },
-
   "workflow_relationships": {
     "rea_activation_requires": ["AUDIT_PASSED", "ACTIVE(parent_mp)"],
     "content_trigger_requires": ["ACTIVE(subscriber)", "AUDIT_PASSED(rea)"],

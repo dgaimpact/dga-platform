@@ -1,0 +1,138 @@
+{
+  "version": "2.0",
+  "last_updated": "2025-11-25",
+  "professions": {
+    "MP": [
+      {
+        "id": "mp_alt_b_lender",
+        "label": "Alternative & B-Lender Solutions"
+      },
+      {
+        "id": "mp_bridge_financing",
+        "label": "Bridge Financing"
+      },
+      {
+        "id": "mp_commercial_mixeduse",
+        "label": "Commercial & Mixed-Use Financing"
+      },
+      {
+        "id": "mp_construction_selfbuild",
+        "label": "Construction & Self-Build Financing"
+      },
+      {
+        "id": "mp_credit_challenged",
+        "label": "Credit-Challenged Solutions"
+      },
+      {
+        "id": "mp_debt_consolidation",
+        "label": "Debt Consolidation & Payment Restructuring"
+      },
+      {
+        "id": "mp_first_time_buyer",
+        "label": "First-Time Homebuyer Guidance"
+      },
+      {
+        "id": "mp_high_net_worth",
+        "label": "High-Net-Worth & Complex-Income Strategies"
+      },
+      {
+        "id": "mp_newcomer_canada",
+        "label": "Newcomer to Canada Programs"
+      },
+      {
+        "id": "mp_preconstruction",
+        "label": "Pre-Construction Financing"
+      },
+      {
+        "id": "mp_private_short_term",
+        "label": "Private & Short-Term Lending Solutions"
+      },
+      {
+        "id": "mp_investor_financing",
+        "label": "Real Estate Investor Financing"
+      },
+      {
+        "id": "mp_refinance_equity",
+        "label": "Refinance & Equity Take-Out Solutions"
+      },
+      {
+        "id": "mp_renewal_switch",
+        "label": "Renewal & Switch Strategies"
+      },
+      {
+        "id": "mp_move_up",
+        "label": "Repeat & Move-Up Homebuyer Strategies"
+      },
+      {
+        "id": "mp_reverse_seniors",
+        "label": "Reverse Mortgage & Seniors Equity Solutions"
+      },
+      {
+        "id": "mp_rural_agri",
+        "label": "Rural & Agricultural Property Financing"
+      },
+      {
+        "id": "mp_second_home",
+        "label": "Second Home & Seasonal Property Financing"
+      },
+      {
+        "id": "mp_bfs_self_employed",
+        "label": "Self-Employed & BFS Solutions"
+      },
+      {
+        "id": "mp_spousal_buyout",
+        "label": "Spousal Buyout & Divorce Strategies"
+      }
+    ],
+    "REA": [
+      {
+        "id": "condo_specialist",
+        "label": "Condo Specialist"
+      },
+      {
+        "id": "divorce_separation_specialist",
+        "label": "Divorce & Separation Specialist"
+      },
+      {
+        "id": "downsizer_empty_nester_specialist",
+        "label": "Downsizer & Empty Nester Specialist"
+      },
+      {
+        "id": "first_time_home_specialist",
+        "label": "First-Time Home Specialist"
+      },
+      {
+        "id": "international_newcomer_specialist",
+        "label": "International & Newcomer Specialist"
+      },
+      {
+        "id": "investor_specialist",
+        "label": "Investor Specialist"
+      },
+      {
+        "id": "luxury_home_specialist",
+        "label": "Luxury Home Specialist"
+      },
+      {
+        "id": "move_up_growing_families_specialist",
+        "label": "Move-Up & Growing Families Specialist"
+      },
+      {
+        "id": "new_build_pre_construction_specialist",
+        "label": "New Build & Pre-Construction Specialist"
+      },
+      {
+        "id": "relocation_corporate_military_specialist",
+        "label": "Relocation, Corporate & Military Specialist"
+      },
+      {
+        "id": "seniors_specialist",
+        "label": "Seniors Specialist"
+      },
+      {
+        "id": "waterfront_recreational_property_specialist",
+        "label": "Waterfront & Recreational Property Specialist"
+      }
+    ]
+  }
+}

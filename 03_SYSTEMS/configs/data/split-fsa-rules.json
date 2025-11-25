@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-10-22",
+  "description": "Ruleset for Ontario FSAs that map to multiple territories. Used to handle edge cases during territory assignment and onboarding.",
+  "split_fsa_rules": {
+    "M1E": {
+      "territories": ["ON-006", "ON-014"],
+      "resolution_strategy": "address_verification_required",
+      "notes": "North York East vs Scarborough East. Use full address (street-level) to determine correct territory."
+    },
+    "L6Y": {
+      "territories": ["ON-021", "ON-023"],
+      "resolution_strategy": "address_verification_required",
+      "notes": "Brampton Central/Downtown vs Brampton East. Use full address / Google Maps to confirm side of boundary."
+    },
+    "K2P": {
+      "territories": ["ON-050", "ON-051"],
+      "resolution_strategy": "map_search_required",
+      "notes": "Ottawa West vs Ottawa Central/Downtown. Use full address and map to confirm neighbourhood alignment."
+    },
+    "L0H": {
+      "territories": ["ON-032", "ON-034"],
+      "resolution_strategy": "manual_assignment",
+      "notes": "Whitchurch-Stouffville vs Pickering rural fringe. Use full address; if still ambiguous, escalate for manual review."
+    },
+    "K0K": {
+      "territories": ["ON-053", "ON-055"],
+      "resolution_strategy": "address_verification_required",
+      "notes": "Kingston/Frontenac/Lennox & Addington vs Belleville/Quinte/PEC. Use municipality and full address to decide."
+    },
+    "K0M": {
+      "territories": ["ON-054", "ON-078"],
+      "resolution_strategy": "address_verification_required",
+      "notes": "Peterborough/Kawartha Lakes vs Haliburton/Minden Hills. Use town name and map if needed."
+    },
+    "N0P": {
+      "territories": ["ON-072", "ON-076"],
+      "resolution_strategy": "address_verification_required",
+      "notes": "Chatham-Kent/Lambton vs Essex County (excl. Windsor/LaSalle). Use municipality and map to confirm."
+    },
+    "L0R": {
+      "territories": ["ON-044", "ON-045", "ON-049"],
+      "resolution_strategy": "map_search_required",
+      "notes": "Hamilton East vs Hamilton West vs Grimsby/Lincoln/West Lincoln. Rural and boundary-heavy; use map pins."
+    }
+  },
+  "default_rules": {
+    "when_not_listed": {
+      "behavior": "use_territories_json_only",
+      "notes": "If an FSA is not in split_fsa_rules, treat the mapping in territories.json / FSA lookup as authoritative."
+    },
+    "on_conflict": {
+      "behavior": "escalate_to_admin",
+      "notes": "If automated address verification cannot clearly resolve between territories, escalate for manual decision."
+    }
+  }
+}
