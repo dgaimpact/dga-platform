@@ -2,6 +2,11 @@ const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
 const { marked } = require('marked');
+const createDOMPurify = require('dompurify');
+const { JSDOM } = require('jsdom');
+
+const window = new JSDOM('').window;
+const DOMPurify = createDOMPurify(window);
 
 const app = express();
 const PORT = 5000;
@@ -16,6 +21,18 @@ marked.setOptions({
   headerIds: true,
   mangle: false
 });
+
+// HTML escape function to prevent XSS
+function escapeHtml(text) {
+  const map = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return text.replace(/[&<>"']/g, m => map[m]);
+}
 
 // Helper function to recursively get all markdown files
 async function getMarkdownFiles(dir = '.', baseDir = '.') {
@@ -75,7 +92,7 @@ function renderTree(tree, level = 0) {
   dirs.forEach(dir => {
     html += `<li class="tree-dir">
       <details ${level === 0 ? 'open' : ''}>
-        <summary>📁 ${dir}</summary>
+        <summary>📁 ${escapeHtml(dir)}</summary>
         ${renderTree(tree[dir], level + 1)}
       </details>
     </li>`;
@@ -85,7 +102,7 @@ function renderTree(tree, level = 0) {
   if (tree._files) {
     tree._files.forEach(file => {
       html += `<li class="tree-file">
-        <a href="/view?file=${encodeURIComponent(file.path)}">📄 ${file.name}</a>
+        <a href="/view?file=${encodeURIComponent(file.path)}">📄 ${escapeHtml(file.name)}</a>
       </li>`;
     });
   }
@@ -262,7 +279,8 @@ app.get('/view', async (req, res) => {
     }
     
     const content = await fs.readFile(fullPath, 'utf-8');
-    const htmlContent = marked(content);
+    const rawHtml = marked(content);
+    const htmlContent = DOMPurify.sanitize(rawHtml);
     const files = await getMarkdownFiles('.');
     const tree = buildTree(files);
     
@@ -272,7 +290,7 @@ app.get('/view', async (req, res) => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${path.basename(filePath)} - DGA Knowledge Base</title>
+  <title>${escapeHtml(path.basename(filePath))} - DGA Knowledge Base</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -461,7 +479,7 @@ app.get('/view', async (req, res) => {
   </style>
   <script>
     window.addEventListener('DOMContentLoaded', function() {
-      const currentFile = "${filePath}";
+      const currentFile = ${JSON.stringify(filePath)};
       const links = document.querySelectorAll('.tree-file a');
       links.forEach(link => {
         if (decodeURIComponent(link.getAttribute('href')).includes(currentFile)) {
@@ -482,7 +500,7 @@ app.get('/view', async (req, res) => {
       ${renderTree(tree)}
     </div>
     <div class="content">
-      <div class="breadcrumb">📍 ${filePath}</div>
+      <div class="breadcrumb">📍 ${escapeHtml(filePath)}</div>
       <div class="markdown-content">
         ${htmlContent}
       </div>
