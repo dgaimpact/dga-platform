@@ -1,141 +1,97 @@
-# 03_SYSTEMS  
-### System Architecture, Data Structures & Platform Configurations
+# **03_SYSTEMS — System Architecture & Operational Logic**
+
+This directory contains the **core system definitions** for the Digital Growth Accelerator (DGA).
+Each file inside this folder represents a *system-level blueprint* that defines how a major DGA function operates — conceptually, operationally, and programmatically.
+
+These system documents act as the “source of truth” for:
+
+* Product logic
+* Territory logic
+* Workflow logic
+* Intake and onboarding systems
+* Content generation systems
+* GEO/AI visibility systems
+* Cross-system dependencies and rules
+
+Everything in this folder is **platform-agnostic** and can be used by:
+
+* Notion frameworks
+* n8n automations
+* StackAI & ChatGPT prompt systems
+* The future DGA SaaS platform
+* Developer handoffs
 
 ---
 
-## Purpose
+## **Folder Structure**
 
-The **03_SYSTEMS** directory documents all *technical systems* that power the Digital Growth Accelerator (DGA) platform.
+```
+03_SYSTEMS/
+  configs/
+  SYSTEMS/
+  README.md   ← You are here
+```
 
-Where **01_FRAMEWORKS** defines strategy and **02_OPERATIONS** defines execution,  
-**03_SYSTEMS** defines the *infrastructure* that makes DGA work at scale:
+### **`configs/`**
 
-- Data structures  
-- Platform integrations  
-- System logic  
-- Configuration standards  
-- Architecture patterns  
-- JSON schemas and registries  
+Machine-readable configuration files used by systems:
 
-This folder is the canonical reference for anyone building, maintaining, or integrating DGA systems.
+* `territories.json`
+* `niches.json`
+* `product-types.json`
+* `workflow-statuses.json`
+* (future) subscription rules, pricing tables, prompt schemas, etc.
 
----
-
-## Scope
-
-Systems include any technical layer that:
-
-- Stores or structures data  
-- Provides a functional capability (CRM, Content Engine, Audit Engine)  
-- Connects to external platforms (Notion, Google Workspace, n8n, Telegram)  
-- Defines schemas, standards, or configuration rules  
-- Supports automations, workflows, or StackAI prompts  
-
-If a document describes how something *works behind the scenes*, it belongs in **03_SYSTEMS**.
+These act like global constants.
 
 ---
 
-## Current Folder Contents
+### **`SYSTEMS/`**
 
-The folder includes (as of now):
+Human-readable system design documents:
 
-### **configs/**  
-A folder containing all DGA system configuration files.  
-These govern how Notion, CRM, and various engines store and interpret information.
+* `system-801-geo-ai-visibility-audit-system.md`
+* `system-802-brand-voice-interview-system.md`
+* `system-803-playbook-system.md`
+* `system-804-lead-intake-crm-system.md`
+* `system-805-content-engine-system.md`
 
-Current files include:
+Each follows a consistent structure:
 
-- `niches.json`  
-- `product-types.json`  
-- `territories.json`  
-- `workflow-statuses.json`  
-- `potential-config-files.md`  
-- `readme.md` (config-level explanation)
-
-### **readme.md**  
-A high-level overview of the Systems folder.  
-Great place for contributors to understand the purpose of the folder.
-
-### **notion-crm.md**  
-Documentation for the Notion CRM structure, including:
-
-- Database architecture  
-- Key properties  
-- Data flow into DGA systems  
-- Integration reference for n8n and future StackAI connectors
+* Purpose
+* Inputs / Outputs
+* Data dependencies
+* Workflow states
+* Automations
+* APIs / prompts used
+* Edge cases
+* Version control
 
 ---
 
-## Future Expected Contents
+## **Purpose of This Folder**
 
-As DGA’s systems mature, this folder will include:
+The goal of `03_SYSTEMS` is to act as the **master blueprint layer** for how the DGA platform works.
 
-### **Audit Engine Architecture**  
-- How audits are structured internally  
-- JSON schema for GEO/AI reports  
-- System logic to support Workflow-901
+This is where:
 
-### **Content Engine Architecture**  
-- How long-form → derivative → OCGF outputs are generated  
-- Entity alignment rules  
-- File and asset structures
+* Business rules are defined
+* Operational constraints are documented
+* Cross-system relationships are mapped
+* The future SaaS backend logic will come from
+* Developers and AI agents can reference exact system behaviour
 
-### **Playbook Engine Architecture**  
-- How MP + REA playbooks are assembled  
-- Data → template → system mapping
-
-### **System Schema Registry**  
-A global index of all:
-
-- JSON schemas  
-- Required inputs/outputs  
-- Data-types  
-- Validation rules  
-
-This ensures consistency across Systems, Workflows, Automations, and Prompts.
-
-### **Platform Integration Blueprints**  
-Documentation for:
-
-- Google Drive folder logic  
-- Gmail integration rules  
-- Calendar sync protocol  
-- GitHub branching and sync logic  
-- Telegram Gateway (high-level view; details live in **04_AUTOMATIONS**)
+This folder **does not contain code** — only logic, rules, definitions, and workflows.
 
 ---
 
-## When to Add or Update a System File
+## **Contributing / Updating**
 
-Add a file here when you are documenting:
+When updating any system:
 
-- A system that powers a workflow  
-- A structural dependency for prompts or frameworks  
-- A schema or registry used by automations  
-- A functional capability (CRM rules, Content Engine logic, Audit Engine logic)  
-- A cross-platform structure (Notion → Google → GitHub)  
+1. Update the appropriate system document in `SYSTEMS/`
+2. Update the corresponding JSON in `configs/`
+3. Commit & Push through Replit → GitHub
+4. Note the update in the system’s `Version History` section
 
-Do **not** put execution steps here — those belong in:
-
-- **02_OPERATIONS** (SOPs, instructions)  
-- **04_AUTOMATIONS** (workflow logic)
-
----
-
-## Relationship to Other Folders
-
-- **01_FRAMEWORKS** → defines the strategy  
-- **03_SYSTEMS** → defines the structure  
-- **04_AUTOMATIONS** → executes system logic  
-- **08_STACKAI_PROMPT_LIBRARY** → interacts with systems for dynamic outputs  
-- **02_OPERATIONS** → uses systems to onboard and deliver DGA services  
-
-This folder sits at the center of DGA’s technical layer.
-
----
-
-## Status
-
-This folder is **active** and will expand as new systems are designed and implemented.  
-All future DGA systems must be documented here before being integrated into automations or prompt libraries.
-
+All changes here should remain **intentionally deliberate and well-documented**.
