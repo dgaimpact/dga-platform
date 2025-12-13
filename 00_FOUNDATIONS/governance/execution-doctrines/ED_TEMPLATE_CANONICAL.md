@@ -28,6 +28,21 @@ This document is **binding**.
 
 If a system behaves differently than specified here, the system is wrong.
 
+This doctrine is constrained by the DGA Pillar Lock Reference and must not introduce behavior that violates pillar ownership.
+
+## 1.1 Pillar Ownership Declaration
+
+This Execution Doctrine operates **exclusively within the following DGA Pillar**:
+
+- **Primary Pillar:** P# — [Pillar Name]
+
+This doctrine may **consume outputs** from other pillars but must not:
+- execute actions owned by another pillar
+- redefine pillar boundaries
+- shortcut pillar sequencing
+
+If a required behavior violates pillar ownership, this doctrine is invalid.
+
 ---
 
 ## 2. Preconditions
