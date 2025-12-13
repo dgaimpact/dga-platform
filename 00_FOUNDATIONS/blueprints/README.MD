@@ -1,4 +1,4 @@
-# 00_BLUEPRINTS — Canonical Governance Documents
+# BLUEPRINTS — Canonical Governance Documents
 
 **Purpose**
 This folder contains all **Blueprints (BP)** for the DGA platform.
