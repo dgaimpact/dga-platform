@@ -6,6 +6,11 @@
 **Created:** 2025-12-13
 **Status:** Binding Execution Doctrine
 
+**Governing Authority:**
+
+- DGA_BUSINESS_MODEL.md
+- PILLAR_LOCK_REFERENCE.md
+
 **Governing Blueprint:**
 
 * BP–P3–Omni-Presence-Blueprint
@@ -47,12 +52,30 @@ This doctrine does **not**:
 * define prompt phrasing
 * define UI presentation details
 * override Blueprint-level constraints
+* perform or trigger content creation, publishing, or relationship continuity actions
 
 If a conflict exists, the Blueprint prevails.
 
 ---
 
-### 1.3 Execution Modes (Mandatory Declaration)
+### 1.3 Pillar Ownership Declaration
+
+This Execution Doctrine operates **exclusively within the DGA Audit Pillar (P3)**.
+
+Primary Pillar Ownership:
+- **P3 — Audit**
+
+This doctrine may consume inputs from other pillars but must not:
+- execute actions owned by another pillar
+- initiate content creation or publishing
+- trigger relationship outreach or continuity actions
+- shortcut pillar sequencing defined in governance documents
+
+If any required behavior violates pillar ownership, this doctrine is invalid.
+
+---
+
+### 1.4 Execution Modes (Mandatory Declaration)
 
 Every audit run must declare an **execution mode** prior to initiation.
 
@@ -75,7 +98,7 @@ No audit may execute without an explicitly declared mode.
 
 ---
 
-### 1.4 Required Platforms
+### 1.5 Required Platforms
 
 The following platforms are **mandatory** for execution of this doctrine:
 
@@ -88,7 +111,7 @@ If any required platform is unavailable, execution behavior is governed strictly
 
 ---
 
-### 1.5 Required Assets by Platform
+### 1.6 Required Assets by Platform
 
 #### Supabase (SB)
 
@@ -136,7 +159,7 @@ User-facing communication rules are defined elsewhere.
 
 ---
 
-### 1.6 Pre-Execution Gate (Non-Negotiable)
+### 1.7 Pre-Execution Gate (Non-Negotiable)
 
 Prior to initiating an audit run, the system must verify:
 
