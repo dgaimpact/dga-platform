@@ -5,7 +5,13 @@
 Version: vX.X  Created: YYYY-MM-DD  Status: Binding (Active)
 
 Applies To: [System / Agent / Platform]
-Governed By: BP–P#–[Blueprint Name]
+
+Governing Authority:
+- DGA_BUSINESS_MODEL.md
+- PILLAR_LOCK_REFERENCE.md
+
+Governed By:
+- BP–P#–[Blueprint Name]
 
 ---
 
