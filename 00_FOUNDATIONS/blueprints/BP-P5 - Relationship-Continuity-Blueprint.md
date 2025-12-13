@@ -1,4 +1,4 @@
-BP–P5–RELATIONSHIP CONTINUITY BLUEPRINT
+## BP–P5–RELATIONSHIP CONTINUITY BLUEPRINT
 Relationship Continuity Intent, Boundaries & Governance
 
 Version: v1.0  
