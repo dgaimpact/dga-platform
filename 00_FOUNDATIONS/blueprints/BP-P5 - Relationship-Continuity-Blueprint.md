@@ -1,4 +1,5 @@
-BP–P5–RELATIONSHIP CONTINUITY BLUEPRINT
+# BP–P5–RELATIONSHIP CONTINUITY BLUEPRINT
+
 Relationship Continuity Intent, Boundaries & Governance
 
 Version: v1.0  Created: 2025-12-13  Status: Governing Authority (Active)
@@ -7,56 +8,57 @@ Related DGA Pillars (Reference Only): P3 – Audit · P4 – Content Creation & 
 
 ---
 
-FOUNDER DOCTRINE
+## FOUNDER DOCTRINE
 
 This Blueprint documents decisions already made.
 
 It exists to:
-• prevent relational pressure from re-entering the system  
-• constrain interpretation of “follow-up” and “continuity”  
-• protect long-term trust  
-• ensure execution respects availability over persistence  
+- prevent relational pressure from re-entering the system
+- constrain interpretation of “follow-up” and “continuity”
+- protect long-term trust
+- ensure execution respects availability over persistence
 
 If a downstream system, Execution Doctrine, SOP, or automation conflicts with this Blueprint, the conflict must be resolved here first.
 
 ---
 
-## 1. Authority & Scope
+## 1. Purpose & Authority
 
-**Document Type:** Blueprint (BP)  
-**Pillar:** P5 — Relationship Continuity  
-**Authority Level:** Governing (Intent & Boundaries)  
+This document is the **canonical governing authority** for Relationship Continuity within the Digital Growth Accelerator (DGA).
 
-This document defines **what Relationship Continuity is and is not** within the Digital Growth Accelerator (DGA).
+It exists to:
+- define what Relationship Continuity is and is not
+- constrain interpretation and execution
+- prevent pursuit logic from re-entering the system under new labels
+- ensure availability is respected over persistence
 
-It governs:
-- relationship continuity intent
-- interaction boundaries
-- language constraints
-- conceptual continuity states
-- interaction with other operating pillars
+This Blueprint governs **intent and boundaries only**.
 
 It does **not** define:
 - workflows
 - queues or cadences
 - CRM behavior
 - tooling
-- field names or schemas
+- schemas or field names
 - automation logic
 
 Those are defined exclusively in Execution Doctrines, Registries, and SOPs.
 
 ---
 
-## 2. Purpose of Relationship Continuity
+## 2. What Problem Relationship Continuity Exists to Solve
 
-Relationship Continuity exists to ensure that **valuable relationships are respected over time without pressure, pursuit, or decay**.
+Relationship Continuity exists to solve a structural problem:
 
-It answers one question only:
+> How does DGA remain present, reliable, and available over time **without creating pressure, urgency, or escalation**?
 
-> How does DGA remain present, reliable, and available without chasing or escalating?
+The system assumes:
+- people are busy
+- timing varies
+- silence is neutral
+- non-response is not rejection
 
-Continuity is about **maintaining a stable line of connection**, not driving action, response, or outcomes.
+Continuity maintains a **stable line of connection**, not momentum.
 
 ---
 
@@ -70,12 +72,6 @@ Relationship Continuity is:
 - non-assumptive
 - non-reactive
 - stability-oriented
-
-It assumes that:
-- people are busy
-- timing matters
-- silence is neutral
-- non-response is not rejection
 
 The system adapts to availability — it does not attempt to override it.
 
@@ -92,7 +88,7 @@ Relationship Continuity is explicitly **not**:
 - sales enablement
 - outcome acceleration
 
-Any logic designed to **increase response probability** violates this pillar.
+Any logic designed to increase response probability violates this pillar.
 
 ---
 
@@ -101,11 +97,11 @@ Any logic designed to **increase response probability** violates this pillar.
 **Availability without insistence.**
 
 DGA maintains presence without:
-- pressure
 - repetition
 - urgency
 - implication
 - escalation
+- pressure
 
 Presence is offered.  
 Response is optional.
@@ -114,7 +110,7 @@ Response is optional.
 
 ## 5. Continuity as State Awareness (Conceptual)
 
-Relationship Continuity operates through **state awareness**, not pressure.
+Relationship Continuity operates through **state awareness**, not pursuit.
 
 At a conceptual level, relationships may exist in observable states such as:
 - **Available** — engagement occurs naturally
@@ -146,9 +142,10 @@ Shortening timeframes to provoke response is prohibited.
 
 ---
 
-## 7. Relationship to Other Pillars
+## 7. Relationship to Other DGA Pillars
 
 ### P3 — Audit
+
 - Audits may inform **timing awareness**
 - Audits never justify pursuit
 - Audit insights do not create urgency
@@ -157,22 +154,24 @@ Shortening timeframes to provoke response is prohibited.
 ---
 
 ### P4 — Content Creation & Publishing
+
 - Content may exist independently of contact
-- Content distribution does not constitute outreach
-- Publishing does not reset continuity states
+- Publishing does not constitute outreach
+- Distribution does not reset continuity states
 
 ---
 
 ### P1 / P2 — Prospecting & Intake
+
 - Continuity applies only **after** a relationship exists
 - Prospecting logic does not bleed into P5
 - Intake completion does not imply availability
 
 ---
 
-## 8. Language & Framing Constraints
+## 8. Language, Interpretation & Framing Constraints
 
-Allowed language is:
+Allowed language:
 - calm
 - optional
 - informational
@@ -191,9 +190,10 @@ Silence must never be framed as a problem.
 
 ---
 
-## 9. Human & System Roles
+## 9. Human & System Responsibilities
 
-### System Role
+### System Responsibilities
+
 - record contact attempts
 - respect pauses
 - honor re-entry timing
@@ -202,7 +202,8 @@ Silence must never be framed as a problem.
 
 ---
 
-### Human Role
+### Human Responsibilities
+
 - accept non-response
 - avoid improvisation
 - trust system cadence
@@ -212,7 +213,7 @@ Human impatience does not override continuity.
 
 ---
 
-## 10. Governance Rules (Non-Negotiable)
+## 10. Non-Negotiable Invariants
 
 1. Continuity ≠ conversion  
 2. Silence ≠ failure  
@@ -221,11 +222,11 @@ Human impatience does not override continuity.
 5. No chase logic  
 6. Respect beats persistence  
 
-Any proposal that violates these rules is rejected unless this Blueprint is formally revised.
+If a proposal violates an invariant, it is rejected unless this Blueprint is formally revised.
 
 ---
 
-## 11. Downstream Enforcement (Declaration Only)
+## 11. Downstream Enforcement
 
 This Blueprint is enforced through:
 - **ED–P5 — Relationship Continuity Execution Doctrine**
