@@ -1,34 +1,30 @@
----
-document_id: BP-P5-REL-CONT
-document_type: Blueprint
-operating_pillar: P5 — Relationship Continuity
-authority_level: Governing
-status: Active
-version: v1.0
-created_date: 2025-12-13
-last_updated: 2025-12-13
-owner: Digital Growth Accelerator (DGA)
-governs:
-  - relationship continuity intent
-  - availability-based engagement
-  - non-pursuit interaction rules
-  - continuity state semantics
-does_not_define:
-  - workflows
-  - automation logic
-  - CRM behavior
-  - queues or cadences
-  - field names or schemas
-downstream_dependencies:
-  - ED-P5 — Relationship Continuity Execution Doctrine
-  - DGA Schema & State Registry
-  - Relationship Continuity SOPs
-supersedes: null
-superseded_by: null
----
+BP–P5–RELATIONSHIP CONTINUITY BLUEPRINT
+Relationship Continuity Intent, Boundaries & Governance
 
-# BP-P5 — Relationship Continuity Blueprint  
-**Digital Growth Accelerator (DGA)**
+Version: v1.0  
+Created: 2025-12-13  
+Status: Governing Authority (Active)
+
+Related DGA Pillars (Reference Only):
+• P3 – Audit  
+• P4 – Content Creation & Publishing  
+• P5 – Post-Publish Reinforcement
+
+FOUNDER DOCTRINE
+
+This Blueprint documents decisions already made.
+
+It exists to:
+
+• prevent relational pressure from re-entering the system  
+• constrain interpretation of “follow-up” and “continuity”  
+• protect long-term trust  
+• ensure execution respects availability over persistence  
+
+If a downstream system, Execution Doctrine, SOP, or automation
+conflicts with this Blueprint, the conflict must be resolved here first.
+
+TABLE OF CONTENTS
 
 ---
 
