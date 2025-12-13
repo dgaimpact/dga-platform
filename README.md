@@ -1,251 +1,173 @@
-# Digital Growth Accelerator (DGA) — Platform Knowledge Base  
-*A unified, version-controlled architecture for all DGA frameworks, systems, standards, and operational workflows.*
+# Digital Growth Accelerator (DGA) — Platform Knowledge Base
+
+*A governed, pillar-based operating system for AI visibility, content authority, and relationship continuity.*
 
 ---
 
-## Purpose of This Repository
-This repository serves as the **single source of truth** for the entire Digital Growth Accelerator (DGA) ecosystem.  
-It centralizes all knowledge, standards, and operational assets required to deliver, scale, and maintain DGA across:
+## What This Repository Is
 
-- Frameworks (Brand Voice, OCGF, GEO/AI Visibility, MP–REA Engagement)
-- Standards (output, tone, GEO/AI, instruction, prompt construction, audit evidence)
-- Systems (Notion CRM, Playbook Engine, Content Engine, Audit Engine)
-- Workflows (voice acquisition, audits, content production, CRM routing)
-- Platform integrations (Notion, Google Workspace, GitHub, n8n, Telegram)
-- SOPs and operational playbooks
-- Audit tools, routing protocols, templates
-- Automation specifications and code
+This repository is the **single source of truth** for the Digital Growth Accelerator (DGA) platform.
 
-This Knowledge Base ensures that **every part of DGA is documented, auditable, upgradeable, and future-proof.**
+It contains all governing documents, pillar execution artifacts, systems, automations, and operational references required to **design, operate, scale, and audit** DGA.
+
+This repository is **governed**, **version-controlled**, and **pillar-aligned**.
 
 ---
 
-# Repository Structure
+## Governing Authority (Read First)
 
-Below is the **future-state architecture**, including active folders and upcoming expansions.
+All documents and systems in this repository are governed by:
 
-```
-00_FOUNDATIONS/
-01_FRAMEWORKS/
-02_OPERATIONS/
-03_SYSTEMS/
-04_AUTOMATIONS/
-05_AUDIT_TOOLS/
-06_CONTENT_SYSTEM/
-07_SALES_MARKETING/
-08_STACKAI_PROMPT_LIBRARY/     ← NEW (Live)
-99_ARCHIVE/
-```
+- **`00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md`**
+- **`00_FOUNDATIONS/GOVERNANCE/PILLAR_LOCK_REFERENCE.md`**
+
+If any document conflicts with these authorities, the conflict is resolved **there first**.
+
+This README is **navigational only**.
 
 ---
 
-# Folder-by-Folder Guide
+## DGA Operational Pillars (Primary Navigation)
 
-## **00_FOUNDATIONS/**
-Core principles that define the DGA platform.
+DGA operates on **five locked operational pillars**.  
+Pillars define **ownership, sequencing, and execution boundaries**.
+
+Each pillar contains its own:
+- Blueprints
+- Execution Doctrines (EDs)
+- Systems
+- Automations
+- SOPs (where applicable)
+
+---
+
+### **P1 — Prospecting**
+**Purpose:** Who should enter the DGA ecosystem.
 
 Includes:
-- Positioning & Value Architecture  
-- Brand Philosophy & Identity  
-- Core Offer Structure  
-- MP/REA Ecosystem Overview  
-- Nomenclature, definitions, and system language  
+- Education-first positioning
+- Prospect diagnostics
+- Pre-intake visibility checks
 
 ---
 
-## **01_FRAMEWORKS/**
-All high-level strategic frameworks that govern DGA.
+### **P2 — Intake & Onboarding**
+**Purpose:** Who the subscriber actually is at activation.
 
 Includes:
-- **Brand Voice Framework**
-- **Omni-Channel Growth Framework (OCGF)**
-- **GEO/AI Visibility Framework**
-- **MP–REA Engagement Model**
-- Narrative, content, and entity-building foundations
-
-Future additions:
-- Persona/Niche Architecture Index (links to StackAI Prompt Library)
+- Entity normalization
+- NAP and platform validation
+- Readiness for audit and publishing systems
 
 ---
 
-## **02_OPERATIONS/**
-Execution, SOPs, delivery workflows, and internal protocols.
+### **P3 — Audit**
+**Purpose:** Understand visibility and recommendability without bias.
 
 Includes:
-- Onboarding flows  
-- Implementation scripts  
-- Notion and Google Workspace integration workflows  
-- Scheduling, task routing, CRM management  
-- Internal documentation standards  
-
-Coming Soon:
-- **Notion ↔ GitHub Sync SOP**  
-- **GitHub Contribution & Versioning SOP**  
-- **Content Engine Production SOP**
+- Snapshot audits
+- Internal ecosystem monitoring
+- Adhoc diagnostic audits
 
 ---
 
-## **03_SYSTEMS/**
-Technical systems architecture for DGA.
+### **P4 — Content Creation & Publishing**
+**Purpose:** Create and distribute structured authority content.
 
 Includes:
-- Notion CRM System  
-- Data Structures (Niches, Territories, Product Types, Workflow Statuses)  
-- System configurations (JSON standards)  
-- System-level blueprints  
-
-Future additions:
-- Full Systems Documentation for:  
-  - Audit Engine  
-  - Content Engine  
-  - Playbook Engine  
-  - CRM/Scoring System  
+- Long-form content creation
+- Canonical publishing (DGA Authority Hub)
+- Managed omni-channel population
 
 ---
 
-## **04_AUTOMATIONS/**
-All automation architecture, primarily built around **n8n**, but expandable.
+### **P5 — Relationship Continuity**
+**Purpose:** Ensure no active subscriber relationship goes cold or transactional.
 
 Includes:
-- Telegram Gateway workflow  
-- API pipelines and triggers  
-- Data transformation logic  
-- n8n node documentation  
-- Automation QA and logging standards  
-
-Future additions:
-- Multi-step AI-assisted automation flows  
-- Webhook orchestration layer  
-- GitHub-driven automation triggers  
+- Human-led outreach cadence
+- Continuity tracking
+- Escalation without automation of intent
 
 ---
 
-## **05_AUDIT_TOOLS/**
-All audit-related tools and supporting documentation.
+## Shared Platform & Cross-Pillar Assets
+
+Some assets support **multiple pillars** and are intentionally centralized.
+
+### **00_FOUNDATIONS/**
+Governance, templates, registries, and canonical references.
 
 Includes:
-- GEO/AI Audits  
-- Visibility assessments  
-- Competitor scans  
-- Persona/Niche audit tools  
-- Routing guides  
-- Template extractors  
-
-Future additions:
-- Full integration with StackAI Prompt Library via Systems/Workflows  
+- Business Model
+- Pillar Lock Reference
+- Templates (ED, BP)
+- Canonical registries
 
 ---
 
-## **06_CONTENT_SYSTEM/**
-Everything related to structured content production.
+### **90_SHARED_PLATFORM/** *(or equivalent)*
+Cross-cutting assets that do not belong to a single pillar.
 
 Includes:
-- Topic generators  
-- Derivative content rules  
-- OCGF standardized distributions  
-- Social, long-form, and repurposing templates  
-- Branding & narrative assets  
-
-Future additions:
-- Entity-aligned content compliance scripts  
-- Content QA checklists (Standards-based)
+- Stack & integration documentation
+- StackAI Prompt Library
+- Sales and positioning assets
+- Style and standards references
 
 ---
 
-## **07_SALES_MARKETING/**
-Revenue, acquisition, authority, and outreach systems.
+### **99_ARCHIVE/**
+Deprecated, superseded, or legacy materials.
 
-Includes:
-- Sales scripts  
-- Email sequences  
-- Webinar structures  
-- Landing page frameworks  
-- Market exclusivity positioning  
-- Authority-building assets  
-
-Future additions:
-- DGA Partner Sales System  
-- Co-marketing scripts (MP/REA bundles)
+All archived items must be clearly marked and must not govern active systems.
 
 ---
 
-## **08_STACKAI_PROMPT_LIBRARY/**
-A full, structured library of all AI-driven prompt assets used across DGA.
-
-### This includes:
-- **Standards (Standards-601 → 607)**  
-- **Systems (System-801 → 805)**  
-- **Workflows (Workflow-901 → 905)**  
-- **Platform Prompts (Platform-701 → 710)**  
-- **Audit/Content/Persona/Niche/Other Prompt Families** (111+ prompts)
-
-Status:
-- **Live (MVP Complete)**  
-- GitHub sync in progress  
-- Individual prompt pages coming online soon  
-
----
-
-## **99_ARCHIVE/**
-Deprecated, superseded, or retired materials.
-
----
-
-# Platform Navigation Guide
+## How to Navigate This Repository
 
 ### New to DGA?
-Start with:  
-- **00_FOUNDATIONS**  
-- **01_FRAMEWORKS**
-
-### Working with Clients (MPs/REAs)?
-- Engagement Framework → 01_FRAMEWORKS  
-- Audits/Personas/Niches → 05_AUDIT_TOOLS  
-- Scripts → 07_SALES_MARKETING  
-
-### Building Content?
-- Core templates → 06_CONTENT_SYSTEM  
-- Brand Voice → 01_FRAMEWORKS  
-- OCGF → 01_FRAMEWORKS  
-
-### Implementing Systems?
-- Notion/GitHub/Google → 03_SYSTEMS  
-- Workflows → 04_AUTOMATIONS  
-- SOPs → 02_OPERATIONS  
-
-### Maintaining the Knowledge Base?
-- Standards → 08_STACKAI_PROMPT_LIBRARY  
-- Systems/Workflows → 08_STACKAI_PROMPT_LIBRARY  
-- GitHub sync → 02_OPERATIONS  
+Start with:
+1. `00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md`
+2. `00_FOUNDATIONS/GOVERNANCE/PILLAR_LOCK_REFERENCE.md`
+3. Then explore each pillar folder in order (P1 → P5)
 
 ---
 
-# Coming Soon (Roadmap Anchors)
-
-- Expanded StackAI Prompt Library integration  
-- System-level documentation packages  
-- Mermaid architecture diagrams  
-- Governance and version-control policies  
-- Unified DGA Schema Registry  
+### Working on Systems or Automations?
+Navigate to the **pillar that owns the behavior**, then:
+- `SYSTEMS/`
+- `AUTOMATIONS/`
+- `EXECUTION_DOCTRINES/`
 
 ---
 
-# Versioning & Governance
-
-This repo follows:
-
-- Semantic content versioning  
-- Standards-first update rules  
-- Git-based lineage tracking  
-- Internal QA workflows  
-- Prompt-level audit trails  
-
-A formal governance SOP will be added under **02_OPERATIONS**.
+### Writing or Updating Docs?
+- Governance → `00_FOUNDATIONS`
+- Pillar behavior → that pillar’s folder
+- Cross-pillar assets → `90_SHARED_PLATFORM`
+- Uncertain legacy items → `99_ARCHIVE`
 
 ---
 
-# Maintainers
+## Versioning & Change Discipline
+
+This repository follows:
+- Versioned governing documents
+- Pillar ownership enforcement
+- No silent changes
+- Deterministic execution rules for systems
+
+Governance always precedes implementation.
+
+---
+
+## Maintainer
+
 **Steve Dainard**  
-Founder & Architect, Digital Growth Accelerator  
+Founder & Architect — Digital Growth Accelerator
 
-This repository evolves continuously as the DGA platform expands.
+---
+
+*DGA is intentionally constrained so it remains valuable.  
+Systems outperform tactics. Governance protects trust.*
