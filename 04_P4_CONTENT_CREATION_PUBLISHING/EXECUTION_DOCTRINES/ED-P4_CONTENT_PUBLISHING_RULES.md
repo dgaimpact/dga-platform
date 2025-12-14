@@ -63,17 +63,31 @@ If a term is not defined here, the system must not infer its meaning.
 
 ## 4. Canonical Publishing Destinations (Mandatory)
 
-The following destinations are **mandatory** for all applicable content:
+The following publishing destinations are **mandatory** for all applicable content and are **published directly by DGA systems**.
+
+These destinations represent the **highest-weight GEO and AIO authority signals**.
+
+Mandatory destinations:
 
 - **DGA Authority Hub**
   - Canonical long-form article hosting
   - Primary indexable authority artifact
 
-- **Required Core Platforms**
-  - Platforms designated by audit outputs as required for corroboration
-  - Platform list is governed elsewhere and versioned
+- **Google Business Profile (GBP)**
+  - Local entity corroboration
+  - Mandatory for GEO visibility
 
-Content must be published to **all mandatory destinations** to be considered complete.
+- **Facebook Business Page**
+  - Brand and entity reinforcement
+  - Cross-platform corroboration signal
+
+- **LinkedIn Profile**
+  - Professional authority validation
+  - AI answer corroboration signal
+
+Content must be successfully published to **all mandatory destinations** to be considered complete.
+
+Subscribers may not opt out of mandatory destinations.
 
 ---
 
