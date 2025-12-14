@@ -1,6 +1,6 @@
 # DGAImpact.com — Website Rebuild Brief
 
-**Version:** v1.0
+**Version:** v1.1
 **Created:** 2025-12-14
 **Status:** Execution Reference (Build Brief)
 
@@ -158,20 +158,84 @@ Exact slugs may change, but **surface separation must remain intact**.
 
 * account-number gated
 * URL-accessible
-* blocked from indexing
+* blocked from indexing (`noindex`, `nofollow`)
 
-**Required Capabilities:**
+**Required Page Types (Templates):**
 
-* content archive view
-* publishing status (past / upcoming)
-* mandatory vs optional platform indicators
-* downloadable content for optional platforms
+#### Page Type A — SO-Style Account Holder Page
+
+Applies to:
+
+* SO MP (payer)
+* SO REA (payer)
+* PB REA sub-account holder (non-payer)
+
+Must display (read-only):
+
+* current snapshot (audit/status summary)
+* what’s upcoming (next cycle / scheduled items)
+* archive view using accordion blocks (newest → oldest)
+
+  * within each cycle accordion:
+
+    1. **Mandatory platform outputs** (samples + live URLs where applicable)
+    2. **Optional platform outputs** (samples + downloads package), determined by that account’s optional platform settings
+
+Cross-link rule (allowed):
+
+* The SO-style page may include a URL link to the **complementary counterpart article** (e.g., MP ↔ REA) **only if the counterpart article is live**.
+
+#### Page Type B — PB Master Page (MP payer)
+
+Applies to:
+
+* PB MP subscriber (payer)
+
+Must display (read-only):
+
+* the MP’s own SO-style content section (same structure as Page Type A)
+* a partner oversight block with:
+
+  * links to each REA referral partner sub-account page (max 5)
+  * high-level partner status indicators (reflection-only), such as:
+
+    * last published date
+    * next scheduled publish
+    * mandatory platform completion flags
+
+Privacy / isolation rule (non-negotiable):
+
+* PB REA sub-accounts must **never** have access to any other PB REA sub-account pages.
 
 **Constraints:**
 
-* read-only
-* no triggers
-* no execution
+* no triggering actions
+* no editing or execution controls
+* no automation
+
+---
+
+## 4.5 URL Format Guidance (Build Standard)
+
+The following URL patterns are recommended to keep access and structure unambiguous.
+
+### Public Surfaces
+
+* DGA Insights (DGA-authored): `/insights/<slug>/`
+* Authority Hub (account-holder authored): `/authority/<profession>/<account-holder-slug>/articles/<slug>/`
+* Trust Network profiles: `/trust-network/<profession>/<region>/<territory>/<account-holder-slug>/`
+
+### Private Account Hub
+
+* Login: `/account/login/`
+* SO-style account page: `/account/<account-number>/`
+* PB master page: `/account/<account-number>/playbook/`
+* PB REA sub-account page: `/account/<sub-account-number>/`
+
+Notes:
+
+* Private Account Hub routes must be blocked from indexing.
+* Private routes must not be linked in public navigation.
 
 ---
 
