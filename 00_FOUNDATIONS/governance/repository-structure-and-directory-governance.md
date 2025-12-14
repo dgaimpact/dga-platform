@@ -62,22 +62,45 @@ No additional top-level folders may be introduced without governance review.
 
 ---
 
-### 00_FOUNDATIONS — Governance & Authority
+### 00_FOUNDATIONS — Governance, Authority & Strategic Context
 
-**Purpose:**  
-Defines *what DGA is*, *how it is governed*, and *what constrains everything else*.
+**Purpose:**
+Defines *what DGA is*, *how it is governed*, and the *strategic intent that informs—but does not override—governing decisions*.
+
+This folder establishes the highest level of authority in the DGA system.
 
 **Contains:**
-- Business model
-- Pillar lock reference
-- Governance documents
-- Canonical templates (ED, BP, SOP)
-- Registries (schemas, naming, assets)
+
+**Governance**
+- Business Model
+- Pillar Lock Reference
+- Repository Structure & Placement Rules
+- Other binding authority documents
+
+**Strategy**
+- Founder rationale
+- Strategic context and directional analysis
+- Trade-offs, intent, and long-range thinking that inform governance decisions
+
+**Templates**
+- Canonical document templates (ED, BP, SOP, General)
+
+**Registries**
+- Canonical schemas
+- Naming conventions
+- Asset and system registries
 
 **Rules:**
-- Nothing here executes
-- Nothing here is optional
-- Documents here outrank all others
+- Nothing in this folder executes
+- Governance documents are binding
+- Strategy documents are non-binding and may not contradict Governance
+- Templates constrain downstream document structure
+- Registries define canonical truth
+- Documents here outrank all other folders
+
+If a conflict exists:
+- Governance prevails
+- Strategy provides context only
 
 ---
 
