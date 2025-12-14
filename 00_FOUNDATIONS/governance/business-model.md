@@ -1,7 +1,8 @@
 # DGA BUSINESS MODEL
 Governing Internal Document
 
-Version: v1.3  
+Version: v1.4  
+Created: 2025-12-14  
 Status: Governing Authority (Active)  
 Audience: Founder, Internal Operations, Future Acquirer Review
 
