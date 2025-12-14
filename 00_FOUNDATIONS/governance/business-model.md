@@ -22,12 +22,14 @@ For clarity and consistency, the following definitions apply throughout this doc
 
 ---
 
-## DGA OPERATIONAL PILLAR MODEL (LOCKED)
+## DGA OPERATIONAL PILLAR MODEL
 
 DGA operates on **five non-negotiable operational pillars**.  
 These pillars govern execution order, system boundaries, and responsibility separation.
 
 They are **not marketing features**.
+
+## **DGA governs execution discipline - AI outcomes remain probabilistic and uncontrollable**.
 
 ---
 
@@ -109,7 +111,7 @@ If a downstream SOP, blueprint, or system conflicts with this document, the conf
 DGA is a **market-limited, subscription-based AI visibility and relationship-leverage operating system** for MPs and REAs.
 
 DGA is designed to:
-- improve AI discoverability and recommendability
+- improve AI recommendability and discoverability through governed execution and consistency, without guaranteeing platform response or outcomes.
 - reinforce clear professional entities
 - protect referral positioning from commoditization
 - operate with enforced scarcity by market
@@ -212,7 +214,7 @@ All content is structured by:
 - professional role
 - defined niche
 
-Specificity is the mechanism that enables recommendability.
+Specificity is the mechanism that enables recommendability through governed execution and consistency, without guaranteeing platform response or outcomes.
 
 ---
 
@@ -241,11 +243,39 @@ Scarcity is structural, not promotional.
 
 ---
 
-## 7. SUBSCRIPTION ARCHITECTURE
+## 7. Execution vs Outcome Boundary (Critical)
+
+DGA is an **execution-governed operating system**, not an outcomes-based service.
+
+DGA **does not guarantee**:
+- search rankings
+- AI-generated answer inclusion
+- recommendation frequency or prominence
+- persistence of AI platform behavior
+- lead volume, conversion, or revenue outcomes
+
+AI platforms (e.g., ChatGPT, Gemini, Perplexity) are:
+- third-party systems
+- probabilistic by design
+- subject to opaque and changing weighting models
+- outside DGA’s control
+
+DGA’s responsibility is limited to **what it fully controls**, including:
+- structured content creation
+- governed publishing to high-signal platforms
+- consistency, continuity, and formatting discipline
+- audit-led execution and system integrity
+
+AI visibility through governed execution and consistency, without guaranteeing platform response or outcomes,and recommendation are **observed outcomes**, not deliverables.
+
+This boundary is non-negotiable and applies to all plans, subscribers, and sub-accounts.
+
+
+## 8. SUBSCRIPTION ARCHITECTURE
 
 ---
 
-### 7.1 Solo (SO)
+### 8.1 Solo (SO)
 
 SO provides foundational infrastructure.
 
@@ -255,7 +285,7 @@ SO is **infrastructure**.
 
 ---
 
-### 7.2 Playbook (PB) — MP Only
+### 8.2 Playbook (PB) — MP Only
 
 Playbook is a **relationship-leverage system**.
 
@@ -270,7 +300,7 @@ PB is leverage — not marketing.
 
 ---
 
-### 7.3 Enterprise (EN-MP / EN-REA)
+### 8.3 Enterprise (EN-MP / EN-REA)
 
 Enterprise provides **organization-paid infrastructure at scale**.
 
@@ -282,9 +312,9 @@ Enterprise is **not Playbook at scale**.
 
 ---
 
-## 8. WEBSITE ACCESS & VISIBILITY GOVERNANCE
+## 9. WEBSITE ACCESS & VISIBILITY GOVERNANCE
 
-The DGA website is the **single source of truth** for content visibility, status, and accountability.
+The DGA website is the **single source of truth** for content status, accountability, and visibility through governed execution and consistency, without guaranteeing platform response or outcomes.
 
 It is:
 - read-only
@@ -295,7 +325,7 @@ It is:
 
 ---
 
-### 8.1 Solo (SO) Website Access
+### 9.1 Solo (SO) Website Access
 
 SO subscribers access a dedicated **Content & Status Page** via DGA account number.
 
@@ -310,7 +340,7 @@ This increases clarity without increasing labor.
 
 ---
 
-### 8.2 Playbook (PB) Website Access
+### 9.2 Playbook (PB) Website Access
 
 PB subscribers access a **Playbook Master Page**.
 
@@ -330,7 +360,7 @@ PBs distribute REA access directly, reinforcing ownership of the relationship an
 
 ---
 
-## 9. PRICING & MONETIZATION
+## 10. PRICING & MONETIZATION
 
 ### Standard Monthly Pricing
 
@@ -348,7 +378,7 @@ Minimum Enterprise commitment: **$1,495 / month**
 
 ### Introductory Pricing (Deferred-Value Model)
 
-Duration: **9 months**
+Duration: **First 9 months post-beta/trial period completion**
 
 - **SO:** $297 → $349  
 - **PB:** $637 → $749  
@@ -357,7 +387,7 @@ Enterprise pricing is not discounted monthly.
 
 ---
 
-## 10. RULES OF ENGAGEMENT (SUMMARY)
+## 11. RULES OF ENGAGEMENT (SUMMARY)
 
 - ROE required for onboarding
 - one-month cancellation notice
@@ -367,7 +397,7 @@ Enterprise pricing is not discounted monthly.
 
 ---
 
-## 11. CLOSING STATEMENT
+## 12. CLOSING STATEMENT
 
 DGA is intentionally constrained so it remains valuable.
 
