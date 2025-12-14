@@ -2,6 +2,10 @@
 
 *A governed, pillar-based operating system for AI visibility, content authority, and relationship continuity.*
 
+Version: v1.1  
+Updated: 2025-12-14  
+Status: Navigational Reference (Non-Governing)
+
 ---
 
 ## What This Repository Is
@@ -12,6 +16,9 @@ It contains all governing documents, pillar execution artifacts, systems, automa
 
 This repository is **governed**, **version-controlled**, and **pillar-aligned**.
 
+This README is **navigational only**.  
+It does not define behavior or override governance.
+
 ---
 
 ## Governing Authority (Read First)
@@ -20,10 +27,10 @@ All documents and systems in this repository are governed by:
 
 - **`00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md`**
 - **`00_FOUNDATIONS/GOVERNANCE/PILLAR_LOCK_REFERENCE.md`**
+- **`00_FOUNDATIONS/GOVERNANCE/DGA_REPOSITORY_STRUCTURE.md`**
+- **`00_FOUNDATIONS/GOVERNANCE/DGA_FILE_PLACEMENT_DECISION_TREE.md`**
 
 If any document conflicts with these authorities, the conflict is resolved **there first**.
-
-This README is **navigational only**.
 
 ---
 
@@ -32,12 +39,12 @@ This README is **navigational only**.
 DGA operates on **five locked operational pillars**.  
 Pillars define **ownership, sequencing, and execution boundaries**.
 
-Each pillar contains its own:
+Each pillar contains its own (as applicable):
 - Blueprints
 - Execution Doctrines (EDs)
 - Systems
 - Automations
-- SOPs (where applicable)
+- SOPs
 
 ---
 
@@ -91,36 +98,70 @@ Includes:
 
 ---
 
-## Shared Platform & Cross-Pillar Assets
-
-Some assets support **multiple pillars** and are intentionally centralized.
+## Foundations, Shared Platform & Runtime
 
 ### **00_FOUNDATIONS/**
-Governance, templates, registries, and canonical references.
+**Purpose:** Governance, authority, and canonical references.
 
 Includes:
 - Business Model
 - Pillar Lock Reference
+- Repository Structure & Placement Rules
 - Templates (ED, BP)
-- Canonical registries
+- Registries
+
+This folder outranks all others.
 
 ---
 
-### **90_SHARED_PLATFORM/** *(or equivalent)*
-Cross-cutting assets that do not belong to a single pillar.
+### **90_PLATFORM_RUNTIME/**
+**Purpose:** Executable platform code only.
+
+Includes:
+- Server code
+- Runtime configuration
+- Dependency manifests
+- Hosting / Replit artifacts
+
+No governance or pillar documentation lives here.
+
+---
+
+### **95_SHARED_PLATFORM/**
+**Purpose:** Cross-pillar, non-governing support assets.
 
 Includes:
 - Stack & integration documentation
-- StackAI Prompt Library
+- Internal Prompt Library
 - Sales and positioning assets
 - Style and standards references
+
+Nothing here executes or governs.
+
+---
+
+## Legacy & Archive Handling (Documented Exception)
+
+### **LEGACY_INBOX/**
+**Purpose:** Temporary holding location for legacy or pre-governance files.
+
+**Important:**
+- This folder exists at the repository root by exception
+- It serves the same function as `99_ARCHIVE/LEGACY_PENDING_REVIEW`
+- Items here are **non-governing**
+- Files must be reviewed, migrated, or archived intentionally
+
+This exception is documented to reduce rework and does not alter governance rules.
 
 ---
 
 ### **99_ARCHIVE/**
-Deprecated, superseded, or legacy materials.
+**Purpose:** Deprecated, superseded, or retired materials.
 
-All archived items must be clearly marked and must not govern active systems.
+Rules:
+- Nothing here governs active systems
+- Archived items must be clearly marked
+- No active system may reference archived content
 
 ---
 
@@ -130,35 +171,33 @@ All archived items must be clearly marked and must not govern active systems.
 Start with:
 1. `00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md`
 2. `00_FOUNDATIONS/GOVERNANCE/PILLAR_LOCK_REFERENCE.md`
-3. Then explore each pillar folder in order (P1 → P5)
+3. Review the five pillars in order (P1 → P5)
 
 ---
 
 ### Working on Systems or Automations?
 Navigate to the **pillar that owns the behavior**, then:
+- `EXECUTION_DOCTRINES/`
 - `SYSTEMS/`
 - `AUTOMATIONS/`
-- `EXECUTION_DOCTRINES/`
 
 ---
 
 ### Writing or Updating Docs?
 - Governance → `00_FOUNDATIONS`
-- Pillar behavior → that pillar’s folder
-- Cross-pillar assets → `90_SHARED_PLATFORM`
-- Uncertain legacy items → `99_ARCHIVE`
+- Pillar-specific behavior → owning pillar folder
+- Cross-pillar assets → `95_SHARED_PLATFORM`
+- Unclassified or legacy items → `LEGACY_INBOX` or `99_ARCHIVE`
 
 ---
 
 ## Versioning & Change Discipline
 
-This repository follows:
+This repository enforces:
 - Versioned governing documents
 - Pillar ownership enforcement
 - No silent changes
-- Deterministic execution rules for systems
-
-Governance always precedes implementation.
+- Governance before implementation
 
 ---
 
