@@ -91,20 +91,22 @@ Subscribers may not opt out of mandatory destinations.
 
 ---
 
-## 5. Optional Publishing Destinations (Conditional)
+## 5. Subscriber-Declared Optional Platforms
 
-The following destinations may be supported **only if**:
+If an account holder declares additional platforms during P2 Intake & Onboarding:
 
-- They are present in the subscriber’s validated platform profile
-- Publishing does not violate audit-defined scope
-- Execution is supported by the managed system
+- DGA will generate governed content for those platforms
+- Content will be made available on the **DGA website**
+- Access will be provided via the subscriber’s **password-protected account page**
 
-Optional destinations may include:
-- Secondary social platforms
-- Professional profiles
-- Distribution channels explicitly allowed by P4 systems
+Optional platform handling rules:
 
-Optional publication must never replace mandatory destinations.
+- DGA does **not** auto-publish to optional platforms
+- Subscribers retrieve and publish content at their discretion
+- Optional publication does not replace mandatory destinations
+- Optional platforms carry no authority guarantees
+
+This model preserves execution integrity while supporting subscriber flexibility.
 
 ---
 
