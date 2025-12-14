@@ -104,7 +104,7 @@ Optional platform handling rules:
 - DGA does **not** auto-publish to optional platforms
 - Subscribers retrieve and publish content at their discretion
 - Optional publication does not replace mandatory destinations
-- Optional platforms carry no authority guarantees
+- Optional platforms carry no execution guarantees and no implied impact on AI visibility or recommendation behavior.
 
 This model preserves execution integrity while supporting subscriber flexibility.
 
@@ -192,6 +192,30 @@ Changes to this Execution Doctrine require:
 - explicit approval
 
 No silent changes are permitted.
+
+---
+
+## 12. AI Platform Response Disclaimer (Non-Guarantee)
+
+DGA does **not** guarantee:
+
+- inclusion in AI-generated answers
+- ranking, prominence, or frequency of mention
+- recommendation outcomes
+- persistence of AI platform behavior
+
+AI platforms are:
+- third-party systems
+- probabilistic by design
+- subject to change without notice
+
+DGA’s responsibility is limited to:
+
+- governed content creation
+- controlled publication to high-signal platforms
+- consistency, structure, and continuity of authority artifacts
+
+AI platform response is **observed**, not controlled.
 
 ---
 
