@@ -1,6 +1,6 @@
 # BP–P2–VOICE BLUEPRINT AND INFORMATION INTAKE PROFILE
 
-> **Subtitle:** Governs how professional voice is captured for content creation and how information-delivery preferences are captured for system communications, with strict separation of purpose and authority.
+> Governs how professional voice is captured for content creation and how information-delivery preferences are captured for system communications, with strict separation of purpose and authority.
 
 ---
 
