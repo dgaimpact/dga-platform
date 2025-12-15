@@ -1,215 +1,206 @@
-# ED-P2 - Voice Blueprnt & Information Intake Profile
+# BP-P2 — Voice Blueprint & Information Intake Profile
 
-**Document Type:** Execution Doctrine (ED)
+**Document Type:** Blueprint (BP)
+**Pillar:** P2 — Intake & Onboarding
+**Version:** v1.0
+**Status:** Governing Authority (Active)
 
-**Status:** Active — Enforced
+**Pillar Ownership:** P2 — Intake & Onboarding
+**Version:** v1.0
+**Status:** Governing Authority (Active)
 
-**Scope:** System-wide (Replit AI-Agent, Intake, Audit, Content, Communications)
+Owned By: DGA Core Platform
+Governed By:
 
-**Governing Authority:**
-
-* BP — Voice Blueprint Profile (VBP)
-* BP — Information Intake Profile (IIP)
-* DGA Business Model
-* Pillar Lock Reference
-
----
-
-## 1. Purpose of This Execution Doctrine
-
-This Execution Doctrine defines **how AI systems and operators must execute against an existing Voice Blueprint Profile (VBP) and Information Intake Profile (IIP)**.
-
-It translates Blueprint-level intent into **deterministic system behavior**.
-
-This ED exists to:
-
-* Prevent voice contamination
-* Prevent misuse of IIP in content generation
-* Ensure consistent AI behavior across Replit, audits, content, and communications
-* Enforce fallback logic when VBP or IIP is missing
-
-This document is **binding**. If execution conflicts with this ED, execution is invalid.
+* 00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md
+* 00_FOUNDATIONS/GOVERNANCE/PILLAR_LOCK_REFERENCE.md
 
 ---
 
-## 2. Definitions (Operational)
+## 1. Purpose of P2 — Entity Voice & Information Intake Profile
 
-### 2.1 Voice Blueprint Profile (VBP)
+This Blueprint governs **how an entity’s outward voice is defined and how information is delivered to that entity inside DGA**.
 
-A structured profile defining **how an account holder communicates outward**.
+This pillar exists to:
 
-Used ONLY for:
+* establish a normalized, durable **entity voice** for all outward-facing content
+* establish a normalized, durable **information intake preference** for communications sent to the account holder
+* prevent voice drift, delivery friction, and AI overreach
+* protect downstream pillars from misapplied tone, formatting, or assumptions
 
-* Content creation
-* Public-facing messaging
-* Scripts, blogs, social posts, long-form articles
-
-Never used for:
-
-* Audit delivery
-* Recommendation emails
-* Internal communications to the account holder
+This Blueprint defines **who the entity sounds like** and **how the entity is communicated with**.
 
 ---
 
-### 2.2 Information Intake Profile (IIP)
+## 2. What This Pillar Owns
 
-A structured profile defining **how an account holder prefers to receive information from DGA**.
+This pillar owns all systems, documents, and logic related to:
 
-Used ONLY for:
+* Voice Blueprint Profile (VBP) definition and authority
+* Information Intake Profile (IIP) definition and authority
+* Storage, replacement, and precedence of VBP and IIP artifacts
+* Validation that a VBP or fallback exists before downstream execution
+* Validation that an IIP or fallback exists for account-holder communications
 
-* Audit reports
-* Recommendation summaries
-* Status updates
-* Emails sent to the account holder
-
-Never used for:
-
-* Content creation
-* Brand voice
-* Audience-facing tone
+This pillar defines **the communicative identity contract** for every active DGA entity.
 
 ---
 
-## 3. Execution Preconditions
+## 3. What This Pillar Explicitly Does NOT Own
 
-Before any AI system may execute:
+This pillar does **not** own:
 
-* The account MUST be active (P2 complete)
-* The system MUST check for:
+* Content strategy or publishing mechanics (P4)
+* Audit interpretation or scoring logic (P3)
+* Relationship cadence or outreach execution (P5)
+* Prospect qualification or diagnostics (P1)
+* Workflow steps, prompts, or automation logic (Execution Doctrines)
 
-  * VBP on file
-  * IIP on file
-
-No inference may occur until this check is complete.
-
----
-
-## 4. VBP Resolution Logic (Content Generation)
-
-### 4.1 Resolution Order
-
-When generating content, the system MUST:
-
-1. Check for a **custom interview-based VBP**
-2. If none exists, check for a **W-VBP (Web-Derived VBP)**
-3. If neither exists, halt execution
-
-Resolution hierarchy:
-
-```
-Custom VBP
-↓
-W-VBP
-```
+If an action is required outside this scope, ownership transfers immediately to the appropriate pillar.
 
 ---
 
-### 4.2 Content Execution Rules
+## 4. Core Definitions
 
-When VBP is resolved:
+### 4.1 Voice Blueprint Profile (VBP)
 
-* AI MUST align to:
+A **Voice Blueprint Profile (VBP)** captures **how an entity communicates outward**.
 
-  * Voice attributes
-  * Tone modifiers
-  * Messaging DNA
-  * Language preferences
-  * Do / Don’t constraints
+A VBP governs:
 
-* AI MUST NOT:
+* tone
+* voice
+* framing
+* messaging patterns
+* narrative continuity
 
-  * Introduce stylistic elements not present in the VBP
-  * Use IIP data in any form
-  * Adjust voice based on inferred delivery preferences
+A VBP is used **exclusively** for:
 
-VBP governs **expression**, not delivery.
+* blogs
+* social posts
+* scripts
+* long-form articles
+* public-facing marketing emails
 
----
+A VBP is **never** used for:
 
-## 5. IIP Resolution Logic (Account Holder Communications)
-
-### 5.1 Resolution Order
-
-When communicating *to* the account holder, the system MUST:
-
-1. Check for a **custom IIP**
-2. If none exists, check for a **provisional scan-derived IIP**
-3. If neither exists, use default neutral delivery
-
-Resolution hierarchy:
-
-```
-Custom IIP
-↓
-Provisional IIP
-↓
-Default Neutral Delivery
-```
+* audit delivery
+* recommendation summaries
+* emails sent to the account holder
+* system or operational communications
 
 ---
 
-### 5.2 Communication Execution Rules
+### 4.2 Information Intake Profile (IIP)
 
-When IIP is resolved:
+An **Information Intake Profile (IIP)** captures **how an entity prefers to receive information from DGA**.
 
-* AI MUST adapt:
+An IIP governs:
 
-  * Information sequencing
-  * Level of detail
-  * Formatting
-  * Follow-up cadence
+* audit report delivery style
+* recommendation summaries
+* sequencing (context vs summary)
+* level of detail
+* follow-up cadence
 
-* AI MUST NOT:
+An IIP is used **exclusively** for communications *to* the account holder.
 
-  * Alter content voice
-  * Alter audience-facing tone
-  * Rephrase content artifacts
+An IIP is **never** used for:
 
-IIP governs **delivery mechanics only**.
+* content creation
+* brand voice or tone
+* audience-facing messaging
+* narrative framing
 
----
+> **VBP governs expression.**
+> **IIP governs delivery.**
 
-## 6. Web Scan Fallback Logic
-
-### 6.1 When Web Scans Are Permitted
-
-Web scans MAY be used only when:
-
-* No custom VBP exists
-* No custom IIP exists
-* Execution must proceed to maintain continuity
+These profiles are intentionally separate and must never be blended.
 
 ---
 
-### 6.2 Web-Derived VBP (W-VBP)
+## 5. Creation Paths & Authority
 
-When generating a W-VBP:
+### 5.1 Custom Interview-Based VBP (Preferred)
 
-* AI MAY infer tone and structure from public assets
-* AI MUST avoid speculative personality traits
-* AI MUST weight findings as provisional
+A custom VBP is created via a structured, human-led interview conducted outside of Replit.
 
-W-VBP is:
+Rules:
 
-* Silent
-* Internal-only
-* Stored until replaced
+* treated as the highest authority
+* uploaded to the account by DGA
+* stored indefinitely
+* referenced by all downstream systems
+* remains active until explicitly replaced
+
+AI systems must never reinterpret or override a custom VBP.
 
 ---
 
-### 6.3 Provisional IIP
+### 5.2 Web-Derived Voice Blueprint Profile (W-VBP)
 
-When generating a provisional IIP:
+A **W-VBP** may be created only when no custom VBP exists.
 
-* AI MAY infer formatting and detail preferences
-* AI MUST avoid assumptions about decision authority or urgency
+Source signals may include:
 
-Provisional IIP is:
+* website copy
+* blog structure
+* Google Business Profile descriptions
+* LinkedIn bios and posts
+* public social content
 
-* Silent
-* Internal-only
-* Automatically replaced by custom IIP
+Rules:
+
+* internal and silent
+* provisional in confidence
+* stored until replaced
+* deleted when a custom VBP is uploaded
+* never blended with a custom VBP
+
+---
+
+### 5.3 Custom Information Intake Profile (IIP)
+
+A custom IIP is collected explicitly from the account holder.
+
+Rules:
+
+* governs all communications *to* the account holder
+* stored indefinitely
+* replaces any provisional IIP
+* may be updated independently of the VBP
+
+---
+
+### 5.4 Provisional Information Intake Profile (IIP)
+
+If no custom IIP exists, a **provisional IIP** may be inferred from observable signals such as:
+
+* content density preferences
+* formatting patterns
+* professional vs casual presentation
+* CTA clarity and structure
+
+Rules:
+
+* internal only
+* silent
+* used strictly for delivery mechanics
+* automatically replaced by a custom IIP
+
+---
+
+## 6. Governing Constraints
+
+The following constraints are non-negotiable:
+
+* VBP must never be used for audit delivery or internal communications
+* IIP must never be used for content creation
+* No system may blend VBP and IIP inputs
+* No AI may infer urgency, tone, or authority beyond what is explicitly defined
+* Replacement occurs by deletion and substitution, never merging
+
+Violation of these constraints constitutes a system fault.
 
 ---
 
@@ -220,63 +211,39 @@ Provisional IIP is:
 
 Replacement behavior:
 
-* DGA deletes W-VBP when a custom VBP is uploaded
-* New VBP becomes authoritative immediately
-* Same logic applies to IIP
-
-No blending. No partial merges.
-
----
-
-## 8. Explicit Prohibitions (System-Critical)
-
-The following are STRICTLY PROHIBITED:
-
-* Using IIP data during content creation
-* Using VBP data to format audit delivery
-* Blending delivery preferences into brand voice
-* Inferring urgency, pressure, or tone not stated
-* Modifying published content retroactively
-
-Any violation constitutes a system fault.
+* when a custom VBP is uploaded, any W-VBP is deleted
+* when a custom IIP is uploaded, any provisional IIP is discarded
+* new profiles apply to all future execution only
+* no retroactive rewriting occurs
 
 ---
 
-## 9. Failure & Halt Conditions
+## 8. Downstream Consumption
 
-Execution MUST HALT if:
+* **P3 — Audit**
 
-* No VBP or W-VBP exists for content creation
-* Account is not active
-* Required upstream pillar data is missing
+  * consumes VBP for interpretive context only
+  * consumes IIP for audit delivery only
 
-Silence is preferred over incorrect execution.
+* **P4 — Content Creation & Publishing**
 
----
+  * consumes VBP only
+  * must never reference IIP
 
-## 10. Auditability & Enforcement
+* **P5 — Relationship Continuity**
 
-All systems must:
-
-* Log which profile was referenced (VBP, W-VBP, IIP)
-* Preserve deterministic behavior
-* Allow post-hoc verification of compliance
-
-This ED is enforceable across:
-
-* Replit AI-Agent
-* Audit systems
-* Content engines
-* Communication workflows
+  * consumes IIP only
+  * must never reference VBP
 
 ---
 
-## 11. Key Principle (Non-Negotiable)
+## 9. Key Principle
 
-> **Voice defines expression. Delivery defines understanding.**
+> **Consistency of voice builds trust.**
+> **Clarity of delivery preserves relationships.**
 
-Mixing the two erodes trust.
+This principle must remain true even as systems evolve.
 
 ---
 
-**END — ED VBP & IIP EXECUTION DOCTRINE**
+END — BP P2 Entity Voice & Information Intake Profile
