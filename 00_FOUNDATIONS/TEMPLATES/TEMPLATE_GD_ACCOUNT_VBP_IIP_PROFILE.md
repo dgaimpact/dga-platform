@@ -1,4 +1,4 @@
-# GD — <ACCOUNT NAME> — Voice Blueprint & Information Intake Profile
+# GD <ACCOUNT NAME> — Voice Blueprint & Information Intake Profile
 
 Version: vX.X  
 Created: YYYY-MM-DD  
