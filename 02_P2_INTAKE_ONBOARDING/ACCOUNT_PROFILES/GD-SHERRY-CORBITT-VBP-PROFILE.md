@@ -1,4 +1,4 @@
-# GD_SHERRY_CORBITT_VBP_PROFILE.md
+# GD - Sherry Corbitt Voice Blueprint Profile
 
 **Document Type:** General Document  
 **Status:** Reference (Active)  
