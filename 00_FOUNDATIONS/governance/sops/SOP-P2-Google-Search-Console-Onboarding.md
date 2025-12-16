@@ -10,7 +10,7 @@ Applies To:
 - DGA Staff
 - DGA Audit Systems
 
-Owned By: P3 — Audit  
+Owned By: P2 — Onboarding
 Governed By:
 - BP–P3–Omni-Presence-Blueprint.md
 - DGA_BUSINESS_MODEL.md
