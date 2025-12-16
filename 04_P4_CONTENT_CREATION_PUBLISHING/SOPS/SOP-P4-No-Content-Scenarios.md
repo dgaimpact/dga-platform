@@ -127,6 +127,32 @@ Content must not be used as emotional compensation.
 
 ---
 
+### 4.6 Ad-Hoc Report Audits (No-Content by Default)
+
+Content **must not be created** as a default outcome of an ad-hoc report audit.
+
+**Applies When:**
+- An audit is requested solely to “see where we’re at”
+- The audit is report-only (snapshot/status) without a validated content opportunity
+- The request is driven by urgency, anxiety, or timeline pressure
+- The audit output is intended for visibility, reassurance, or decision support—not execution
+
+**Rationale:**  
+Ad-hoc audits are observational and communicative. They are not, by default, a trigger for content creation. Content is created only when P3 artifacts identify a defensible opportunity that clears governance and lifecycle requirements.
+
+**Allowed Output Instead:**
+- Audit Report (Snapshot/Monitoring)
+- Audit Summary
+- Risk & Ambiguity Flags
+- “No-Content Decision” note (documented per Section 5)
+
+**Exception (Content May Proceed):**
+Only if the ad-hoc audit produces:
+- stable, corroborated signals **and**
+- a specific, non-speculative content opportunity that qualifies for **Observed → Drafted** transition under SOP — P4 Content Lifecycle States.
+
+---
+
 ## 5. Decision & Documentation
 
 When a no-content decision is reached:
