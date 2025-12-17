@@ -10,9 +10,10 @@ Canonical registry of all AI Answer Optimization (AIO) prompts used by the P3 Au
 **Primary Pillar:** P3 — Audit  
 **Filename:** REG–P3–AIO_PROMPT_SET.md  
 
-**Version:** v1.0  
+**Version:** v1.1  
 **Status:** Canonical (Active)  
 **Created:** 2025-12-17  
+**Last Updated:** 2025-12-17  
 
 **Consumed By:**  
 - Replit AI-Agent (Audit Execution)  
@@ -46,31 +47,54 @@ All prompts may use **only** the following variables:
 - `{{MARKET}}` — Declared market or territory  
 - `{{NICHE}}` — Declared specialization or context  
 - `{{PROFESSION}}` — Industry role (system-injected, role-equivalent)  
-- `{{ACCOUNT_HOLDER_NAME}}` — Used **only** in P7  
+- `{{ACCOUNT_HOLDER_NAME}}` — Used **only** in AIO-G01  
 
 No additional variables are permitted.
 
 ---
 
-## 3. Prompt Set Overview
+## 3. Prompt Classes & Execution Rules (Non-Negotiable)
 
-| Prompt ID | Prompt Name | Prompt Class |
-|---------|-------------|--------------|
-| P1 | Best-in-Niche (Direct) | Selection |
-| P2 | Best-in-Niche (Alternate Framing) | Selection |
-| P3 | Local Niche Expert | Selection |
-| P4 | Highly Recommended | Selection |
-| P5 | Most Trusted / Reviews-Oriented | Selection |
-| P6 | Review-Specific Trigger | Selection |
-| P7 | Entity Grounding / Bias Control | Grounding |
+### 3.1 AIO Selection Prompts
+
+- **Exactly six (6)** AIO selection prompts exist  
+- Identified as **AIO-01 through AIO-06**  
+- Executed **first**, as a group  
+- Used only to observe:
+  - AI selection behavior
+  - trust and credibility signals
+  - framing sensitivity
+  - reputation weighting  
+
+**Account-holder identity MUST NOT appear** in any selection prompt.
 
 ---
 
-## 4. Canonical Prompt Definitions
+### 3.2 AIO Grounding / Bias-Control Prompt
+
+- **Exactly one (1)** grounding prompt exists  
+- Identified as **AIO-G01**  
+- Executed **only after** AIO-01 through AIO-06  
+- Executed **in isolation**, never combined with selection prompts  
+
+AIO-G01:
+- confirms entity grounding
+- detects hallucination vs real knowledge
+- explains selection or non-selection
+- provides diagnostic context only
+
+AIO-G01:
+- is **not scored**
+- MUST NOT influence selection evidence
+- MUST NOT be executed before or alongside AIO-01–AIO-06
 
 ---
 
-### P1 — Best-in-Niche (Direct)
+## 4. Canonical AIO Prompt Definitions
+
+---
+
+### AIO-01 — Best-in-Niche (Direct)
 
 **Purpose:**  
 Stress-test direct AI recommendation behavior.
@@ -87,7 +111,7 @@ If only one category meaningfully exists, state that explicitly.
 
 ---
 
-### P2 — Best-in-Niche (Alternate Framing)
+### AIO-02 — Best-in-Niche (Alternate Framing)
 
 **Purpose:**  
 Detect prompt framing sensitivity and bias.
@@ -104,7 +128,7 @@ If only one category meaningfully exists, state that explicitly.
 
 ---
 
-### P3 — Local Niche Expert
+### AIO-03 — Local Niche Expert
 
 **Purpose:**  
 Observe perceived expertise signals.
@@ -123,7 +147,7 @@ If only one category meaningfully exists, state that explicitly.
 
 ---
 
-### P4 — Highly Recommended
+### AIO-04 — Highly Recommended
 
 **Purpose:**  
 Probe trust and recommendation signals.
@@ -142,7 +166,7 @@ If only one category meaningfully exists, state that explicitly.
 
 ---
 
-### P5 — Most Trusted / Reviews-Oriented
+### AIO-05 — Most Trusted / Reviews-Oriented
 
 **Purpose:**  
 Surface reputation- and review-weighted selection.
@@ -163,7 +187,7 @@ If only one category meaningfully exists, state that explicitly.
 
 ---
 
-### P6 — Review-Specific Trigger
+### AIO-06 — Review-Specific Trigger
 
 **Purpose:**  
 Test whether reviews alone can trigger selection.
@@ -180,7 +204,7 @@ If only one category meaningfully exists, state that explicitly.
 
 ---
 
-### P7 — Entity Grounding / Bias Control
+### AIO-G01 — Entity Grounding / Bias Control
 
 **Purpose:**  
 Confirm entity grounding and explain selection outcomes.
@@ -189,8 +213,9 @@ Confirm entity grounding and explain selection outcomes.
 
 What can you tell me about {{ACCOUNT_HOLDER_NAME}}, a {{PROFESSION}} in {{MARKET}} specializing in {{NICHE}}?
 
-**Rules:**
-- Executed only after P1–P6  
+**Execution Rules:**  
+- Executed **only after** AIO-01 through AIO-06  
+- Executed **separately** to eliminate AI bias  
 - Not scored  
 - Used for grounding, bias detection, and explanation only  
 
@@ -198,10 +223,10 @@ What can you tell me about {{ACCOUNT_HOLDER_NAME}}, a {{PROFESSION}} in {{MARKET
 
 ## 5. Registry Rules (Non-Negotiable)
 
-- Prompt IDs are immutable  
+- Prompt identifiers are immutable  
 - Prompt text must not be paraphrased by systems  
-- No additional prompts may be introduced without ED revision  
-- Prompt sequencing is enforced by ED–P3–AIO_PROMPT_INVARIANTS  
+- No additional AIO prompts may be introduced without ED revision  
+- Prompt sequencing and isolation are enforced by ED–P3–AIO_PROMPT_INVARIANTS  
 - This Registry may be referenced but not overridden  
 
 ---
