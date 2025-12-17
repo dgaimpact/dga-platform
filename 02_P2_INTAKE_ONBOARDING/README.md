@@ -1,113 +1,164 @@
-# P2 — Intake & Onboarding  
-Pillar Overview & Directory Guide
+# P2 — Intake & Onboarding
 
-Version: v1.0  
-Created: 2025-12-14  
-Status: Pillar Reference (Active)
+This folder defines the **canonical governance, registries, and execution doctrines** for **Pillar 2 (P2): Intake & Onboarding** within the DGA platform.
 
-Owned By: DGA Core Platform  
-Governed By:
-- 00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md
-- 00_FOUNDATIONS/GOVERNANCE/PILLAR_LOCK_REFERENCE.md
+P2 is responsible for establishing **clean, validated, activation-ready accounts** without inference, drift, or ambiguity.
 
 ---
 
-## 1. Purpose of P2 — Intake & Onboarding
+## Pillar Purpose
 
-P2 — Intake & Onboarding governs **how a prospect becomes an ACTIVE DGA subscriber**.
+P2 exists to answer one question — **with certainty**:
 
-This pillar exists to:
-- establish a clean, normalized entity baseline
-- validate identity, platforms, and readiness
-- remove ambiguity before audits or content begin
-- protect downstream pillars from incomplete or malformed data
+> “Is this account structurally valid and eligible to become ACTIVE?”
 
-Intake is **not marketing** and **not relationship management**.  
-It is **entity normalization and activation discipline**.
+P2 does **not**:
+- qualify prospects (P1)
+- define authority or truth (P3)
+- create or publish content (P4)
+- manage relationships or cadence (P5)
 
----
-
-## 2. What This Pillar Owns
-
-P2 owns all systems, documents, and logic related to:
-
-- Subscriber activation
-- Account creation and normalization
-- Entity data capture (NAP, platforms, identifiers)
-- Platform and profile validation
-- Readiness confirmation for P3 (Audit) and P4 (Content)
-
-P2 defines **who the subscriber actually is** at the moment they become active.
+P2 is the **gatekeeper** between interest and execution.
 
 ---
 
-## 3. What This Pillar Explicitly Does NOT Own
+## What P2 Governs
 
-P2 does **not** own:
+P2 governs:
 
-- Prospect qualification or diagnostics (P1)
-- Ongoing audits or visibility measurement (P3)
-- Content creation or publishing (P4)
-- Relationship cadence or continuity (P5)
-- Sales or pricing enforcement logic
+- Intake field requirements
+- Profession assignment
+- Seat classification
+- Market & territory assignment
+- Capacity enforcement at activation
+- PB-REA referral partner onboarding
+- Intake exceptions (explicit, temporary)
+- Deterministic activation behavior
 
-Once intake is complete, **ownership transfers immediately** to downstream pillars.
+If an account is ACTIVE, **P2 guarantees**:
+- no missing required fields
+- no capacity violations
+- no partial market writes
+- no inferred data
 
 ---
 
-## 4. Directory Structure & Intended Use
+## Folder Structure
 
-02_P2_INTAKE_ONBOARDING/
-├── BLUEPRINTS/
+2 — Intake & Onboarding
+│
+├── REGISTRIES/
+│ ├── REG_P2_PROFESSION_CODES.md
+│ ├── REG_P2_MARKET_CAPACITY.md
+│ ├── REG_P2_ACCOUNT_SEAT_CLASS.md
+│ ├── REG_P2_RELATIONSHIP_TYPES.md
+│ ├── REG_P2_P2_STATUS_CODES.md
+│ └── REG_P2_INTAKE_FIELD_SET.md
+│
 ├── EXECUTION_DOCTRINES/
-├── SYSTEMS/
-├── AUTOMATIONS/
-├── OPS_SOPS/
-├── ASSETS/
-└── README.md
-
-
-### Subfolder Definitions
-
-- **BLUEPRINTS/**  
-  Define the strategic intent and design principles for intake and onboarding.
-
-- **EXECUTION_DOCTRINES/**  
-  Enforce deterministic behavior for activation, validation, and normalization.
-
-- **SYSTEMS/**  
-  Logical system designs supporting entity capture and readiness verification.
-
-- **AUTOMATIONS/**  
-  Workflow automations for intake routing, validation checks, and status changes.
-
-- **OPS_SOPS/**  
-  Human-executed intake procedures and exception handling.
-
-- **ASSETS/**  
-  Reference materials, intake checklists, and non-executing support content.
+│ ├── ED_P2_ACTIVATION_CAPACITY_ENFORCEMENT.md
+│ ├── ED_P2_PB_REA_REFERRAL_PARTNER_ONBOARDING.md
+│ └── ED_P2_INTAKE_EXCEPTION_HANDLING.md
+│
+└── IMPLEMENTATION/
+└── P2_REPLIT_ONBOARDING_ED_MAPPED.md
 
 ---
 
-## 5. Governing Constraints
+## Registry Layer (REG)
 
-- P2 must not activate incomplete entities
-- P2 must not infer missing data
-- All required fields must be explicitly confirmed or rejected
-- No audits may run before P2 completion
-- No content may be created before P2 completion
+Registries define **what exists**.
 
-If intake fails, the subscriber remains **inactive**.
+They are:
+- authoritative
+- non-executing
+- logic-free
+- immutable without versioning
+
+### P2 Registries
+
+| Registry | Purpose |
+|--------|--------|
+| REG_P2_PROFESSION_CODES | Canonical profession dimension |
+| REG_P2_MARKET_CAPACITY | Market scarcity model |
+| REG_P2_ACCOUNT_SEAT_CLASS | Capacity-bearing vs non-capacity seats |
+| REG_P2_RELATIONSHIP_TYPES | Parent/child account relationships |
+| REG_P2_P2_STATUS_CODES | P2 lifecycle state machine |
+| REG_P2_INTAKE_FIELD_SET | Required & optional intake fields |
+
+If a field, enum, or rule is not in a REG, **it does not exist**.
 
 ---
 
-## 6. Key Principle
+## Execution Doctrine Layer (ED)
 
-> **P2 creates the truth that every other pillar depends on.  
-> If P2 is wrong or rushed, everything downstream degrades.**
+Execution Doctrines define **how rules are enforced**.
 
-Precision and discipline matter more than speed.
+They:
+- implement REG intent
+- prohibit ambiguity
+- define hard stops and failure behavior
+- control activation timing
+
+### P2 Execution Doctrines
+
+| ED | Purpose |
+|----|--------|
+| ED_P2_ACTIVATION_CAPACITY_ENFORCEMENT | When & how activation occurs |
+| ED_P2_PB_REA_REFERRAL_PARTNER_ONBOARDING | PB referral partner exception path |
+| ED_P2_INTAKE_EXCEPTION_HANDLING | Controlled intake exceptions |
+
+If execution behavior conflicts with a REG, **the REG prevails**.
 
 ---
 
-END — P2 INTAKE & ONBOARDING README
+## Implementation Mapping
+
+Application logic must map **1:1** to EDs.
+
+- Replit onboarding apps
+- Supabase triggers & functions
+- Automation workflows
+
+**Reference:**
+`IMPLEMENTATION/P2_REPLIT_ONBOARDING_ED_MAPPED.md`
+
+This document is the **contract** between governance and code.
+
+---
+
+## Key Invariants (Non-Negotiable)
+
+- No account becomes ACTIVE without passing P2
+- Capacity is enforced only at activation
+- Market assignment is atomic (`market_name` + `territory_code`)
+- PB_CHILD accounts never consume market capacity
+- Intake exceptions are explicit and block activation
+- No inference, no silent fallback, no drift
+
+Violation of any invariant invalidates execution.
+
+---
+
+## P2 → P3 Handoff
+
+An account may exit P2 and enter P3 **only when**:
+- `account_status = ACTIVE`
+- `p2_status = P2_ACTIVE_CONFIRMED`
+- No unresolved intake exceptions
+- All REG and ED constraints satisfied
+
+P3 assumes **P2 truth is final**.
+
+---
+
+## Change Control
+
+- All changes require versioned updates
+- REG changes precede ED changes
+- ED changes precede app changes
+- Silent drift is prohibited
+
+---
+
+END — P2 PILLAR README
