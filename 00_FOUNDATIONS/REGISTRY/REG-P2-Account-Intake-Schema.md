@@ -1,4 +1,4 @@
-# Account Intake Schema
+# ACCOUNT INTAKE SCHEMA
 
 Canonical registry of all fields used to onboard, normalize, and compliantly represent a DGA subscriber account
 
