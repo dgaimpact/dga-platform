@@ -46,7 +46,7 @@ If an account is ACTIVE, **P2 guarantees**:
 ## Folder Structure
 
 ```text
-P2 — Intake & Onboarding
+P2_Intake_Onboarding/
 ├── REGISTRIES/
 │   ├── REG_P2_PROFESSION_CODES.md
 │   ├── REG_P2_MARKET_CAPACITY.md
@@ -60,7 +60,7 @@ P2 — Intake & Onboarding
 │   └── ED_P2_INTAKE_EXCEPTION_HANDLING.md
 └── IMPLEMENTATION/
     └── P2_REPLIT_ONBOARDING_ED_MAPPED.md
-less
+```
 
 ---
 
