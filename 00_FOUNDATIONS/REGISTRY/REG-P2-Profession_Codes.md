@@ -1,4 +1,4 @@
-# REG–P2–PROFESSION_CODES
+# PROFESSION CODES
 
 Canonical registry of profession codes used for **P2 intake**, **territory assignment**, and **market capacity enforcement**.
 
