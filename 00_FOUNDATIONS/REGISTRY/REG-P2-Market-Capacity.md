@@ -1,4 +1,4 @@
-# REG–P2–MARKET_CAPACITY
+# MARKET CAPACITY
 
 Canonical registry governing **market seat capacity enforcement** by **Market Type × Profession** and **Territory × Profession**.
 
