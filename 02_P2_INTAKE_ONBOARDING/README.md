@@ -45,6 +45,7 @@ If an account is ACTIVE, **P2 guarantees**:
 
 ## Folder Structure
 
+'''text
 2 — Intake & Onboarding
 │
 ├── REGISTRIES/
