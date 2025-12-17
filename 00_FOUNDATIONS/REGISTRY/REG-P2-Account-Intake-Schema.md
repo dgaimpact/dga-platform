@@ -1,4 +1,4 @@
-# REG–P2–Account Intake Schema
+# Account Intake Schema
 
 Canonical registry of all fields used to onboard, normalize, and compliantly represent a DGA subscriber account
 
