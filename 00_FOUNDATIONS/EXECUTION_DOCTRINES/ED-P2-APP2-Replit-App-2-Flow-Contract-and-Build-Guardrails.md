@@ -1,368 +1,272 @@
-ED-P2-App2-Onboarding-Flow-Contract
-Document Type
+# Replit App 2 Onboarding Flow Contract & Build Guardrails
 
+## Document Type
 Execution Definition (ED)
 
-Pillar
-
+## Primary Pillar
 P2 — Intake & Onboarding
 
-Purpose
+## Purpose
+Define the complete, governed onboarding flow for **App 2**, which supports:
 
-Define the complete, governed onboarding flow for App 2, which supports:
+- Playbook (PB) Child Account onboarding  
+- Enterprise (EN) Seat onboarding  
 
-Playbook (PB) Child Account onboarding
+This document is authoritative for:
 
-Enterprise (EN) Seat onboarding
-
-This document is authoritative for flow sequencing, validation rules, column writes, UX language constraints, and admin responsibility boundaries.
+- Flow sequencing  
+- Validation rules  
+- Column write permissions  
+- UX language constraints  
+- Admin vs Public responsibility boundaries  
 
 No build, refactor, or automation may proceed without alignment to this contract.
 
-Scope & Non-Goals
-In Scope
+---
 
-Child onboarding under existing PB Parent accounts
+## Scope
 
-Seat onboarding under existing EN Parent accounts
+### In Scope
+- Child onboarding under existing PB Parent accounts  
+- Seat onboarding under existing EN Parent accounts  
 
-Invite-based and parent-linked flows
+### Out of Scope
+- Parent account creation  
+- Territory creation or modification  
+- Seat capacity overrides  
+- Status promotion (PROSPECT → ACTIVE)  
+- Billing, pricing, or invoicing logic  
 
-Validation, inheritance, and write constraints
+---
 
-Explicitly Out of Scope
+## Core Principles
 
-Parent account creation
+1. **Supabase is the Source of Truth**  
+   No schema changes. No ALTER TABLE. No inferred columns.
 
-Territory selection or confirmation
+2. **Parent-Driven Authority**  
+   App 2 inherits profession, territory, and plan from the parent.  
+   The user cannot change these.
 
-CASL capture
+3. **Minimal Public Capture**  
+   App 2 collects only what the user must supply.  
+   Admin resolves all ambiguity later.
 
-Plan selection or pricing logic
+4. **Neutral UX Language Only**  
+   Never imply reservation, confirmation, or lock-in.
 
-Admin overrides or seat management UI
+---
 
-Schema changes of any kind
+## Flow A — Playbook (PB) Child Onboarding
 
-Source of Truth
+### Entry
+`/onboard/child?parent={PARENT_ID}`
 
-Supabase is the system of record.
+---
 
-No schema changes permitted
+### Step 0 — Parent Validation (Read Only)
 
-No ALTER TABLE operations
+**Purpose**  
+Verify that the parent account is eligible to accept a child.
 
-No speculative columns
+**Checks**
+- Parent exists  
+- Parent account_status = ACTIVE  
+- Parent plan_type = PLAYBOOK  
+- Parent has available seat capacity  
 
-All writes must target existing columns only
+**Writes**
+- None
 
-Core Principles
+**Failure Handling**
+- Show friendly error  
+- Block progression  
 
-Parent-driven governance — Child and seat records inherit from parent
+---
 
-Minimal public capture — Collect only what is required
+### Step 1 — Contact Information
 
-Neutral UX language — Never imply confirmation or reservation
+**Capture**
+- first_name  
+- last_name  
+- email  
+- phone  
 
-Explicit write contracts — Every step declares allowed writes
+**Writes**
+- INSERT new row in `dga_accounts`
+- parent_id  
+- profession_type (inherited from parent)  
+- account_status = PROSPECT  
 
-Admin authority preserved — Final activation handled outside public apps
+**Constraints**
+- No CASL capture  
+- No territory selection  
+- No plan selection  
 
-FLOW A — PLAYBOOK (PB) CHILD ONBOARDING
-Entry
+---
 
-User arrives via parent-scoped URL:
+### Step 2 — Professional Identity
 
-/onboard/child?parent={PARENT_ACCOUNT_ID}
+**Capture**
+- Professional title (free text)  
+- Brokerage / Firm name  
+- License number  
+  - Required for Mortgage Professionals  
+  - Optional for Real Estate Agents  
 
-Step A0 — Parent Validation (Read-Only)
-Purpose
+**Writes**
+- UPDATE `admin_notes`
+- Append structured `PRO_ID` block  
 
-Ensure the parent account is eligible to accept a PB child.
+---
 
-Checks
+### Step 3 — Google Business Profile Match
 
-Parent exists
+**Behavior**
+- Same matching logic as App 1  
+- Optional manual entry  
+- Exception path allowed  
 
-Parent account_status = ACTIVE
+**Writes**
+- gbp_place_id  
+- gbp_url  
+- gbp_exception_enabled  
+- gbp_exception_note  
 
-Parent plan_type = PB
+---
 
-Parent seat capacity not exceeded
+### Completion
+- Confirmation screen only  
+- No writes  
 
-Outcome
+---
 
-PASS → Proceed
+## Flow B — Enterprise (EN) Seat Onboarding
 
-FAIL → Block with friendly message
+### Entry
+`/onboard/seat?token={INVITE_TOKEN}`
 
-Writes
+---
 
-None
+### Step 0 — Invite Validation (Read Only)
 
-Step A1 — Contact Information
-Fields Captured
+**Checks**
+- Invite token exists and is valid  
+- Parent exists  
+- Parent account_status = ACTIVE  
+- Parent plan_type = ENTERPRISE  
+- Seat capacity available  
 
-first_name
+**Writes**
+- None
 
-last_name
+---
 
-email
+### Step 1 — Contact Information
 
-phone
+**Capture**
+- first_name  
+- last_name  
+- email  
+- phone  
 
-Behavior
+**Writes**
+- INSERT new row in `dga_accounts`
+- parent_id  
+- profession_type (from invite)  
+- account_status = PROSPECT  
 
-New record INSERT
+---
 
-parent_id assigned
+### Step 2 — Professional Identity
 
-profession_type inherited from parent
+**Capture**
+- Professional title (free text)  
+- Brokerage / Firm name  
+- License number (optional unless MP)  
 
-Writes
+**Writes**
+- UPDATE `admin_notes`
+- Append structured `PRO_ID` block  
 
-first_name
+---
 
-last_name
+### Completion
+- Confirmation screen only  
+- Invite token burned  
+- No additional writes  
 
-email
+---
 
-phone
+## Column Write Permissions (App 2)
 
-parent_id
+### Allowed
+- first_name  
+- last_name  
+- email  
+- phone  
+- parent_id  
+- profession_type  
+- admin_notes  
+- gbp_place_id (PB only)  
+- gbp_url (PB only)  
+- gbp_exception_* (PB only)  
 
-profession_type
+---
 
-Step A2 — Professional Identity
-Fields Captured
+### Explicitly Forbidden
+- casl_*  
+- market_territory_code  
+- plan_type  
+- account_status (beyond initial PROSPECT)  
+- Any INSERT without parent_id  
 
-Professional title (free text)
+---
 
-Brokerage / Firm name
+## UX Language Rules
 
-License number
+### Use
+- “Submitted for review”  
+- “Seat pending confirmation”  
+- “Inherited from parent account”  
 
-Required for MP
+### Avoid
+- “Confirmed”  
+- “Reserved”  
+- “Your territory”  
+- “Available seat”  
 
-Optional for REA
+---
 
-Storage
+## Validation Rules
 
-Written to admin_notes as a structured PRO_ID block
+- Profession type is inherited and immutable  
+- Territory is inherited and read-only  
+- Seat capacity enforced before INSERT  
+- License rules depend on profession  
+- No field is captured more than once  
 
-Writes
+---
 
-admin_notes (append only)
+## Admin Responsibilities (Out of App 2)
 
-Step A3 — Google Business Profile (PB Only)
-Behavior
+- Parent account creation  
+- Invite token generation  
+- Seat limit management  
+- Status promotion  
+- Territory assignment confirmation  
+- GBP matching for EN seats  
 
-Identical to App 1 GBP matching flow.
+---
 
-Options
+## Final Authority Statement
 
-Match existing GBP
+This document is **canonical** for App 2.
 
-Request exception (explicit checkbox + note)
+Any implementation that:
+- Writes outside permitted columns  
+- Allows user-controlled territory or plan changes  
+- Implies availability or reservation  
+- Bypasses parent validation  
 
-Writes
-
-gbp_place_id
-
-gbp_url
-
-gbp_exception_enabled
-
-gbp_exception_note
-
-Completion — PB Child
-UX
-
-Confirmation screen only
-
-Neutral language: “Submitted for review”
-
-Writes
-
-None
-
-FLOW B — ENTERPRISE (EN) SEAT ONBOARDING
-Entry
-
-User arrives via invite-based URL:
-
-/onboard/seat?token={INVITE_TOKEN}
-
-Step B0 — Invite Validation (Read-Only)
-Purpose
-
-Validate eligibility before data capture.
-
-Checks
-
-Token valid
-
-Token not expired
-
-Token not previously used
-
-Parent exists
-
-Parent account_status = ACTIVE
-
-Parent plan_type = EN
-
-Seat capacity available (soft check only)
-
-Outcome
-
-PASS → Proceed
-
-FAIL → Block with friendly message
-
-Writes
-
-None
-
-Step B1 — Contact Information
-Fields Captured
-
-first_name
-
-last_name
-
-email
-
-phone
-
-Behavior
-
-New record INSERT
-
-parent_id assigned
-
-profession_type inherited from invite
-
-Writes
-
-first_name
-
-last_name
-
-email
-
-phone
-
-parent_id
-
-profession_type
-
-Step B2 — Professional Identity
-Fields Captured
-
-Professional title (free text)
-
-Brokerage / Firm name
-
-License number (optional)
-
-Storage
-
-Written to admin_notes as a structured PRO_ID block
-
-Writes
-
-admin_notes (append only)
-
-Completion — EN Seat
-UX
-
-Confirmation screen only
-
-Language: “Submitted for onboarding review”
-
-No territory confirmation
-
-No seat confirmation
-
-Writes
-
-None
-
-INHERITANCE RULES (MANDATORY)
-Attribute	Source	Editable
-parent_id	URL / Invite	No
-profession_type	Parent / Invite	No
-market_territory_code	Parent	No
-plan_type	Parent	No
-account_status	System/Admin	No
-COLUMN WRITE MATRIX (APP 2)
-Column	PB Child	EN Seat
-first_name	Yes	Yes
-last_name	Yes	Yes
-email	Yes	Yes
-phone	Yes	Yes
-parent_id	Yes	Yes
-profession_type	Inherited	From invite
-admin_notes	Yes	Yes
-gbp_place_id	Yes	No
-gbp_url	Yes	No
-gbp_exception_*	Yes	No
-STRICTLY FORBIDDEN IN APP 2
-
-Writing to casl_* fields
-
-Writing to market_territory_code
-
-Writing to plan_type
-
-Writing to account_status
-
-Any INSERT without parent_id
-
-Any flow without parent/invite validation
-
-Any public confirmation of seat or territory availability
-
-UX LANGUAGE RULES
-Allowed
-
-“Submitted for review”
-
-“Pending onboarding confirmation”
-
-“Seat request received”
-
-Forbidden
-
-“Confirmed”
-
-“Reserved”
-
-“Your territory”
-
-“Seat locked”
-
-“Available seat”
-
-ADMIN RESPONSIBILITIES (OUTSIDE APP 2)
-
-Parent account creation
-
-Seat limit configuration
-
-Invite token generation and expiry
-
-Seat approval or rejection
-
-Account status promotion (PROSPECT → ACTIVE)
-
-GBP handling for EN seats
-
-FINAL STATUS
-
-APP 2 — DEFINITION COMPLETE
-
-This document supersedes all prior drafts and discussions.
-
-No implementation may proceed until this contract is explicitly approved by DGA Admin.
+is **non-compliant** and must be corrected before release.
