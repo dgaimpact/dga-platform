@@ -72,79 +72,39 @@ Code blocks are permitted **only** when:
 
 ---
 
-## 5. Delivery Format Rule (Mandatory)
+### 4.1 Directory Structures & File Trees (Non-Negotiable)
 
-### 5.1 Chat Delivery Requirement
+Directory structures, file trees, or repository layouts **MUST NEVER** be included inside Markdown (` ```md `) documents.
 
-When delivering Markdown content **via ChatGPT**, the assistant MUST:
+Directory structures are **structural references**, not documents.
 
-- Return the **entire document inside a single fenced Markdown code block**
-- Use ` ```md ` as the fence language
-- Include **only the document content** inside the block
-- Include **no text before or after** the fenced block
+**Rules:**
 
-This rule exists to guarantee:
-- lossless copy-paste into GitHub
-- no rendering drift
-- no UI interference
+- Directory trees are **not Markdown documents**
+- Directory trees must never be mixed with:
+  - Blueprints
+  - SOPs
+  - READMEs
+  - Execution Doctrines
+  - Registries
+- Directory trees must always be delivered using a fenced **` ```text `** code block
+- Directory trees must never be delivered using ` ```md `
 
-Failure to deliver Markdown inside a fenced `md` block when requested is a **standard violation**.
+**Required Format:**
 
----
+- Use plain ASCII text only
+- Use indentation (spaces) only
+- Do **not** use box-drawing characters (`├──`, `└──`)
+- Do **not** allow Markdown tokens at column 0 (`#`, `---`, `>`, `*`)
 
-### 5.2 GitHub Storage Requirement
+**Example (Valid):**
 
-When the document is committed to GitHub:
+```text
+DIRECTORY STRUCTURE
 
-- The fenced block is **removed**
-- The document exists as **plain Markdown**
-- No wrapping code fences remain in the repository
-
-The fenced block is a **delivery mechanism**, not a storage format.
-
----
-
-## 6. Single-Pass Delivery Rule
-
-All Markdown documents must be delivered:
-
-- In **one response**
-- In **final form**
-- With **no “continued below”**
-- With **no placeholders**
-- With **no post-hoc corrections required**
-
-If a document cannot be completed in one pass, it must **not** be generated.
-
----
-
-## 7. Authority & Applicability
-
-This standard applies to **all DGA documentation**, including:
-
-- Blueprints (BP)
-- Execution Doctrines (ED)
-- Registries (REG)
-- SOPs
-- Guides
-- Internal governance documents
-
-If a document violates this standard, it must be **regenerated**, not patched.
-
----
-
-## 8. Enforcement Rule
-
-If there is a conflict between:
-
-- formatting convenience
-- chat UI behavior
-- tool limitations
-
-**This standard prevails.**
-
-Markdown integrity outranks speed.
-
----
-
-END — Markdown Output Standard (Canonical)
+[ROOT]
+  /03_P3_AUDIT
+    /BLUEPRINTS
+    /EXECUTION_DOCTRINES
+    /SYSTEMS
+    README.md
