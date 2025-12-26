@@ -1,55 +1,99 @@
-# Audit Scoring Blueprint — GEO & AIO  
-Canonical Weighted Scoring Model
+# SCORING BLUEPRINT - GEO & AIO  
 
-Version: v1.0  
-Status: LOCKED  
-Applies To: P3 Audit Runner (DAY-00, SNAPSHOT, DELTA, ADHOC)  
-Audience: R-Agent, Audit Engine, Governance Review  
+---
+
+## DOCUMENT METADATA
+
+**Document Type:** General Document (GD)  
+**Pillar:** P3 — Audit  
+**Document Title:** P3 Scoring Blueprint — GEO & AIO  
+**Filename:** GD_P3_SCORING_BLUEPRINT_GEO_AIO.md  
+
+**Version:** v1.0  
+**Status:** LOCKED  
+**Created:** 2025-12-26  
+**Last Updated:** 2025-12-26  
+
+**Canonical GitHub Location:**  
+/dga-platform/03_P3_AUDIT/REGISTRIES/GD_P3_SCORING_BLUEPRINT_GEO_AIO.md  
+
+**Consumed By:**
+- BP-P3-AUDIT-EXECUTION
+- BP-P3-DELTA-EVALUATION
+- P3 Audit Runner (R-Agent)
+- Governance Review
+
+**Produces:**
+- Authoritative scoring rules for GEO and AIO
+- Factor definitions, weights, and marking guidance
+
+**Non-Goals (Explicit):**
+- This document does not define execution order or workflows
+- This document does not define automation triggers or schedules
+- This document does not authorize discovery, scraping, or enrichment
+- This document does not define content creation or publishing (P4)
+- This document does not define relationship activation (P5)
 
 ---
 
 ## 1. Purpose
 
-This document defines the authoritative scoring blueprint for the P3 Audit.
+This General Document defines the **canonical scoring model** for the P3 Audit.
 
-It governs how weighted, fractional scores are assigned for:
+It establishes:
+- what is scored
+- how much each factor may contribute
+- how partial credit is assigned
+- how GEO and AIO differ in intent
+- how incremental improvements are reflected over time
 
-- GEO — Entity Legitimacy & Corroboration (10.0)
-- AIO — Answer Inclusion & Optimization (10.0)
-
-The blueprint exists to ensure scoring is:
-
-- deterministic  
-- bounded  
-- monotonic (only improves with improvement)  
-- explainable to subscribers  
-- suitable for 30-day deltas  
-
-R-Agent MUST consume this document as the source of truth.  
-R-Agent MUST NOT invent weights, thresholds, or interpretations.
+This document is the **single source of truth** for P3 scoring.  
+All execution logic must defer to this registry.
 
 ---
 
-## 2. Global Scoring Rules (Non-Negotiable)
+## 2. Scoring Philosophy (Global)
 
-- All factor scores are capped at their defined maximum.
-- Sub-signals are additive, never multiplicative.
-- Partial credit is preferred over binary scoring.
-- Absence of observable evidence = score 0.0.
-- No inference, prediction, or intent modeling at P3.
-- Improvements must map to observable changes.
-- Scores may change only when inputs change.
+All P3 scoring adheres to the following principles:
+
+- Scores are **bounded** by defined maxima
+- Partial credit is preferred over binary outcomes
+- Absence of observable evidence yields a score of 0.0
+- No inferred, predicted, or speculative signals are permitted
+- Improvements must map to observable changes
+- Scores must be explainable to a non-technical subscriber
+- GEO stabilizes; AIO compounds
+
+---
+
+## 3. Score Structure Overview
+
+The P3 Audit consists of two independent scoring domains:
+
+| Domain | Max |
+|------|-----|
+| GEO — Entity Legitimacy & Corroboration | 10.0 |
+| AIO — Answer Inclusion & Optimization | 10.0 |
+| **P3 Total** | **20.0** |
+
+Each domain is composed of weighted factors defined below.
 
 ---
 
 # PART I — GEO  
 Entity Legitimacy & Corroboration (10.0)
 
+## GEO Definition
+
 GEO answers one question:
 
-Is this entity real, attributable, and independently corroborated?
+**Is this entity real, attributable, and independently corroborated across the web?**
 
-GEO does NOT measure performance, marketing quality, optimization, or recency.
+GEO does not measure:
+- performance
+- rankings
+- marketing quality
+- optimization sophistication
 
 ---
 
@@ -63,7 +107,7 @@ GEO does NOT measure performance, marketing quality, optimization, or recency.
 | Third-Party Mentions & Trust Network | 1.0 |
 | Social Media Activity Signals | 0.5 |
 | Other Profiles (Identity Surfaces) | 0.5 |
-| Total GEO | 10.0 |
+| **Total GEO** | **10.0** |
 
 ---
 
@@ -76,19 +120,18 @@ Measures Google-validated existence, attribution, and configuration clarity.
 
 | Sub-Signal | Max |
 |----------|-----|
-| GBP exists & attributable | 1.0 |
+| GBP exists and is attributable | 1.0 |
 | Category relevance | 0.5 |
 | NAP completeness | 0.5 |
 | Profile completeness | 0.5 |
-| Verification & activity signals | 0.5 |
+| Verification and activity signals | 0.5 |
 
 ### Marking Examples
-- Exists but misconfigured → 1.6–2.0  
+- Exists but poorly configured → 1.6–2.0  
 - Well configured, lightly maintained → 2.2–2.6  
-- Strong, complete, verified → 2.7–3.0  
+- Complete, verified, consistent → 2.7–3.0  
 
-Service-area and address-based profiles are treated equally.  
-Clarity failures are configuration failures, not business-model failures.
+Service-area and address-based profiles are treated equally.
 
 ---
 
@@ -97,59 +140,58 @@ Clarity failures are configuration failures, not business-model failures.
 ### Definition  
 Measures independent, third-party, client-generated evidence of service delivery over time.
 
+### Included Platforms
+- Google Reviews (primary)
+- Rate-My-Agent
+- Trustpilot
+- Other credible vertical review platforms
+
 ### Sub-Signals
 
 | Sub-Signal | Max |
 |----------|-----|
-| Reviews present (any credible platform) | 0.5 |
+| Reviews present | 0.5 |
 | Quantity threshold (aggregate) | 0.5 |
-| Temporal spread (aggregate) | 0.5 |
-| Rating consistency (aggregate) | 0.5 |
-
-### Platforms Included
-- Google Reviews (primary)
-- Rate-My-Agent
-- Trustpilot
-- Other credible vertical platforms (weighted internally)
+| Temporal spread | 0.5 |
+| Rating consistency | 0.5 |
 
 ### Marking Examples
 - No reviews → 0.0  
-- Few, old reviews → 0.6–1.0  
+- Few or dated reviews → 0.6–1.0  
 - Consistent moderate history → 1.2–1.6  
 - Strong, stable, multi-platform → 1.7–2.0  
 
-Reviews do not contribute directly to AIO scoring.
+Reviews strengthen confidence but do not directly contribute to AIO.
 
 ---
 
 ## GEO Factor 3 — Website (Authority Surfaces) (3.0)
 
 ### Definition  
-Measures the existence of crawlable, attributable authority surfaces usable by AI systems.
+Measures the presence of crawlable, attributable authority surfaces usable by AI systems.
 
 ### Authority Surface Classes
 - Owned first-party website
-- Delegated brokerage profile (e.g. brokerage domain page)
+- Delegated brokerage profile
 - Authority Hub (DGA-controlled)
 
 ### Sub-Signals
 
 | Sub-Signal | Max |
 |----------|-----|
-| Ownership primacy (first-party domain) | 1.25 |
+| Ownership primacy | 1.25 |
 | Delegated authority presence | 0.75 |
-| Crawlable & public | 0.5 |
-| Entity attribution (NAP, credentials) | 0.5 |
-| Structured long-form reference content | 0.5 |
+| Crawlable and public | 0.5 |
+| Entity attribution clarity | 0.5 |
+| Structured reference content | 0.5 |
 | Authority Hub presence | 0.25 |
-| Total | 3.0 |
 
 ### Marking Examples
 - Brokerage profile only → ~1.8–2.1  
 - Personal website only → ~2.4–2.7  
 - Website + Authority Hub → 3.0  
 
-Authority Hub confirms legitimacy but does not replace ownership primacy.
+Authority Hub reinforces but does not replace ownership primacy.
 
 ---
 
@@ -165,10 +207,10 @@ Measures independent corroboration and structured professional relationships.
 | Independent third-party mentions | 0.5 |
 | Trust Network corroboration | 0.5 |
 
-### Examples
-- Chamber of Commerce, association listing → partial  
-- Media or industry features → stronger  
-- Verified MP–REA Trust Network relationships → additive  
+### Marking Examples
+- Association or chamber listing → partial  
+- Media or industry mentions → stronger  
+- Verified Trust Network relationships → additive  
 
 Trust Network is corroborative, not client feedback.
 
@@ -177,7 +219,7 @@ Trust Network is corroborative, not client feedback.
 ## GEO Factor 5 — Social Media Activity Signals (0.5)
 
 ### Definition  
-Measures minimal public activity presence, not marketing performance.
+Measures minimal public activity presence, not engagement or marketing performance.
 
 ### Sub-Signals
 
@@ -186,7 +228,7 @@ Measures minimal public activity presence, not marketing performance.
 | At least one active profile | 0.25 |
 | Evidence of recent activity | 0.25 |
 
-No engagement metrics are evaluated.
+Follower counts and engagement metrics are excluded.
 
 ---
 
@@ -202,18 +244,20 @@ Measures identity coherence across non-review, non-social platforms.
 | At least one credible profile | 0.25 |
 | Consistency across profiles | 0.25 |
 
-Includes LinkedIn, brokerage directories, licensing registries, associations.
+Includes LinkedIn, brokerage directories, licensing registries, and associations.
 
 ---
 
 # PART II — AIO  
 Answer Inclusion & Optimization (10.0)
 
+## AIO Definition
+
 AIO answers one question:
 
-If an AI system is asked a relevant question, would it confidently include this entity in the answer?
+**Would an AI system confidently include this entity when answering a relevant question?**
 
-AIO measures usability by AI systems, not legitimacy.
+AIO measures usability by AI systems, not existence.
 
 ---
 
@@ -225,7 +269,7 @@ AIO measures usability by AI systems, not legitimacy.
 | Content Extractability & Structure | 3.0 |
 | First-Party Authority Signals | 2.0 |
 | AI Surface Presence | 2.0 |
-| Total AIO | 10.0 |
+| **Total AIO** | **10.0** |
 
 ---
 
@@ -239,11 +283,11 @@ Measures how many real-world situations are explicitly addressed in AI-readable 
 | Sub-Signal | Max |
 |----------|-----|
 | Core service situations | 1.0 |
-| Secondary / edge situations | 1.0 |
-| Geographic & role clarity | 1.0 |
+| Secondary and edge situations | 1.0 |
+| Geographic and role clarity | 1.0 |
 
 ### Marking Examples
-- Generic description → 0.4–0.7  
+- Generic descriptions → 0.4–0.7  
 - Multiple vague mentions → 0.8–1.4  
 - Structured situation sections → 1.8–2.4  
 - Deep long-form coverage → 2.5–3.0  
@@ -280,11 +324,11 @@ Measures AI trust in the entity as a safe source of advice.
 
 | Sub-Signal | Max |
 |----------|-----|
-| Entity clarity & credentials | 0.75 |
-| Authorship & attribution | 0.5 |
+| Entity clarity and credentials | 0.75 |
+| Authorship and attribution | 0.5 |
 | Authority Hub canonical presence | 0.75 |
 
-Authority Hub carries near-first-party weight in AIO.
+Authority Hub carries near-first-party weight for AIO.
 
 ---
 
@@ -297,26 +341,22 @@ Measures observed inclusion or persistence in AI-generated outputs.
 
 | Sub-Signal | Max |
 |----------|-----|
-| Evidence of AI citation | 1.0 |
+| Evidence of AI citation or summarization | 1.0 |
 | Persistence across queries or time | 1.0 |
 
-### Day-00 Reality
-Most Day-00 audits score 0.0–0.5 here.  
+### Day-00 Expectation
+Most baseline audits score 0.0–0.5 here.  
 This is expected and honest.
 
 ---
 
-## 3. Final Scoring Model
+## 4. Final Notes
 
-- GEO Score: /10.0  
-- AIO Score: /10.0  
-- P3 Total Score: /20.0  
-
-GEO stabilizes early.  
-AIO compounds over time.  
-
-This separation ensures honest baselines and visible improvement driven by DGA execution.
+- GEO stabilizes early; AIO compounds over time
+- Authority Hub primarily drives AIO improvement
+- Incremental changes must be visible in 30-day cycles
+- This document is authoritative and binding
 
 ---
 
-End of Canonical Document
+**END — GD_P3_SCORING_BLUEPRINT_GEO_AIO**
