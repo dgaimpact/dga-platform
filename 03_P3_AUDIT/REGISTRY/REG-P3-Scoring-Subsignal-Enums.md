@@ -1,239 +1,152 @@
-# SCORING SUBSIGNAL ENUMS  
-P3 Scoring Subsignal Enumeration — GEO & AIO
+# SCORING SUBSIGNAL ENUMS
 
-Version: v1.0  
-Status: LOCKED  
-Created: 2025-12-26  
-Last Updated: 2025-12-26  
-
-Consumes:
-- /dga-platform/03_P3_AUDIT/REGISTRY/GD_P3_SCORING_BLUEPRINT_GEO_AIO.md
-
-Purpose:
-Defines the authoritative subsignal_id enumeration used by R-Agent for deterministic scoring, delta attribution, and templated explanations.
+## Document Metadata
+- **Registry:** P3 Scoring – Subsignal Enumerations
+- **Version:** v1.1
+- **Status:** Canonical
+- **Owner:** Digital Growth Accelerator (DGA)
+- **Last Updated:** 2025-01-28
+- **Supersedes:** v1.0
+- **Scope:** Scoring Registry (non-executional)
 
 ---
 
-## 1. Global Enums
+## 1. Purpose
 
-### 1.1 Allowed Subsignal State Enum (Authoritative)
-All subsignals MUST emit exactly one of:
+This document defines the **canonical subsignal enumerations** used by the P3 scoring engine.
 
-- PRESENT
-- PARTIAL
-- ABSENT
-- NOT_INTEGRATED
-- UNKNOWN
+Subsignals represent **detected conditions or attributes** derived from discovery and crawling processes.  
+They are **inputs to scoring**, not scoring logic themselves.
 
-State meaning:
-- PRESENT: evidence clearly supports the signal
-- PARTIAL: evidence exists but is incomplete, misaligned, or weak
-- ABSENT: evidence indicates the signal is not present
-- NOT_INTEGRATED: the system does not yet collect/store the needed evidence
-- UNKNOWN: evidence is expected but currently unavailable or indeterminate (not a system integration gap)
-
-### 1.2 Evidence Reference Rule (Authoritative)
-- evidence_refs MUST contain only keys from the execution-level evidence_index
-- evidence_refs MUST be empty when state is NOT_INTEGRATED (unless documenting integration status)
+This registry intentionally avoids:
+- discovery mechanics
+- query logic
+- platform preferences
+- execution details
 
 ---
 
-## 2. GEO Subsignal Enums
+## 2. Entity Identity Subsignals
 
-### 2.1 GEO_GBP — Google Business Profile (3.0)
+These subsignals reflect clarity and consistency of the **Entity Bundle**.
 
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| GEO_GBP_EXISTS_ATTRIBUTABLE | GBP exists and is attributable | 1.0 | gbp_place_id | If no gbp_place_id and no resolvable identifier → ABSENT |
-| GEO_GBP_CATEGORY_RELEVANCE | Category relevance | 0.5 | gbp_primary_category, gbp_primary_category_id, profession_type | PARTIAL when category exists but mismatched/too broad |
-| GEO_GBP_NAP_COMPLETENESS | NAP completeness | 0.5 | gbp_primary_category_raw plus stored GBP profile fields (if available) | If GBP NAP fields not stored → NOT_INTEGRATED |
-| GEO_GBP_PROFILE_COMPLETENESS | Profile completeness | 0.5 | stored GBP profile fields (description, hours, photos, services) | If not stored → NOT_INTEGRATED |
-| GEO_GBP_VERIFIED_ACTIVITY | Verification and activity signals | 0.5 | stored GBP verification/activity flags | If not stored → NOT_INTEGRATED |
+### ENTITY_NAME_PRESENT
+- One or more entity names or aliases detected
+- Aliases may include personal name, DBA, or branded name
 
-Delta drivers:
-- GEO_GBP_EXISTS_ATTRIBUTABLE
-- GEO_GBP_CATEGORY_RELEVANCE
-- GEO_GBP_NAP_COMPLETENESS
-- GEO_GBP_PROFILE_COMPLETENESS
-- GEO_GBP_VERIFIED_ACTIVITY
+### ENTITY_NAME_CONSISTENT
+- Entity names across surfaces are reconcilable
+- Minor variation permitted within the same Entity Bundle
+
+### ENTITY_NAME_CONFLICT
+- Irreconcilable or contradictory entity naming detected
 
 ---
 
-### 2.2 GEO_REVIEWS — Reviews (Independent Client Feedback) (2.0)
+## 3. Domain & Ownership Subsignals
 
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| GEO_REVIEWS_PRESENT_ANY | Reviews present (any credible platform) | 0.5 | reviews_google_count, reviews_rma_count, reviews_trustpilot_count, reviews_other[] | PRESENT if any count >= 1 |
-| GEO_REVIEWS_QUANTITY_AGG | Quantity threshold (aggregate) | 0.5 | counts across platforms | PARTIAL bands based on aggregate counts |
-| GEO_REVIEWS_TEMPORAL_SPREAD | Temporal spread (aggregate) | 0.5 | last_review_date per platform; optional first_review_date | If dates not stored → NOT_INTEGRATED |
-| GEO_REVIEWS_RATING_CONSISTENCY | Rating consistency (aggregate) | 0.5 | rating avg per platform; optional distribution | If ratings not stored → NOT_INTEGRATED |
+### PRIMARY_DOMAIN_PRESENT
+- Authoritative primary domain detected
 
-Platform credibility weighting (internal guidance, not a separate subsignal):
-- Google: 1.0
-- Rate-My-Agent: 0.8
-- Trustpilot: 0.6
-- Other credible vertical platforms: 0.4–0.6
+### PRIMARY_DOMAIN_CONSISTENT
+- Domain consistently associated with the same entity bundle
 
-Delta drivers:
-- GEO_REVIEWS_PRESENT_ANY
-- GEO_REVIEWS_QUANTITY_AGG
-- GEO_REVIEWS_TEMPORAL_SPREAD
-- GEO_REVIEWS_RATING_CONSISTENCY
+### DOMAIN_ENTITY_MISMATCH
+- Domain detected but entity association unclear or conflicting
 
 ---
 
-### 2.3 GEO_WEBSITE — Website (Authority Surfaces) (3.0)
+## 4. Google Business Profile (GBP) Subsignals
 
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| GEO_WEBSITE_OWNERSHIP_PRIMACY | Ownership primacy (first-party domain) | 1.25 | website_url | PRESENT when owned site exists; otherwise ABSENT |
-| GEO_WEBSITE_DELEGATED_AUTHORITY | Delegated authority presence | 0.75 | delegated_profile_url (brokerage profile) | PRESENT when brokerage profile exists; else ABSENT |
-| GEO_WEBSITE_CRAWLABLE_PUBLIC | Crawlable and public | 0.5 | website_url and/or delegated_profile_url and/or authority_hub_url | If no crawl check stored → UNKNOWN (not NOT_INTEGRATED) |
-| GEO_WEBSITE_ENTITY_ATTRIBUTION | Entity attribution clarity (NAP, credentials) | 0.5 | structured content checks or known template presence | If not assessed/stored → NOT_INTEGRATED |
-| GEO_WEBSITE_STRUCTURED_REFERENCE | Structured reference content | 0.5 | content_inventory[] or known page list | If inventory not integrated → NOT_INTEGRATED |
-| GEO_WEBSITE_AUTHORITY_HUB_PRESENT | Authority Hub presence | 0.25 | authority_hub_url | PRESENT when hub URL exists and is attributable |
+### GBP_PRESENT
+- Google Business Profile detected
 
-Marking guidance:
-- Brokerage profile only commonly yields ~1.8–2.1 across subsignals.
-- Owned site only commonly yields ~2.4–2.7.
-- Owned site + hub can reach full 3.0.
+### GBP_NAME_CONSISTENT
+- GBP naming aligns with Entity Bundle
 
-Delta drivers:
-- GEO_WEBSITE_OWNERSHIP_PRIMACY
-- GEO_WEBSITE_DELEGATED_AUTHORITY
-- GEO_WEBSITE_CRAWLABLE_PUBLIC
-- GEO_WEBSITE_ENTITY_ATTRIBUTION
-- GEO_WEBSITE_STRUCTURED_REFERENCE
-- GEO_WEBSITE_AUTHORITY_HUB_PRESENT
+### GBP_LOCATION_MATCH
+- GBP location matches declared service geography
 
 ---
 
-### 2.4 GEO_THIRD_PARTY_TRUST — Third-Party Mentions & Trust Network (1.0)
+## 5. Review Presence Subsignals (Platform-Agnostic)
 
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| GEO_TPT_INDEPENDENT_MENTIONS | Independent third-party mentions | 0.5 | third_party_mentions[] | PARTIAL bands based on count/quality |
-| GEO_TPT_TRUST_NETWORK_CORROBORATION | Trust Network corroboration | 0.5 | trust_network_relationships[]; trust_network_links[]; utm_relationship_proof[] | If not yet integrated → NOT_INTEGRATED |
+Review subsignals intentionally **do not encode vendor identity**.
 
-Delta drivers:
-- GEO_TPT_INDEPENDENT_MENTIONS
-- GEO_TPT_TRUST_NETWORK_CORROBORATION
+### REVIEW_SURFACE_PRESENT
+- One or more third-party review surfaces detected
 
----
+### REVIEW_SURFACE_MULTIPLE
+- Reviews detected across multiple independent domains
 
-### 2.5 GEO_SOCIAL — Social Media Activity Signals (0.5)
+### REVIEW_ENTITY_MATCH
+- Reviews clearly reference the same Entity Bundle
 
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| GEO_SOCIAL_ACTIVE_PROFILE_PRESENT | At least one active profile | 0.25 | facebook_url, instagram_url, x_url, tiktok_url, youtube_url, other_social_urls[] | Active = exists, public, attributable |
-| GEO_SOCIAL_RECENT_ACTIVITY_PRESENT | Evidence of recent activity | 0.25 | social_last_activity_date_by_platform[] | If not stored → NOT_INTEGRATED |
-
-Exclusions:
-- LinkedIn is not scored here (belongs to GEO_OTHER_PROFILES).
-
-Delta drivers:
-- GEO_SOCIAL_ACTIVE_PROFILE_PRESENT
-- GEO_SOCIAL_RECENT_ACTIVITY_PRESENT
+### REVIEW_ENTITY_AMBIGUOUS
+- Reviews present but entity association unclear
 
 ---
 
-### 2.6 GEO_OTHER_PROFILES — Other Profiles (Identity Surfaces) (0.5)
+## 6. Location & NAP Subsignals
 
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| GEO_PROFILES_CREDIBLE_PRESENT | At least one credible profile | 0.25 | linkedin_url, licensing_registry_url, association_profile_urls[], directory_profile_urls[] | Review platforms excluded |
-| GEO_PROFILES_CONSISTENCY | Consistency across profiles | 0.25 | same as above plus normalized identity fields | If normalization not implemented → NOT_INTEGRATED |
+### NAP_PRESENT
+- Name, address, and/or phone detected
 
-Delta drivers:
-- GEO_PROFILES_CREDIBLE_PRESENT
-- GEO_PROFILES_CONSISTENCY
+### NAP_CONSISTENT
+- NAP signals consistent across surfaces
 
----
-
-## 3. AIO Subsignal Enums
-
-### 3.1 AIO_SITUATION_COVERAGE — Situation Coverage (3.0)
-
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| AIO_SIT_CORE_SITUATIONS | Core service situations | 1.0 | content_inventory[]; situation_map[] | If not integrated → NOT_INTEGRATED |
-| AIO_SIT_SECONDARY_EDGE | Secondary and edge situations | 1.0 | content_inventory[]; situation_map[] | PARTIAL when coverage exists but shallow |
-| AIO_SIT_GEO_ROLE_CLARITY | Geographic and role clarity | 1.0 | content checks for location/role blocks; authority_hub templates | If not assessed → NOT_INTEGRATED |
-
-Marking examples:
-- Generic descriptions → 0.4–0.7
-- Multiple vague mentions → 0.8–1.4
-- Structured situation sections → 1.8–2.4
-- Deep long-form coverage → 2.5–3.0
-
-Delta drivers:
-- AIO_SIT_CORE_SITUATIONS
-- AIO_SIT_SECONDARY_EDGE
-- AIO_SIT_GEO_ROLE_CLARITY
+### NAP_INCONSISTENT
+- Conflicting NAP signals detected
 
 ---
 
-### 3.2 AIO_EXTRACTABILITY — Content Extractability & Structure (3.0)
+## 7. Content & Context Subsignals
 
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| AIO_EXT_DECLARATIVE_HEADINGS | Declarative headings | 1.0 | structural_checks[] per page | If not integrated → NOT_INTEGRATED |
-| AIO_EXT_ANSWER_DENSE_PARAS | Answer-dense paragraphs | 1.0 | structural_checks[] per page | If not integrated → NOT_INTEGRATED |
-| AIO_EXT_STRUCTURAL_CONSISTENCY | Structural consistency | 1.0 | presence of lists, sections, FAQs | If not integrated → NOT_INTEGRATED |
+### SERVICE_CONTEXT_PRESENT
+- Services clearly described in relation to the entity
 
-Marking examples:
-- Narrative blog style → 0.3–0.8
-- Mixed structure → 1.0–1.8
-- Well-structured pages → 2.0–2.6
-- Authority Hub canonical pages → 2.7–3.0
+### LOCATION_CONTEXT_PRESENT
+- Location references present within content
 
-Delta drivers:
-- AIO_EXT_DECLARATIVE_HEADINGS
-- AIO_EXT_ANSWER_DENSE_PARAS
-- AIO_EXT_STRUCTURAL_CONSISTENCY
+### CONTEXT_THIN
+- Entity or service context present but insufficient
 
 ---
 
-### 3.3 AIO_AUTHORITY_SIGNALS — First-Party Authority Signals (2.0)
+## 8. Indexing & Accessibility Subsignals
 
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| AIO_AUTH_ENTITY_CREDENTIALS | Entity clarity and credentials | 0.75 | credential_block_present; licensing_category; page template checks | If not integrated → NOT_INTEGRATED |
-| AIO_AUTH_AUTHORSHIP_ATTRIB | Authorship and attribution | 0.5 | authorship_present; about_page_present; schema_present | If not integrated → NOT_INTEGRATED |
-| AIO_AUTH_HUB_CANONICAL_PRESENCE | Authority Hub canonical presence | 0.75 | authority_hub_url; hub_content_inventory[] | PRESENT when hub exists and is attributable |
+### INDEXABLE
+- Page accessible and indexable
 
-Delta drivers:
-- AIO_AUTH_ENTITY_CREDENTIALS
-- AIO_AUTH_AUTHORSHIP_ATTRIB
-- AIO_AUTH_HUB_CANONICAL_PRESENCE
+### NOINDEX_DETECTED
+- Explicit noindex directive detected
+
+### CRAWL_ERROR
+- Page unreachable or errored during crawl
 
 ---
 
-### 3.4 AIO_AI_SURFACE_PRESENCE — AI Surface Presence (2.0)
+## 9. Interpretation Notes
 
-| subsignal_id | Label | Max | Expected Evidence Inputs | Notes |
-|---|---|---:|---|---|
-| AIO_AI_EVIDENCE_OF_CITATION | Evidence of AI citation or summarization | 1.0 | ai_presence_observations[] | If you do not run observations yet → NOT_INTEGRATED |
-| AIO_AI_PERSISTENCE_OVER_TIME | Persistence across queries or time | 1.0 | ai_presence_time_series[] | Typically NOT_INTEGRATED at Day-00 |
-
-Day-00 expectation:
-- Scores often 0.0–0.5 due to lack of integrated observations.
-
-Delta drivers:
-- AIO_AI_EVIDENCE_OF_CITATION
-- AIO_AI_PERSISTENCE_OVER_TIME
+- Subsignals are **binary or categorical observations**
+- They do **not** imply score weight
+- Weighting and impact are governed by the P3 Scoring Blueprint
+- Detection methods may evolve without changing enum meaning
 
 ---
 
-## 4. Required R-Agent Output Alignment (Binding)
+## 10. Version History
 
-For each factor:
-- R-Agent MUST emit all subsignals listed above
-- R-Agent MUST compute factor score as the sum of subsignal scores capped at factor max
-- R-Agent MUST provide evidence_refs for each subsignal when PRESENT or PARTIAL
-- R-Agent MUST set NOT_INTEGRATED where the system does not collect the evidence yet
-- R-Agent MUST avoid using UNKNOWN when the correct state is NOT_INTEGRATED
+- **v1.0** – Initial subsignal enumeration
+- **v1.1** – Aligned subsignals with Entity Bundle model and platform-agnostic review philosophy
 
 ---
 
-END — REG_P3_SCORING_SUBSIGNAL_ENUMS
+## 11. Canonical Status
+
+This registry is the **authoritative enumeration source** for:
+- P3 scoring inputs
+- gap detection logic
+- action synthesis mapping
+
+All P3 scoring components must reference these enums verbatim unless superseded by a formally versioned update.
