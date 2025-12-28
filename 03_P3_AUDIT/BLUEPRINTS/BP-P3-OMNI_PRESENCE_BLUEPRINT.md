@@ -1,259 +1,198 @@
-# BP–P3–OMNI-PRESENCE BLUEPRINT
+# P3-OMNI_PRESENCE_BLUEPRINT
 
-Canonical Authority Model for Visibility, Corroboration & Audit-Governed Presence
-
-Version: v11.0  
-Created: 2025-12-14  
-Status: Governing Authority (Active)
-
-Primary Pillar: P3 — Audit  
-Consumed By: P4 — Content Creation & Publishing  
-Explicitly Excluded: P1, P2, P5
-
----
-
-## FOUNDER DOCTRINE
-
-This Blueprint documents **decisions already made**.
-
-It exists to:
-- prevent system drift
-- constrain interpretation
-- protect long-term trust
-- ensure execution follows intent
-
-If a downstream system, Execution Doctrine, SOP, or automation conflicts with this Blueprint, **the conflict must be resolved here first**.
+## Document Metadata
+- **Blueprint:** P3 – Omni-Presence Evaluation Framework
+- **Version:** v1.1
+- **Status:** Canonical
+- **Owner:** Digital Growth Accelerator (DGA)
+- **Last Updated:** 2025-01-28
+- **Supersedes:** v1.0
+- **Scope:** Conceptual / Strategic (non-executional)
 
 ---
 
-## 1. PURPOSE & AUTHORITY
+## 1. Purpose
 
-This Blueprint defines **what Omni-Presence means inside DGA** at the authority and audit level.
+This blueprint defines how **Omni-Presence** is conceptually evaluated within the DGA **P3 Audit framework**.
 
-It governs:
-- how presence is **defined**, not produced
-- how authority signals are **interpreted**, not optimized
-- how GEO and AIO observations are **evaluated**, not exploited
+Omni-Presence represents the **legitimacy, consistency, and discoverability of a professional entity** across:
+- the open web,
+- dominant consumer discovery platforms, and
+- AI-mediated search and recommendation environments.
 
-This document is **governing**, not advisory.
-
-It does **not** describe:
-- content creation workflows
-- publishing mechanics
-- cadence decisions
-- relationship follow-up
-
-Those belong to downstream pillars.
+This document defines **what matters and why**.  
+It intentionally does **not** define crawling logic, query mechanics, tooling, or implementation details.
 
 ---
 
-## 2. ROLE OF THIS BLUEPRINT IN DGA
+## 2. Omni-Presence vs Traditional SEO
 
-Within the locked pillar model:
+P3 Omni-Presence evaluation is **not traditional SEO**.
 
-- **P3 (Audit)** defines *truth*
-- **P4 (Content)** executes *artifacts*
-- **P5 (Relationship Continuity)** preserves *human trust*
+It does not focus on:
+- keyword rankings,
+- backlink volume,
+- tactical optimization tricks.
 
-This Blueprint belongs to **P3** because it defines:
-
-> what must exist for an entity to be considered present, corroborated, and recommendable.
-
-Content creation is **downstream execution**, never upstream authority.
-
----
-
-## 3. OMNI-PRESENCE — WHAT IT IS (AND IS NOT)
-
-### Omni-Presence **IS**
-
-- A governed model for **entity corroboration**
-- A definition of **required authority artifacts**
-- A framework for **audit-based visibility assessment**
-- A constraint system that prevents arbitrary publishing
-
-### Omni-Presence **IS NOT**
-
-- A content strategy
-- A social media plan
-- A distribution checklist
-- A growth hack or engagement tactic
-
-Presence is **observed**, not manufactured.
+Instead, P3 evaluates whether an entity:
+- exists clearly,
+- is consistently represented,
+- is corroborated across independent surfaces,
+- can be confidently recommended by AI systems.
 
 ---
 
-## 4. DESIGN DOMAINS (CONCEPTUAL, NOT OPERATIONAL)
+## 3. Entity-Centric Evaluation Model
 
-Omni-Presence operates across four conceptual domains:
+### 3.1 Entity Bundle (Canonical Clarification)
 
-1. **Entity Identity**
-   - Name, role, geography, niche
-   - Verified and normalized upstream (P2)
+Within P3, **brand identity is treated as an _Entity Bundle_**, not a single literal brand string.
 
-2. **Authority Artifacts**
-   - Canonical long-form content
-   - Persistent, indexable proof of expertise
+An Entity Bundle may include:
+- a **primary domain** (authoritative owned property),
+- one or more **public-facing names**, including:
+  - personal name,
+  - DBA or branded name,
+  - brokerage-affiliated name,
+- **known aliases** derived from authoritative sources.
 
-3. **Platform Corroboration**
-   - Presence across required platforms
-   - Consistency of entity signals
+Aliases may be surfaced from:
+- website titles, headings, and structured data,
+- Google Business Profile naming,
+- linked social or professional profiles.
 
-4. **Temporal Continuity**
-   - Ongoing existence over time
-   - Absence is observable and material
+Omni-Presence is evaluated **across the Entity Bundle**, allowing legitimate variation between:
+- personal brand,
+- domain brand,
+- brokerage overlay.
 
-These domains **define what audits look for**.  
-They do not define how artifacts are created.
-
----
-
-## 5. AUDIT AS THE SYSTEM SOURCE OF TRUTH
-
-Within DGA:
-
-- Audit results are **authoritative**
-- Content plans are **derivative**
-- Publishing is **reactive to audit insight**
-
-The direction of flow is **strictly one-way**:
-
-AUDIT → INSIGHT → CONTENT → DISTRIBUTION
-
-
-Any system that reverses this flow violates this Blueprint.
+This reflects real-world professional branding and avoids penalizing valid naming divergence.
 
 ---
 
-## 6. GEO & AIO — SEPARATION OF RESPONSIBILITY
+## 4. Core Omni-Presence Surfaces
 
-### GEO (Generative Entity Optimization)
-- Observes **entity corroboration**
-- Evaluates structural authority signals
-- Measures consistency and persistence
+P3 evaluates omni-presence across the following surface categories:
 
-### AIO (AI Answer Optimization)
-- Observes **answer-level visibility**
-- Evaluates recommendation likelihood
-- Measures contextual relevance
+### 4.1 Owned Properties
+- Primary website
+- Primary domain content
+- Structured data and entity declarations
 
-Both are:
-- **observational**
-- **non-authoritative**
-- **inputs**, not decision engines
+### 4.2 Platform Anchors
+- Google Business Profile (GBP)
+- Core professional social presences (e.g., LinkedIn, Facebook Business)
 
-No AI platform is a source of truth.
+These anchors establish **baseline legitimacy**.
 
----
+### 4.3 Earned & Third-Party Signals
+- Review platforms
+- Directory mentions
+- Independent citations
+- Press or reference mentions
 
-## 7. AUDIT TYPES & CADENCE (GOVERNANCE ONLY)
-
-This Blueprint governs audit **meaning**, not scheduling.
-
-Recognized audit classes:
-
-- **Snapshot Audits**
-  - Day 00 baseline
-  - Periodic reassessment
-
-- **Internal Monitoring**
-  - Silent ecosystem observation
-
-- **Adhoc Diagnostic Audits**
-  - Prospecting checks
-  - Competitive context
-  - Anomaly investigation
-
-Only **scheduled snapshot audits** may inform content planning.
+These surfaces validate the entity beyond self-owned claims.
 
 ---
 
-## 8. SCORING PHILOSOPHY & TIME MECHANICS
+## 5. Review Presence Philosophy (Clarified)
 
-Scores represent:
-- **relative state**
-- **directional movement**
-- **contextual confidence**
+Review presence within P3 is **platform-agnostic**.
 
-Scores do **not** represent:
-- performance guarantees
-- growth velocity
-- effort attribution
+Any legitimate third-party review surface surfaced organically in the open web may contribute to review visibility signals, provided:
+- entity identification is consistent, and
+- signals corroborate the same Entity Bundle.
 
-Time is treated as:
-- linear
-- non-accelerated
-- resistant to manipulation
+Evaluation emphasizes:
+- presence across multiple independent surfaces,
+- corroboration with other omni-presence signals,
+- consistency of entity naming and location.
 
-Momentum cannot be forced.
+No preferred, exclusive, or allow-listed review platforms are assumed beyond mandatory identity anchors (e.g., Google Business Profile).
+
+This prevents vendor bias and reflects how AI systems assess trust signals in aggregate.
 
 ---
 
-## 9. LANGUAGE & CONFIDENCE CONSTRAINTS
+## 6. Consistency & Corroboration
 
-All systems governed by this Blueprint must:
+Omni-Presence strength increases when:
+- entity names align across surfaces,
+- location references are consistent,
+- services are described coherently,
+- independent sources corroborate existence.
 
-- avoid certainty claims
-- avoid outcome promises
-- avoid comparative superiority language
-- reflect probabilistic reality
-
-Confidence emerges from **corroboration**, not claims.
-
----
-
-## 10. UNCERTAINTY AS A DESIGN FEATURE
-
-Uncertainty is:
-- expected
-- preserved
-- surfaced
-
-Systems must not:
-- smooth uncertainty away
-- infer missing context
-- fabricate confidence
-
-When signals are unclear, the correct response is **restraint**.
+Perfect uniformity is **not required**.  
+Reasonable variation is acceptable when:
+- signals clearly reference the same entity,
+- conflicts can be reconciled contextually.
 
 ---
 
-## 11. GOVERNED SYSTEM EVOLUTION
+## 7. Omni-Presence in AI-Mediated Environments (AIO)
 
-This Blueprint allows evolution **only** through:
+AI systems do not “rank pages” — they assess **confidence**.
 
-- explicit versioning
-- documented rationale
-- downstream compatibility review
+Confidence is derived from:
+- entity clarity,
+- repetition across trusted sources,
+- absence of contradictions,
+- breadth of corroboration.
 
-Silent drift is prohibited.
-
----
-
-## 12. NON-NEGOTIABLE INVARIANTS
-
-The following are absolute:
-
-- Audit defines truth
-- Content never defines authority
-- Omni-Presence is governed, not tactical
-- GEO and AIO are observational only
-- Flow is one-way: Audit → Content
-- Human trust is protected elsewhere (P5)
-
-Violation of any invariant invalidates execution.
+P3 Omni-Presence evaluation is designed to model **AI confidence formation**, not algorithmic ranking.
 
 ---
 
-## 13. DOWNSTREAM ENFORCEMENT
+## 8. Diagnostic Role of P3
 
-This Blueprint is enforced by:
+P3 is **diagnostic**, not prescriptive.
 
-- **ED–P3–Audit Core**
-- P4 Execution Doctrines (consumption only)
-- Registry-aligned schemas
-- System gating and audit lifecycle controls
+It answers:
+- “Is this entity clearly and consistently represented?”
+- “Would an AI system confidently recommend this professional?”
+
+It does **not**:
+- prescribe marketing tactics,
+- generate content strategy,
+- enforce optimization techniques.
+
+Those actions occur in downstream workflows (e.g., P4, P5).
 
 ---
 
-END — BP–P3–OMNI-PRESENCE BLUEPRINT
+## 9. Governance & Separation of Concerns (Clarified)
+
+This blueprint defines:
+- conceptual factors,
+- evaluative philosophy,
+- signal interpretation principles.
+
+It intentionally excludes:
+- crawling strategies,
+- query planning,
+- cost controls,
+- execution tooling.
+
+P3 discovery and auditing processes are designed to prioritize **high-impact omni-presence factors** while remaining **cost-aware at scale**.  
+Execution mechanics are governed separately to prevent architectural drift.
+
+---
+
+## 10. Version History
+
+- **v1.0** – Initial omni-presence blueprint
+- **v1.1** – Clarified:
+  - Entity Bundle model
+  - Platform-agnostic review philosophy
+  - Cost-aware governance principles
+
+---
+
+## 11. Canonical Status
+
+This document is the **authoritative conceptual reference** for:
+- P3 Omni-Presence evaluation
+- GEO / AIO alignment discussions
+- Future audit and scoring evolution
+
+All implementation must remain aligned to this blueprint unless superseded by a formally versioned update.
