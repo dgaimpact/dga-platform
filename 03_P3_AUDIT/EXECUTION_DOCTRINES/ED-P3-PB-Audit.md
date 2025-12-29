@@ -23,9 +23,9 @@ Governed By:
 
 ## GitHub Directory Location
 
-# 03_P3_AUDIT/
-# └── EXECUTION_DOCTRINES/
-# └── ED–P3–PB-AUDIT.md
+03_P3_AUDIT/
+└── EXECUTION_DOCTRINES/
+└── ED–P3–PB-AUDIT.md
 
 ---
 
