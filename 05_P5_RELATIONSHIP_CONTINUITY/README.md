@@ -1,29 +1,31 @@
 # P5 — Relationship Continuity  
 Pillar Overview & Directory Guide
 
-Version: v1.0  
+Version: v1.1  
 Created: 2025-12-14  
+Last Updated: 2025-12-29  
 Status: Pillar Reference (Active)
 
 Owned By: DGA Core Platform  
 Governed By:
 - 00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md
 - 00_FOUNDATIONS/GOVERNANCE/PILLAR_LOCK_REFERENCE.md
+- BP–P5–Relationship-Continuity.md
 
 ---
 
 ## 1. Purpose of P5 — Relationship Continuity
 
-P5 — Relationship Continuity governs **how DGA shows up as a human system over time**.
+P5 — Relationship Continuity governs **how DGA preserves human presence over time without automation, optimization, or performance pressure**.
 
 This pillar exists to:
-- ensure no ACTIVE subscriber relationship ever goes cold
-- prevent DGA from becoming invisible, transactional, or purely automated
-- protect trust, confidence, and long-term retention
-- reinforce the value of consistency over novelty
+- ensure no ACTIVE subscriber relationship silently goes cold
+- maintain predictable human presence without outcome expectations
+- prevent relationships from becoming transactional, scored, or automated
+- protect trust by refusing to optimize or systematize human intent
 
-P5 is about **presence**, not performance.  
-It ensures continuity, not outcomes.
+P5 is about **presence only**.  
+It records *that* DGA showed up — never *why*, *how well*, or *with what result*.
 
 ---
 
@@ -31,13 +33,15 @@ It ensures continuity, not outcomes.
 
 P5 owns all systems, documents, and logic related to:
 
-- Human-led outreach cadence (60–90 day cycles)
-- Relationship touchpoints (calls, meetings, check-ins, coffee)
-- Continuity tracking (status, not scoring)
-- Escalation signaling when relationships stall
-- Guardrails that prevent automation of intent
+- the definition of *relationship continuity* as time-based presence
+- canonical cadence rules (60–90 days)
+- continuity states (Current · Approaching Lapse · Lapsed)
+- recording of **human-confirmed** touchpoints only
+- visibility-only signals and escalation
+- enforcement of human-vs-system responsibility boundaries
+- absolute prohibition of relationship automation
 
-P5 defines **how DGA remains human at scale**.
+P5 defines **presence as sufficient** and refuses to measure beyond it.
 
 ---
 
@@ -45,14 +49,16 @@ P5 defines **how DGA remains human at scale**.
 
 P5 does **not** own:
 
-- Prospect qualification or onboarding (P1 / P2)
-- Audit execution or interpretation (P3)
-- Content creation or publishing (P4)
-- CRM-style performance tracking
-- Automated outreach or messaging
-- Outcome enforcement or guarantees
+- prospecting, nurturing, or qualification (P1)
+- intake, onboarding, or activation (P2)
+- audits or audit interpretation (P3)
+- content creation, publishing, or discussion (P4)
+- CRM workflows, task management, or performance tracking
+- satisfaction, engagement, retention, or “relationship health” metrics
+- outreach tactics, scripts, or message templates
+- automated messaging, sequencing, or re-engagement logic
 
-If a system attempts to *replace* human intent, it violates this pillar.
+If action, interpretation, or outcomes are required, ownership lies elsewhere.
 
 ---
 
@@ -64,51 +70,59 @@ If a system attempts to *replace* human intent, it violates this pillar.
 ├── SYSTEMS/
 ├── AUTOMATIONS/
 ├── OPS_SOPS/
+├── TOOLS/
 ├── ASSETS/
 └── README.md
 
+---
 
 ### Subfolder Definitions
 
 - **BLUEPRINTS/**  
-  Define relationship philosophy, intent, and non-negotiable boundaries.
+  Founder intent, philosophy, invariants, and non-negotiable boundaries.
 
 - **EXECUTION_DOCTRINES/**  
-  Enforce limits on automation, cadence rules, and escalation logic.
+  Binding rules governing scope, definitions, cadence, states, signals, data, automation limits, compliance, and lock statements.
 
 - **SYSTEMS/**  
-  Logical designs that support visibility into relationship state without scoring.
+  Visibility-only designs (status, elapsed time, awareness surfaces).
 
 - **AUTOMATIONS/**  
-  Limited, supporting automations (reminders, flags, status prompts only).
+  Assistive automation only (calculations, reminders, integrity checks).  
+  No outbound communication. No decision-making.
 
 - **OPS_SOPS/**  
-  Human-executed procedures for outreach, follow-up, and escalation.
+  Human procedures explaining how to *interpret* visibility without mandating action.
+
+- **TOOLS/**  
+  Inspection and compliance utilities (non-executing).
 
 - **ASSETS/**  
-  Reference materials, guidance notes, and non-executing support content.
+  Reference materials and supporting documentation.
 
 ---
 
-## 5. Governing Constraints
+## 5. Governing Constraints (Non-Negotiable)
 
-- Human action must always precede system escalation
-- No automated messaging may replace a human touchpoint
-- Continuity tracking records *presence*, not performance
-- Escalation signals inform humans — they do not act for them
-- Relationship context must never be inferred by automation
+- Time is the only signal
+- Humans own intent; systems own visibility
+- No automated relationship outreach of any kind
+- No scoring, ranking, prioritization, or “health” indicators
+- No urgency or consequence language
+- No AI-generated personal messaging
+- No cadence acceleration or performance linkage
+- No cross-pillar action triggers
 
-Trust outranks efficiency.
+Violation of any constraint invalidates the implementation.
 
 ---
 
 ## 6. Key Principle
 
-> **P5 protects the relationship layer.  
-> When relationships erode, systems lose meaning.**
+> **P5 protects trust by refusing to optimize relationships.**
 
-DGA remains valuable because it stays human where it matters most.
+This principle must remain true regardless of scale, tooling, or future team composition.
 
 ---
 
-END — P5 RELATIONSHIP CONTINUITY README
+END — P5 — Relationship Continuity README
