@@ -1,161 +1,172 @@
-# SOP — P5 Human Touchpoint
+# Record - Human Touchpoint
 
-## DOCUMENT METADATA
+Standard Operating Procedure for recording a Human Touchpoint within P5 — Relationship Continuity
 
-**Document Type:** SOP  
-**Scope:** Relationship Continuity · Human Interaction  
-**Applies To:** All ACTIVE DGA subscriber and partner relationships
+Version: v1.1  
+Created: 2025-12-16  
+Last Updated: 2025-12-29  
+Status: Active
 
-**Primary Pillar:** P5 — Relationship Continuity  
-**Related Pillar(s):** P1 (Prospecting), P3 (Audit)  
+Applies To:
+- DGA Core Platform operators
+- Any human acting under DGA authority who records P5 continuity data
 
-**Derived From:**  
-- DGA Business Model (Governing Authority)  
-- SOP — P5 Relationship State Model  
-- SOP — Subscriber Enforcement & Termination  
+Primary Pillar:
+- P5 — Relationship Continuity
 
-**Version:** v1.0  
-**Status:** Active  
-**Created:** 2025-12-16  
-**Last Updated:** 2025-12-16  
-
-**Owned By:** DGA Core Platform  
+Governing Authority:
+- BP–P5–Relationship-Continuity.md
+- REG–P5–Relationship-Continuity.md
+- All ED–P5–Relationship-Continuity Execution Doctrines
 
 ---
 
 ## 1. Purpose
 
-This SOP defines **what constitutes a legitimate human touchpoint** within **P5 — Relationship Continuity**.
+This SOP defines the **only permitted procedure** for recording a Human Touchpoint in P5.
 
-Its purpose is to:
-- preserve genuine human trust
-- prevent automation creep
-- avoid transactional relationship behavior
-- ensure presence is real, not simulated
+It exists to:
+- ensure continuity data reflects real human presence
+- prevent inferred, automated, or qualitative recording
+- preserve cadence integrity and auditability
+- keep meaning, sentiment, and performance outside P5
 
-A touchpoint is meaningful **only if it reflects human intent**.
-
----
-
-## 2. What This SOP Governs
-
-This SOP governs:
-
-- What qualifies as a human touchpoint
-- What explicitly does **not** qualify
-- How touchpoints relate to relationship states
-- Guardrails against artificial or automated “presence”
-
-This SOP does **not** mandate frequency or cadence.
+This SOP governs **recording behavior only**.
 
 ---
 
-## 3. What This SOP Does *Not* Govern
+## 2. When This SOP Applies
 
-This SOP does **not** govern:
+Use this SOP **only when**:
 
-- Sales follow-ups
-- Marketing outreach
-- Automated notifications
-- Content distribution
-- CRM activity metrics
+- a real human-to-human interaction has occurred
+- a human acting under DGA authority participated directly
+- the date of the interaction is known with certainty
 
-This SOP governs **human presence**, not activity volume.
+Do **not** use this SOP:
+- to log automated messages
+- to log content publishing or audit delivery
+- to compensate for missed continuity
+- to improve appearance of presence
 
----
-
-## 4. Qualifying Human Touchpoints
-
-A human touchpoint must meet **all** of the following criteria.
-
-### 4.1 Intentional
-
-- Initiated with conscious human intent
-- Not triggered solely by time, automation, or system rules
-- Reflects awareness of the specific relationship
+Absence must remain visible.
 
 ---
 
-### 4.2 Contextual
+## 3. What This SOP Is (and Is Not)
 
-- Acknowledges the individual or organization
-- References relevant context, history, or state
-- Is not generic or templated beyond recognition
+### What This SOP *Is*
 
----
+- A mechanical rule for recording a date
+- A safeguard against automation creep
+- A control that protects P5 neutrality
 
-### 4.3 Reciprocal-Capable
+### What This SOP *Is Not*
 
-- Allows for response, dialogue, or engagement
-- Is not a broadcast or one-way notification
-- Creates space for human reply
-
----
-
-### 4.4 Trust-Preserving
-
-- Respects boundaries and professional tone
-- Does not pressure, manipulate, or extract
-- Reinforces continuity, not obligation
+- A definition of relationship quality
+- A guide for outreach strategy
+- A place to store context or notes
+- A performance or engagement signal
 
 ---
 
-## 5. Examples of Valid Human Touchpoints
+## 4. Preconditions (All Must Be True)
 
-The following **may** qualify when performed intentionally:
+Before recording a touchpoint, confirm:
 
-- Personal email written specifically for the recipient
-- Direct phone or video conversation
-- Handwritten or personal note
-- Context-aware check-in referencing current state
-- Collaborative discussion related to shared work
+- the interaction involved direct human participation
+- the interaction was intentional (not system-triggered)
+- the interaction occurred on a known calendar date
+- you personally participated in or directly confirmed it
 
-Qualification depends on **how**, not just **what**.
-
----
-
-## 6. Explicitly Non-Qualifying Actions
-
-The following **do not** qualify as human touchpoints:
-
-- Automated emails or sequences
-- System notifications or reminders
-- Bulk messages or broadcasts
-- Social media likes, comments, or reactions
-- Content publishing or tagging
-- “Just checking in” messages without context
-
-These actions may support systems — they do not maintain relationships.
+If any condition is false, **do not record a touchpoint**.
 
 ---
 
-## 7. Relationship State Implications
+## 5. Procedure — Recording the Touchpoint
 
-- **Active:** Touchpoints may occur but are not required
-- **Quiet:** A light, intentional human touch may be appropriate
-- **Dormant:** A deliberate re-engagement touch is expected
-- **Escalated:** Direct human attention is required
+1. Identify the correct `relationship_id`  
+2. Confirm the interaction meets the P5 Human Touchpoint definition  
+3. Enter the **actual calendar date** the interaction occurred (YYYY-MM-DD)  
+4. Save the record  
 
-Touchpoints should reflect the **current state**, not attempt to mask it.
-
----
-
-## 8. Enforcement Rule
-
-- Human touchpoints must not be simulated by automation
-- No system may mark a relationship “active” based solely on non-qualifying actions
-- Artificial presence violates P5 governance
-
-If intent cannot be clearly identified, the action does not qualify.
+No additional fields may be created or populated.
 
 ---
 
-## 9. Lock Statement
+## 6. Validation Rules
 
-This SOP is authoritative.
+When recording a touchpoint:
 
-Any system, process, or behavior that treats automated or generic activity as a human touchpoint violates P5 governance and must be corrected.
+- future dates are invalid
+- backdating is permitted only if accurate
+- estimated or inferred dates are prohibited
+- system defaults must not overwrite human input
+
+If the date is uncertain, the touchpoint must not be recorded.
 
 ---
 
-**END — SOP — P5 Human Touchpoint (v1.0)**
+## 7. What Happens After Recording
+
+Upon save:
+
+- `last_touchpoint_date` is updated
+- continuity state derives automatically as **Current**
+- historical lapse visibility remains intact
+- no notifications or actions are triggered
+
+Recording a touchpoint does **not**:
+- initiate outreach
+- notify the subscriber
+- change account status
+- affect audits, content, or billing
+
+---
+
+## 8. Explicit Prohibitions
+
+The following must **never** be recorded as touchpoints:
+
+- automated emails, SMS, or DMs
+- system reminders or notifications
+- content publication or tagging
+- social media reactions
+- internal review activity
+- messages written by AI
+
+If intent was automated, the touchpoint does not exist.
+
+---
+
+## 9. If No Touchpoint Occurred
+
+Do nothing.
+
+Lapse visibility is correct by design.  
+Continuity must never be simulated.
+
+---
+
+## 10. Compliance Reminder
+
+Improper recording:
+- corrupts cadence
+- invalidates P5 state derivation
+- undermines trust
+- constitutes a governance violation
+
+Accuracy outranks appearance.
+
+---
+
+## 11. Lock Statement
+
+> **Record what occurred.  
+> Do not record what should have occurred.**
+
+This SOP is binding.
+
+---
+
+END — SOP–P5–Record-Human-Touchpoint
