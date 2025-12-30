@@ -42,54 +42,29 @@ This document does **not** define:
 RCF operates as a **closed-loop continuity cycle**.
 There is no terminal state while a relationship remains active.
 
-┌───────────────────────────┐
-│                           │
-│   Partner / Subscriber    │
-│        Relationship       │
-│                           │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│   Progress Snapshot       │
-│   (Context Established)   │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│   Guided / Alignment      │
-│   Conversation            │
-│   (Meaning Confirmed)     │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│   Group / Peer            │
-│   Discussion              │
-│   (Patterns Surface)      │
-└─────────────┬─────────────┘
-              │
-              ▼
-┌───────────────────────────┐
-│   Quiet Validation        │
-│   Touchpoint              │
-│   (Presence Reinforced)   │
-└─────────────┬─────────────┘
-              │
-              ▼
-        [ Cycle Repeats ]
+### Continuity Sequence (Canonical)
 
----
+1. **Relationship Active**
+2. **Progress Snapshot**  
+   _Context Established_
+3. **Alignment Conversation**  
+   _Meaning Confirmed_
+4. **Group / Peer Discussion**  
+   _Patterns Surface_
+5. **Quiet Validation Touchpoint**  
+   _Presence Reinforced_
 
-## Structural Rules
+The sequence repeats continuously while the relationship remains active.
+
+### Structural Rules
 
 The following rules are structural and invariant:
 
 1. The continuity loop has **no terminal node**
-2. Components execute in a fixed order
+2. Components execute in a **fixed order**
 3. No component operates independently
-4. Silence is not a valid state
-5. Cycle repetition continues while the relationship remains active
+4. Silence is **not** a valid state
+5. The cycle repeats until the relationship ends
 
 ---
 
