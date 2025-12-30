@@ -42,19 +42,19 @@ This document does **not** define:
 RCF operates as a **closed-loop continuity cycle**.
 There is no terminal state while a relationship remains active.
 
-### Continuity Sequence (Canonical)
+### Continuity Components (Fixed Order)
 
 1. **Relationship Active**
 2. **Progress Snapshot**  
-   _Context Established_
+   Context is established.
 3. **Alignment Conversation**  
-   _Meaning Confirmed_
+   Meaning is confirmed.
 4. **Group / Peer Discussion**  
-   _Patterns Surface_
+   Shared patterns surface.
 5. **Quiet Validation Touchpoint**  
-   _Presence Reinforced_
+   Presence is reinforced.
 
-The sequence repeats continuously while the relationship remains active.
+After Step 5, the cycle repeats while the relationship remains active.
 
 ### Structural Rules
 
