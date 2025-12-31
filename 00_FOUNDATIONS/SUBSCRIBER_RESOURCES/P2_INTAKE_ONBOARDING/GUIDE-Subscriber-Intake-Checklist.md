@@ -9,8 +9,8 @@
 **Derived From:** DGA Business Model · Intake & Onboarding Framework  
 
 **Version:** v1.0  
-**Status:** Draft  
-**Created:** 2025-01-31  
+**Status:** Approved
+**Created:** 2025-12-31  
 **Owned By:** DGA Core Platform  
 
 ---
