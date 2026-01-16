@@ -2,21 +2,24 @@
 
 ## DOCUMENT METADATA
 
-**Document Type:** Execution Doctrine (ED)
-**Pillar:** P3 — Audit
-**Doctrine Title:** Audit Runner
-**Filename:** ED_P3_AUDIT_RUNNER.md
+**Document Type:** Execution Doctrine (ED)  
+**Pillar:** P3 — Audit  
+**Doctrine Title:** Audit Runner — Deterministic Execution & Containment  
+**Filename:** ED_P3_AUDIT_RUNNER.md  
 
-**Version:** v1.0
-**Status:** Active
-**Created:** 2026-01-15
-**Last Updated:** 2026-01-15
+**Version:** v2.0  
+**Status:** Active  
+**Created:** 2026-01-15  
+**Last Updated:** 2026-01-16  
 
-**Owned By:** DGA Core Platform
+**Owned By:** DGA Core Platform  
+
 **Governing Authority:**
+- 00_FOUNDATIONS/BLUEPRINTS/P3_AUDIT/BP_P3_AUDIT_GOVERNANCE.md  
+- 00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md  
 
-* 00_FOUNDATIONS/BLUEPRINTS/P3_AUDIT/BP_P3_AUDIT_GOVERNANCE.md
-* 00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md
+**GitHub Directory:**  
+`P3_AUDIT/EXECUTION_DOCTRINES/ED_P3_AUDIT_RUNNER.md`
 
 ---
 
@@ -24,7 +27,10 @@
 
 This Execution Doctrine defines the **deterministic runtime behavior** of the P3 Audit Runner.
 
-It translates the P3 Audit Governance Blueprint into **enforced execution rules**. No discretion, interpretation, or optimization is permitted at runtime.
+It translates the P3 Audit Governance Blueprint into **enforced system behavior**.  
+No discretion, optimization, or outcome-aware logic is permitted at runtime.
+
+If any system behavior conflicts with this doctrine, this doctrine prevails unless superseded by Blueprint authority.
 
 ---
 
@@ -32,12 +38,12 @@ It translates the P3 Audit Governance Blueprint into **enforced execution rules*
 
 The Audit Runner exists to:
 
-* Execute audits **only when eligible**
-* Enforce **cadence discipline**
-* Produce **immutable audit artifacts**
-* Halt safely on failure without side effects
+- Execute governed audits only when eligible
+- Enforce deterministic execution and containment
+- Produce immutable audit artifacts
+- Separate observation from execution entirely
 
-The runner is not adaptive, persuasive, or outcome-aware.
+The runner is not adaptive, persuasive, instructional, or outcome-aware.
 
 ---
 
@@ -45,11 +51,11 @@ The runner is not adaptive, persuasive, or outcome-aware.
 
 Audits may be triggered only by:
 
-* Account activation (Day 00)
-* Scheduled due state (30-day cadence)
-* Restoration of payment eligibility from a blocked state
+- Account activation (Day 00)
+- Scheduled audit due state
+- Internal-authority ad-hoc invocation (diagnostic only)
 
-No other trigger source is valid.
+No subscriber-initiated or manual trigger is permitted.
 
 ---
 
@@ -57,118 +63,152 @@ No other trigger source is valid.
 
 Before execution, the runner must assert:
 
-* account_status = ACTIVE
-* execution_blocked = false
-* payment_status_v2 ∈ {BETA, ACTIVE, TRIAL, COMP}
+- `account_status = ACTIVE`
+- `execution_blocked = false`
+- `payment_status_v2 ∈ {BETA, ACTIVE, TRIAL, COMP}`
 
 If any condition fails:
 
-* execution is aborted
-* audit_run_status is set to BLOCKED
-* no retries are attempted
+- execution is aborted
+- `audit_run_status = BLOCKED`
+- no retries are attempted
 
 ---
 
 ## 5. Cadence Rules
 
-* Day 00 executes immediately on activation
-* Subsequent audits are due **30 days from last successful audit**
-* Cadence resets only after a successful run
-* Blocked audits do not advance cadence
+- Cadence determines **when** a scheduled audit may run
+- Cadence does **not** alter audit structure, scoring, or output
+- Blocked audits do not advance cadence
+- Cadence logic is external to the audit artifact
+
+The audit itself contains no timing or cadence language.
 
 ---
 
 ## 6. Execution Flow (Deterministic)
 
+The Audit Runner MUST execute the following steps in order:
+
 1. Assert eligibility gates
 2. Lock audit run context
-3. Perform GEO and AIO observation
-4. Perform integrity checks (up to 3 passive re-validations)
-5. Apply scoring and confidence impacts
-6. Generate branded PDF
-7. Upload artifact to Account Hub
-8. Persist final state
+3. Perform GEO observation
+4. Perform AIO observation
+5. Apply factor-level scoring
+6. Aggregate GEO and AIO totals
+7. Construct audit artifact
+8. Persist immutable audit record
 9. Release execution lock
 
-No step may be skipped or reordered.
+No step may be skipped, reordered, or conditionally bypassed.
 
 ---
 
-## 7. Retry & Failure Handling
+## 7. Scoring Enforcement
 
-* Maximum retries per audit cycle: 3
-* Retry attempts occur only within the same due window
-* After 3 failures:
+- All factors execute every run
+- Each factor has a defined maximum score
+- Missing, incomplete, or ambiguous signals receive low or zero scores
+- Unobservable signals receive a zero score with explanatory language
+- No confidence bands or confidence modifiers are permitted
+- No global penalties are permitted
 
-  * audit_run_status = FAILED
-  * no further retries
-  * admin intervention required
+---
+
+## 8. Retry & Failure Handling
+
+- Maximum retries per scheduled audit cycle: 3
+- Retries occur only within the same due window
+- After 3 failures:
+  - `audit_run_status = FAILED`
+  - no further retries
+  - administrative review required
 
 Subscribers are not notified of failures.
 
 ---
 
-## 8. Artifact Rules
+## 9. Artifact Rules
 
-* One PDF per audit run
-* Artifacts are immutable
-* Artifacts are never overwritten
-* Historical artifacts remain accessible per Account Hub rules
+- One immutable artifact per audit run
+- Artifacts are never overwritten
+- Historical artifacts remain accessible per Account Hub policy
+- No regeneration of historical audits is permitted
 
 ---
 
-## 9. Account-Type Parameterization
+## 10. Ad-Hoc Audit Rules
+
+- Ad-hoc audits are **internal-authority only**
+- Ad-hoc audits are **diagnostic**
+- Ad-hoc audits:
+  - are not visible to account holders
+  - do not update baselines
+  - do not write deltas
+  - do not trigger P4
+  - do not alter cadence
+
+Ad-hoc audits may not be converted into formal audits.
+
+---
+
+## 11. Account-Type Parameterization
 
 The runner is parameterized by account type:
 
-* SO
-* PB Parent
-* Child
+- SO
+- PB Parent
+- Child
 
-Parameterization affects:
-
-* delivery recipients
-* payment inheritance (child)
-* CASL enforcement
+Parameterization may affect:
+- delivery recipients
+- inheritance rules
+- compliance enforcement
 
 Execution logic remains uniform.
 
 ---
 
-## 10. Prohibited Behavior
+## 12. Prohibited Behavior
 
 The Audit Runner must never:
 
-* run ad-hoc or manual audits
-* emit tactical guidance
-* reference competitor identities
-* re-run audits mid-cycle
-* mutate upstream account data
+- emit execution guidance
+- recommend actions
+- reference platform-specific tactics
+- reference competitor identities
+- alter upstream account data
+- adapt logic based on prior outcomes
 
 ---
 
-## 11. Monitoring & Observability
+## 13. Versioning Enforcement
+
+- Every audit run is tagged with an internal logic version
+- The audit version is displayed in the footer
+- When logic changes affect comparability, a brief annotation is included
+- No scoring mechanics or change details are exposed
+
+---
+
+## 14. Monitoring & Observability
 
 The runner must emit:
 
-* run start and completion timestamps
-* retry counts
-* terminal status
+- run start and completion timestamps
+- retry counts
+- terminal execution status
 
-Observability does not imply control.
-
----
-
-## 12. Change Control
-
-* Changes require Blueprint alignment
-* Behavioral changes require version increment
-* No hotfixes that alter eligibility or cadence
+Observability does not imply control or adaptation.
 
 ---
 
-## 13. Lock Statement
+## 15. Lock Statement
 
-This Execution Doctrine is authoritative.
+This Execution Doctrine is authoritative and binding.
 
-Any system behavior that deviates from this doctrine must be corrected to align.
+Any deviation requires a governed revision aligned to the P3 Audit Governance Blueprint.
+
+---
+
+END — ED–P3 — Audit Runner (v2.0)
