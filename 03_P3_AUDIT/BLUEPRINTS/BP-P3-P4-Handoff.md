@@ -1,195 +1,220 @@
-# P3 → P4 Handoff Governance Blueprint
+# Audit-to-Execution Handoff Blueprint
 
 ## DOCUMENT METADATA
 
-**Document Type:** Blueprint (BP)
-**Pillar:** P3 — Audit / P4 — Content Creation & Publishing
-**Blueprint Title:** P3 to P4 Handoff Governance
-**Filename:** BP_P3_P4_HANDOFF_GOVERNANCE.md
+**Document Type:** Blueprint (BP)  
+**Pillars:** P3 — Audit → P4 — Execution  
+**Blueprint Title:** Audit-to-Execution Handoff & Consumption Contract  
+**Filename:** BP_P3_P4_HANDOFF.md  
 
-**Version:** v1.0
-**Status:** Active
-**Created:** 2026-01-15
-**Last Updated:** 2026-01-15
+**Version:** v1.1  
+**Status:** Active  
+**Created:** 2026-01-15  
+**Last Updated:** 2026-01-16  
 
-**Owned By:** DGA Core Platform
+**Owned By:** DGA Core Platform  
+
 **Governing Authority:**
+- 00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md  
+- P3_AUDIT/BLUEPRINTS/BP_P3_AUDIT_GOVERNANCE.md  
+- P3_AUDIT/EXECUTION_DOCTRINES/ED_P3_AUDIT_RUNNER.md  
 
-* 00_FOUNDATIONS/GOVERNANCE/DGA_BUSINESS_MODEL.md
-* 00_FOUNDATIONS/GOVERNANCE/PILLAR_LOCK_REFERENCE.md
-
----
-
-## FOUNDER DOCTRINE
-
-Audit must lead. Content must follow.
-
-The moment content is allowed to influence audit, DGA loses credibility, defensibility, and governance integrity. P3 establishes truth. P4 responds to truth. This directionality is irreversible.
-
-Failure occurs when:
-
-* content priorities bleed backward into audit logic
-* audits are tuned to justify publishing decisions
-* observation becomes advisory
-
-P3 → P4 is a one-way boundary.
-
----
-
-## TABLE OF CONTENTS
-
-1. Purpose & Authority
-2. Problem Statement
-3. Scope — What This Blueprint Governs
-4. Explicit Exclusions — What This Blueprint Does NOT Govern
-5. Core Definitions
-6. Foundational Principles
-7. Invariants & Non-Negotiables
-8. Pillar Ownership & Responsibilities
-9. Relationships to Other Pillars
-10. Downstream Enforcement & Consumption Rules
-11. Change, Replacement & Persistence Rules
-12. Compliance & Auditability
-13. Lock Statement
+**GitHub Directory:**  
+`P3_AUDIT/BLUEPRINTS/BP_P3_P4_HANDOFF.md`
 
 ---
 
 ## 1. Purpose & Authority
 
-This Blueprint governs the **handoff boundary between P3 (Audit) and P4 (Content Creation & Publishing)**.
+This Blueprint defines the **authoritative handoff contract** between:
 
-It defines what P3 is permitted to emit, what P4 is permitted to consume, and what is strictly prohibited in either direction.
+- **P3 — Audit (Observation)**
+- **P4 — Execution (Language & Content Artifacts)**
 
----
+Its purpose is to enforce a **strict, one-way boundary** that preserves audit integrity while enabling disciplined downstream execution.
 
-## 2. Problem Statement
-
-Without a hard handoff boundary:
-
-* audits drift toward recommendation engines
-* content creation becomes self-justifying
-* execution pressure corrupts observation
-
-This Blueprint prevents audit contamination and content-led reinterpretation of truth.
+If any P4 behavior conflicts with this Blueprint, **this Blueprint prevails**.
 
 ---
 
-## 3. Scope — What This Blueprint Governs
+## 2. Core Principle (Non-Negotiable)
 
-This Blueprint governs:
+> **P3 identifies pressure.  
+> P4 supplies language.  
+> P3 never instructs.  
+> P4 never reinterprets.**
 
-* the data and signals P3 may expose to P4
-* the interpretation limits placed on P4
-* sequencing and dependency rules
-* prohibition of backward influence
-
----
-
-## 4. Explicit Exclusions — What This Blueprint Does NOT Govern
-
-This Blueprint does **not** govern:
-
-* P4 content strategy or formatting
-* publishing cadence or channel selection
-* editorial voice or narrative framing
-* relationship communications
+This separation is foundational to DGA governance.
 
 ---
 
-## 5. Core Definitions
+## 3. What P3 Produces (Immutable)
 
-* **Audit Output:** Final, immutable observational signals produced by P3
-* **Handoff:** The controlled exposure of audit outputs to downstream systems
-* **Backward Influence:** Any attempt by P4 to alter P3 behavior, language, or cadence
+P3 produces a **fixed audit artifact** containing:
 
----
+- GEO total score  
+- GEO factor-level scores  
+- AIO total score  
+- AIO factor-level observations  
+- **Top 3 GEO Opportunities only**  
+- Delta Summary (if applicable)  
+- Competitor Insight Sidebar (if applicable)  
 
-## 6. Foundational Principles
+Once generated, this artifact is **immutable** for the cycle.
 
-* Observation precedes execution
-* Audit outputs are descriptive, not prescriptive
-* Content systems must accept audit truth without negotiation
-
----
-
-## 7. Invariants & Non-Negotiables
-
-The following rules must never be violated:
-
-* P3 outputs are immutable
-* P4 may not request re-runs, partial audits, or reinterpretation
-* P3 may not emit tactics, instructions, or content recommendations
-* P4 may not infer intent beyond what is explicitly stated
-* No system may bypass P3 to initiate content
+P3 explicitly does **not** produce:
+- execution guidance  
+- remediation steps  
+- copy or content  
+- timing or urgency language  
+- numeric success targets  
 
 ---
 
-## 8. Pillar Ownership & Responsibilities
+## 4. What P4 Is Permitted to Consume
 
-**P3 owns:**
+P4 may consume **only the following elements** from P3:
 
-* audit execution
-* audit language
-* scoring and confidence signals
-* artifact generation
+1. **Top 3 GEO Opportunity categories**
+2. Corresponding GEO factor names
+3. High-level deficiency context (directional only)
+4. Account type (e.g., MP, REA)
 
-**P4 owns:**
-
-* content ideation
-* content creation
-* publishing and distribution
-
-No shared ownership exists.
-
----
-
-## 9. Relationships to Other Pillars
-
-* **P2:** Supplies entity data upstream of P3
-* **P5:** Uses P4 outputs for relationship continuity
-
-Neither P2 nor P5 may influence P3 execution.
+P4 may **not** consume:
+- numeric scores or maxima  
+- deltas or historical comparisons  
+- competitor data  
+- audit wording verbatim  
+- AIO observations as execution drivers  
 
 ---
 
-## 10. Downstream Enforcement & Consumption Rules
+## 5. GEO → AIO Causality (Explicit Lock)
 
-P4 systems may consume only:
+DGA enforces the following causality:
 
-* finalized audit outputs
-* explicit confidence and priority signals
-* integrity flags
+> **GEO improvements are the only direct execution lever.  
+> AIO changes are downstream effects and confirmatory signals.**
 
-P4 systems must never:
-
-* request additional audit context
-* alter audit language
-* store derived interpretations as audit data
+P4 must never treat AIO as:
+- a primary execution input  
+- a separate optimization target  
+- a competing priority set  
 
 ---
 
-## 11. Change, Replacement & Persistence Rules
+## 6. P4 Execution Intent (Clarified)
 
-* Changes require alignment with both P3 and P4 ownership
-* Boundary violations require immediate remediation
-* New downstream consumers must conform to this Blueprint
+P4 exists to:
+- reduce ambiguity  
+- improve clarity  
+- reinforce professional identity  
+- strengthen corroboration across GEO-controlled surfaces  
 
----
-
-## 12. Compliance & Auditability
-
-Compliance is validated by:
-
-* absence of tactical language in P3 outputs
-* absence of audit mutation requests from P4
-* deterministic sequencing enforcement
-
-Violations invalidate downstream execution.
+P4 does **not** exist to:
+- chase AI outputs  
+- optimize for named platforms  
+- respond to individual AI answers  
+- publish content solely for volume  
 
 ---
 
-## 13. Lock Statement
+## 7. Language Artifact Eligibility Rule
 
-This Blueprint is authoritative and binding.
+For each Top 3 GEO opportunity, P4 must assess:
 
-Any system, document, or execution behavior that violates this P3 → P4 boundary must be
+> **Can this pressure be reduced through better language on a GEO surface?**
+
+If **yes**:
+- P4 supplies governed language or copy
+- Language is clarity-first, non-promotional, AI-parsable
+- Artifacts may be reused across approved GEO surfaces
+
+If **no**:
+- No artifact is produced
+- The pressure persists until structural correction occurs
+
+---
+
+## 8. Approved P4 Artifact Classes (Illustrative)
+
+Permitted P4 artifacts include:
+- identity clarification copy  
+- entity disambiguation language  
+- profile description normalization  
+- service taxonomy phrasing  
+- corroboration blocks  
+- answer-style summaries  
+- derivative reinforcement snippets  
+
+All artifacts must:
+- map to GEO surfaces  
+- avoid tactics and marketing claims  
+- remain execution-neutral  
+
+---
+
+## 9. AIO-Informed, Not AIO-Driven
+
+AIO observations may influence:
+- tone simplicity  
+- wording clarity  
+- explanatory depth  
+
+AIO observations must **never**:
+- override GEO priority  
+- introduce new execution priorities  
+- justify standalone actions  
+
+---
+
+## 10. Temporal Discipline
+
+- P4 artifacts are produced **within the audit cycle**
+- P4 makes **no guarantees** of improvement
+- Validation occurs only via the **next P3 audit**
+
+No feedback loop exists inside a single cycle.
+
+---
+
+## 11. Ad-Hoc Audit Containment
+
+Ad-hoc audits are:
+- internal-authority only  
+- diagnostic in nature  
+
+Ad-hoc audits:
+- are invisible to P4  
+- do not trigger execution  
+- do not reset baselines or deltas  
+
+---
+
+## 12. Audit Immutability Protection
+
+- P4 may not modify or annotate audits  
+- P4 may not request regeneration  
+- P4 may not override Top 3 selection  
+
+Audit truth is final for the cycle.
+
+---
+
+## 13. Governance & Change Control
+
+Any change to this handoff requires:
+- a versioned update to this Blueprint  
+- confirmation of P3 and P4 impact  
+- lock renewal  
+
+---
+
+## 14. Lock Statement
+
+> This Blueprint is authoritative and binding.  
+> The P3 → P4 handoff defined herein is **LOCKED** and may be modified only through formal governance revision.
+
+---
+
+END — BP–P3 → P4 Audit-to-Execution Handoff (v1.1)
