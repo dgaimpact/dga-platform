@@ -1,11 +1,350 @@
 questions:
-  - question_key: vbp_primary_voice
+  - question_key: vbp_role_who_help
     order: 1
     required: true
-    intent: primary_voice
+    intent: identity_role_market
     question_text: >
-      When you communicate professionally with clients or referral partners,
-      how would you describe your natural voice?
-      Think about tone, energy, and personality rather than tactics or delivery.
-    notes: ""
+      Tell me what you do and who you help.
+    notes: "Section 1 — Warm-Up"
 
+  - question_key: vbp_local_market_summary
+    order: 2
+    required: true
+    intent: market_context
+    question_text: >
+      Describe your local market in a sentence or two.
+    notes: "Section 1 — Warm-Up"
+
+  - question_key: vbp_primary_niche
+    order: 3
+    required: true
+    intent: niche_focus
+    question_text: >
+      What is your primary niche right now, and why does it matter to you?
+    notes: "Section 1 — Warm-Up"
+
+  - question_key: vbp_client_acquisition
+    order: 4
+    required: true
+    intent: acquisition_sources
+    question_text: >
+      How do clients typically find you?
+    notes: "Section 1 — Warm-Up"
+
+  - question_key: vbp_known_for_first
+    order: 5
+    required: true
+    intent: reputation_positioning
+    question_text: >
+      What do people come to you for first? What are you known for?
+    notes: "Section 1 — Warm-Up"
+
+  - question_key: vbp_greeting_out_loud
+    order: 6
+    required: true
+    intent: natural_voice_sample
+    question_text: >
+      If a brand-new client sat across from you, how would you greet them?
+      Say it out loud the way you actually would.
+    notes: "Section 2 — Natural Voice Patterns"
+
+  - question_key: vbp_explain_when_overwhelmed
+    order: 7
+    required: true
+    intent: explanation_style
+    question_text: >
+      When clients get confused or overwhelmed, how do you explain things?
+    notes: "Section 2 — Natural Voice Patterns"
+
+  - question_key: vbp_simple_terms_example
+    order: 8
+    required: true
+    intent: simplification_example
+    question_text: >
+      Give me an example of how you explain something complicated in simple terms.
+    notes: "Section 2 — Natural Voice Patterns"
+
+  - question_key: vbp_sentence_length_style
+    order: 9
+    required: true
+    intent: sentence_structure
+    question_text: >
+      Do you naturally speak in short sentences, longer explanations, or a mix?
+    notes: "Section 2 — Natural Voice Patterns"
+
+  - question_key: vbp_direct_vs_conversational
+    order: 10
+    required: true
+    intent: directness
+    question_text: >
+      Do you tend to be more direct or more conversational?
+    notes: "Section 2 — Natural Voice Patterns"
+
+  - question_key: vbp_three_words_how_come_across
+    order: 11
+    required: true
+    intent: tone_traits_positive
+    question_text: >
+      Pick three words that describe how you want to come across.
+    notes: "Section 3 — Personality + Tone Mapping"
+
+  - question_key: vbp_three_words_not_you
+    order: 12
+    required: true
+    intent: tone_traits_negative
+    question_text: >
+      Pick three words that absolutely do NOT describe you.
+    notes: "Section 3 — Personality + Tone Mapping"
+
+  - question_key: vbp_personality_spectrum
+    order: 13
+    required: true
+    intent: personality_range
+    question_text: >
+      Are you more calm, energetic, empathetic, humorous, serious…?
+      Tell me where you naturally fall.
+    notes: "Section 3 — Personality + Tone Mapping"
+
+  - question_key: vbp_email_tone_natural
+    order: 14
+    required: true
+    intent: written_tone
+    question_text: >
+      When you write emails or messages, what tone naturally shows up?
+    notes: "Section 3 — Personality + Tone Mapping"
+
+  - question_key: vbp_client_tone_response
+    order: 15
+    required: true
+    intent: audience_tone_fit
+    question_text: >
+      What tone do your clients respond best to?
+    notes: "Section 3 — Personality + Tone Mapping"
+
+  - question_key: vbp_topics_strongest
+    order: 16
+    required: true
+    intent: expertise_topics
+    question_text: >
+      What topics do you feel strongest teaching or explaining?
+    notes: "Section 4 — Confidence, Expertise, and Framing"
+
+  - question_key: vbp_misconceptions_correct
+    order: 17
+    required: true
+    intent: misconceptions
+    question_text: >
+      What misconceptions do you constantly correct?
+    notes: "Section 4 — Confidence, Expertise, and Framing"
+
+  - question_key: vbp_repeat_phrases
+    order: 18
+    required: true
+    intent: repeated_phrases
+    question_text: >
+      When you talk about your work, what phrases do you find yourself using repeatedly?
+    notes: "Section 4 — Confidence, Expertise, and Framing"
+
+  - question_key: vbp_phrases_land_well
+    order: 19
+    required: true
+    intent: high_impact_phrases
+    question_text: >
+      What’s something you say to clients that always seems to land well?
+    notes: "Section 4 — Confidence, Expertise, and Framing"
+
+  - question_key: vbp_value_not_salesy
+    order: 20
+    required: true
+    intent: value_framing
+    question_text: >
+      How do you describe your value without sounding salesy?
+    notes: "Section 4 — Confidence, Expertise, and Framing"
+
+  - question_key: vbp_before_after_story
+    order: 21
+    required: true
+    intent: story_example
+    question_text: >
+      Share a quick story of helping a client recently — the “before and after.”
+    notes: "Section 5 — Story, Examples, and Style"
+
+  - question_key: vbp_story_details_emphasize
+    order: 22
+    required: true
+    intent: story_emphasis
+    question_text: >
+      What details do you usually emphasize when telling stories?
+    notes: "Section 5 — Story, Examples, and Style"
+
+  - question_key: vbp_preferred_explanation_modes
+    order: 23
+    required: true
+    intent: explanation_modes
+    question_text: >
+      Do you prefer explaining through analogies, step-by-step, examples, pros and cons,
+      numbers, visuals, or something else?
+    notes: "Section 5 — Story, Examples, and Style"
+
+  - question_key: vbp_common_mistake_walkthrough
+    order: 24
+    required: true
+    intent: common_mistake
+    question_text: >
+      What’s a common mistake clients make, and how do you walk them through it?
+    notes: "Section 5 — Story, Examples, and Style"
+
+  - question_key: vbp_tone_style_dislike
+    order: 25
+    required: true
+    intent: dislikes
+    question_text: >
+      What tone or writing style do you absolutely dislike?
+    notes: "Section 6 — What You Don’t Want"
+
+  - question_key: vbp_never_in_content
+    order: 26
+    required: true
+    intent: hard_exclusions
+    question_text: >
+      What should NEVER appear in your content?
+      For example: hype, emojis, jargon, or anything else you want to ban.
+    notes: "Section 6 — What You Don’t Want"
+
+  - question_key: vbp_avoid_sounding_like
+    order: 27
+    required: true
+    intent: avoid_archetypes
+    question_text: >
+      What do you want to avoid sounding like — desperate, pushy, academic, or something else?
+    notes: "Section 6 — What You Don’t Want"
+
+  - question_key: vbp_not_you_wording
+    order: 28
+    required: true
+    intent: not_you_phrasing
+    question_text: >
+      Is there any wording or phrasing that instantly feels “not you”?
+    notes: "Section 6 — What You Don’t Want"
+
+  - question_key: vbp_perfect_like_you_definition
+    order: 29
+    required: true
+    intent: perfect_voice_definition
+    question_text: >
+      When your content sounds “perfectly like you,” what does that mean?
+    notes: "Section 7 — What You Do Want"
+
+  - question_key: vbp_emotional_experience
+    order: 30
+    required: true
+    intent: desired_emotion
+    question_text: >
+      What emotional experience should a client feel when reading or watching you?
+    notes: "Section 7 — What You Do Want"
+
+  - question_key: vbp_values_in_communication
+    order: 31
+    required: true
+    intent: values
+    question_text: >
+      What values matter most in how you communicate?
+    notes: "Section 7 — What You Do Want"
+
+  - question_key: vbp_content_one_job
+    order: 32
+    required: true
+    intent: single_objective
+    question_text: >
+      If your content could only accomplish ONE thing, what would it be?
+    notes: "Section 7 — What You Do Want"
+
+  - question_key: vbp_content_feel_options
+    order: 33
+    required: true
+    intent: tone_options
+    question_text: >
+      Do you want your content to feel expert, approachable, inspirational, reassuring,
+      bold, calm, or something else? Tell me your top two or three.
+    notes: "Section 7 — What You Do Want"
+
+  - question_key: vbp_target_audience_description
+    order: 34
+    required: true
+    intent: audience
+    question_text: >
+      Who do you actually want to attract? Describe them.
+    notes: "Section 8 — Target Audience Mapping"
+
+  - question_key: vbp_audience_worries
+    order: 35
+    required: true
+    intent: audience_worries
+    question_text: >
+      What do they worry about the most?
+    notes: "Section 8 — Target Audience Mapping"
+
+  - question_key: vbp_audience_hopes
+    order: 36
+    required: true
+    intent: audience_hopes
+    question_text: >
+      What do they hope for?
+    notes: "Section 8 — Target Audience Mapping"
+
+  - question_key: vbp_top_objections
+    order: 37
+    required: true
+    intent: objections
+    question_text: >
+      What objections do you face most often?
+    notes: "Section 8 — Target Audience Mapping"
+
+  - question_key: vbp_one_thing_to_remember
+    order: 38
+    required: true
+    intent: takeaway
+    question_text: >
+      What’s the number one thing you want them to remember after hearing from you?
+    notes: "Section 8 — Target Audience Mapping"
+
+  - question_key: vbp_sentence_exactly_like_you
+    order: 39
+    required: true
+    intent: calibration_positive
+    question_text: >
+      Give me a sentence that sounds exactly like you.
+    notes: "Section 9 — Final Calibration"
+
+  - question_key: vbp_sentence_not_like_you
+    order: 40
+    required: true
+    intent: calibration_negative
+    question_text: >
+      Give me the same sentence in a version that does not sound like you.
+    notes: "Section 9 — Final Calibration"
+
+  - question_key: vbp_signature_feel
+    order: 41
+    required: true
+    intent: signature_feel
+    question_text: >
+      If your content had a signature “feel,” how would you describe it?
+    notes: "Section 9 — Final Calibration"
+
+  - question_key: vbp_anything_else
+    order: 42
+    required: false
+    intent: additional_notes
+    question_text: >
+      Is there anything else that would help us capture your voice perfectly?
+    notes: "Section 9 — Final Calibration"
+
+  - question_key: vbp_famous_personality_optional
+    order: 43
+    required: false
+    intent: personality_reference
+    question_text: >
+      Optional: If you had to describe your communication style as if it were a famous personality,
+      who would it be and why?
+    notes: "Optional Closing Prompt"
