@@ -1,1 +1,11 @@
+questions:
+  - question_key: vbp_primary_voice
+    order: 1
+    required: true
+    intent: primary_voice
+    question_text: >
+      When you communicate professionally with clients or referral partners,
+      how would you describe your natural voice?
+      Think about tone, energy, and personality rather than tactics or delivery.
+    notes: ""
 
