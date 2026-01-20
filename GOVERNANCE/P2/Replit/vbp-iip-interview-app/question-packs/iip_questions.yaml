@@ -1,10 +1,71 @@
 questions:
-  - question_key: iip_delivery_format
+  - question_key: iip_first_contact_preference
     order: 1
     required: true
-    intent: format_preference
+    intent: information_entry_point
     question_text: >
-      When receiving important information from DGA, how do you prefer it to be delivered?
-      For example: short summaries, detailed explanations, links to review later, or a mix.
-    notes: ""
+      When someone is explaining something complex to you, what do you want first?
+      For example: a short summary then details if needed, full context first then a summary,
+      a visual overview like charts or bullets, or it depends — explain.
+    notes: "First Contact Preference"
 
+  - question_key: iip_ideal_format
+    order: 2
+    required: true
+    intent: preferred_format
+    question_text: >
+      What formats do you personally prefer when reviewing information?
+      For example: bullet points, short paragraphs, visuals or charts,
+      written explanation with a follow-up call, video explanation, or a combination.
+    notes: "Ideal Format"
+
+  - question_key: iip_detail_threshold
+    order: 3
+    required: true
+    intent: detail_level
+    question_text: >
+      How much detail feels “just right” for you by default?
+      For example: high-level only and you’ll ask if you need more,
+      moderate detail with optional expansion, or very detailed explanations.
+    notes: "Detail Threshold"
+
+  - question_key: iip_attention_timing
+    order: 4
+    required: false
+    intent: timing_and_attention
+    question_text: >
+      If you’re busy, what’s the best way for us to communicate with you?
+      For example: a short email with key takeaways, an internal message,
+      a calendar booking prompt, a video summary, or something else.
+    notes: "Attention & Timing"
+
+  - question_key: iip_immediate_turnoffs
+    order: 5
+    required: false
+    intent: communication_anti_patterns
+    question_text: >
+      What instantly frustrates or turns you off when receiving information?
+    notes: "Immediate Turn-Offs"
+
+  - question_key: iip_decision_support
+    order: 6
+    required: true
+    intent: decision_acceleration
+    question_text: >
+      When you’re reviewing recommendations, what helps you decide fastest?
+      For example: clear priority ranking, pros and cons,
+      what most people do in similar situations, risk assessment,
+      a clear next step or recommendation, or a combination.
+    notes: "Decision Support"
+
+  - question_key: iip_followup_style
+    order: 7
+    required: true
+    intent: followup_preference
+    question_text: >
+      After we send you something important, what follow-up style do you prefer?
+      For example: no follow-up unless you respond,
+      a gentle check-in after a certain number of days,
+      a direct “have you had a chance to review?” message,
+      or a book-a-call reminder.
+    notes: "Follow-Up Style"
