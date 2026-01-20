@@ -49,7 +49,6 @@ This repository **does not contain application code**.
 ---
 
 ## Directory Structure
-
 question-packs/ Interview questions only
 generation-params/ Output rules and formatting constraints
 r-agent/ Explicit agent limitations and rules
