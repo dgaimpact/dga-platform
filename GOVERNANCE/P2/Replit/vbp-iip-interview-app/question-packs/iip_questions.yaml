@@ -1,1 +1,10 @@
+questions:
+  - question_key: iip_delivery_format
+    order: 1
+    required: true
+    intent: format_preference
+    question_text: >
+      When receiving important information from DGA, how do you prefer it to be delivered?
+      For example: short summaries, detailed explanations, links to review later, or a mix.
+    notes: ""
 
