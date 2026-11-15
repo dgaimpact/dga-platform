@@ -3,8 +3,9 @@
 P4 — Content Creation & Publishing  
 Canonical Delivery & Cadence Protocol
 
-Version: v1.0  
+Version: v1.1  
 Created: 2026-01-16  
+Last Amended: 2026-11-15 (v1.1 — narrow content-refresh carve-out, Section 5)  
 Status: Governing Authority (Active)  
 Primary Pillar: P4 — Content Creation & Publishing  
 Consumed By: ED–P4–CORE, Replit AI-Agent
@@ -48,7 +49,7 @@ It exists to:
 
 5. **Post-Execution Freeze:**  
    - Artifacts are frozen until the **next P3 audit cycle**  
-   - No mid-cycle edits, substitutions, or refreshes  
+   - No mid-cycle edits, substitutions, or refreshes — **except** the narrow, admin-triggered factual-accuracy refresh defined in BP–P4–Scope & Exclusions §3a (v1.1): one admin-initiated action, on one already-published artifact at a time, through the same checker/judge/Red Team gate as new content, with the original publish date immutable and no default re-distribution. This carve-out authorizes that one specific action only — it does not reopen the freeze to any other mid-cycle edit, substitution, or refresh.
 
 ---
 

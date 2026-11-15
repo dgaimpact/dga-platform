@@ -1,7 +1,8 @@
 # Content Creation & Publishing
 
-**Version:** v1.1  
+**Version:** v1.2  
 **Created:** 2026-01-16  
+**Last Amended:** 2026-11-15 (v1.2 — narrow content-refresh carve-out, §5.4/§5.9/§7, per BP–P4–Scope & Exclusions §3a)  
 **Status:** Binding (Active)  
 **Applies To:** Replit AI-Agent, P4 Content Systems  
 
@@ -77,7 +78,7 @@ If any precondition fails, P4 must **not generate artifacts**.
 
 4. **Audit Trigger Only**  
    - P4 executes artifacts **only** from current P3 Top-3 pressure points  
-   - No proactive or mid-cycle generation  
+   - No proactive or mid-cycle generation — **except** the narrow, admin-triggered content-refresh action defined in BP–P4–Scope & Exclusions §3a (one already-published artifact, factual-accuracy only, same gate as new content)  
 
 5. **Platform Enforcement**  
    - Publish only to mandatory + user-declared optional platforms  
@@ -102,7 +103,7 @@ If any precondition fails, P4 must **not generate artifacts**.
 
 9. **Immutability**  
    - Artifacts frozen once published  
-   - Only new P3-triggered cycles may generate replacements  
+   - Only new P3-triggered cycles may generate replacements, **except** the BP–P4–Scope & Exclusions §3a admin-triggered refresh, which may update one published artifact's content in place — the original publish date remains immutable regardless  
 
 10. **Length / Format Discipline**  
     - Adhere to category definition  
@@ -132,12 +133,12 @@ If any precondition fails, P4 must **not generate artifacts**.
 P4 must never:  
 - Generate outside the current audit cycle  
 - Merge multiple pressure points into one artifact  
-- Modify previously published artifacts  
+- Modify previously published artifacts — **except** the one, narrowly-defined BP–P4–Scope & Exclusions §3a admin-triggered refresh action  
 - Generate for unapproved platforms  
 - Include persuasion, sales, CTA, or temporal claims  
 - Reference competitors, rankings, or AI behavior  
 - Blend IIP, prior content, or subscriber input  
-- Reuse artifacts from previous cycles without new P3 trigger  
+- Reuse artifacts from previous cycles without new P3 trigger — the §3a admin-triggered refresh is the one other recognized trigger, for that purpose only  
 
 ---
 
