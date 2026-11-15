@@ -1,3 +1,5 @@
+> **DEPRECATED — 2026-11-15.** This is a stale, never-superseded duplicate (v1.0, filename case `ED-P4-Core-...`) of the current, canonical doctrine: `04_P4_CONTENT_CREATION_PUBLISHING/EXECUTION_DOCTRINES/ED-P4-CORE-Content-Creation-and-Publishing.md` (v1.2 as of this move — all-caps `CORE` in the filename). Found during the 2026-11-15 narrow content-refresh governance review: both files existed side by side under near-identical titles, with no marker on either one indicating which was authoritative. This file is retained here, unmodified below this notice, for historical reference only. **Do not treat anything below this notice as binding — read the v1.2 file instead.**
+
 # Content Creation & Publishing
 
 **Version:** v1.0  
